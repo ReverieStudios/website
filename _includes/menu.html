@@ -1,0 +1,16 @@
+<nav>
+		
+	<ul class = "main">
+		<li><a href = "/">Home</a></li>
+		<li>Events</li>
+			<ul class = "events">
+				{% assign events = site.events | sort: 'order' %}
+				{% for e in events %}
+				<li><a href = "{{e.url}}">{{e.title}}</a></li>
+				{% endfor %}
+			</ul>
+		<li>About</li>
+		<li>Contact</li>
+	</ul>
+	
+</nav>
