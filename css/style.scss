@@ -1,0 +1,33 @@
+---
+---
+
+// :fonts
+
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,700|Oswald:500');
+$text-heading: Oswald, Impact, sans-serif;
+$text-main: "Crimson Text", Georgia, serif;
+
+body {
+	font-family: $text-main;
+}
+
+// :colors
+
+// :layout
+
+nav {
+	position: fixed;
+	top: 0;
+	margin: 0;
+	width: 0;
+	overflow: hidden;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+// ::general
+
+// ::home

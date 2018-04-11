@@ -3,8 +3,43 @@ title: Reverie Studios
 ---
 
 {% include header.html %}
+{% include masthead-standard.html %}
 {% include menu.html %}
 
-<p>Welcome to Thunderdome.</p>
+<section id = "hero">
+	
+</section>
+
+<section id = "intro">
+	{% capture intro %}{% include text-intro.md %}{% endcapture %}
+	{{intro | markdownify}}
+	
+	<a href = "about.html" class = "about-more">Learn More</a>
+</section>
+
+<section id = "events">
+	
+	<h2>Events</h2>
+	
+	{% assign events = site.events | sort: 'order' %}
+	{% for e in events %}
+		<div class = "event {{e.short-name}}">
+				<a href = "{{e.url}}"
+				<img src = "{{e.thumbnail}}" />
+				<h3>{{e.title}}</h3>
+				<p>{{e.blurb | markdownify}}</p>
+			</a>
+		</div>	
+	{% endfor %}
+	
+</section>
+
+<section id = "about">
+	
+	<h2>About</h2>
+	
+	{% capture about %}{% include text-about.md %}{% endcapture %}
+	{{about | markdownify}}
+</section>
 
 {% include footer.html %}

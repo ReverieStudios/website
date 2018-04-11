@@ -4,12 +4,17 @@
 		<li><a href = "/">Home</a></li>
 		<li>Events</li>
 			<ul class = "events">
+				<li><a href = "">Schedule</a></li>
 				{% assign events = site.events | sort: 'order' %}
 				{% for e in events %}
 				<li><a href = "{{e.url}}">{{e.title}}</a></li>
 				{% endfor %}
 			</ul>
 		<li>About</li>
+			<ul class = "about">
+				<li><a href = "">LARP Gaming</a></li>
+				<li><a href = "">Reverie Studios</a></li>
+			</ul>
 		<li>Contact</li>
 	</ul>
 	
