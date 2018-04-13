@@ -14,7 +14,7 @@ title: Reverie Studios
 	{% capture intro %}{% include text-intro.md %}{% endcapture %}
 	{{intro | markdownify}}
 	
-	<a href = "about.html" class = "about-more">Learn More</a>
+	<p><a href = "about.html" class = "about-more">Learn More</a></p>
 </section>
 
 <section id = "events">
@@ -24,10 +24,13 @@ title: Reverie Studios
 	{% assign events = site.events | sort: 'order' %}
 	{% for e in events %}
 		<div class = "event {{e.short-name}}">
-				<a href = "{{e.url}}"
+				<a href = "{{e.url}}">
 				<img src = "{{e.thumbnail}}" />
-				<h3>{{e.title}}</h3>
-				<p>{{e.blurb | markdownify}}</p>
+				
+				<div class = "blurb">
+					<h3>{{e.title}}</h3>
+					{{e.blurb | markdownify}}
+				</div>
 			</a>
 		</div>	
 	{% endfor %}

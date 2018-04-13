@@ -3,31 +3,224 @@
 
 // :fonts
 
-@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,700|Oswald:500');
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700|Oswald:500');
 $text-heading: Oswald, Impact, sans-serif;
-$text-main: "Crimson Text", Georgia, serif;
+$text-main: "Lora", Georgia, serif;
+$text-aux: Verdana, Geneva, sans-serif;
 
 body {
 	font-family: $text-main;
+	font-size: 20px;
 }
 
-// :colors
+h1, h2, h3, h4, h5, h6 {
+	font-family: $text-heading;
+	text-transform: uppercase;
+}
+
+h2 {
+	text-align: right;
+}
+
+p {
+	font-size: 70%;
+}
+
+footer p {
+	font-size: 60%;
+}
+
+.menu-toggle, .about-more, footer * {
+	font-family: $text-aux;
+}
+
+// :colors & deocration
+
+$color-background-main: #38383c;
+$color-text-main: #e7e7f4;
+$color-link-main: #fff;
+$color-background-heading: #1b1b1f;
+$color-background-footer: #191919;
+
+body {
+	background: $color-background-main;
+	color: $color-text-main
+}
+
+h2 {
+	background: $color-background-heading;
+}
+
+a {
+	color: $color-link-main;
+	text-decoration: none;
+	border-bottom: 1px solid $color-link-main;
+}
+
+a.menu-toggle {
+	border: none;
+	color: mix($color-background-main, $color-text-main, 75);
+	background: $color-text-main;
+	border-radius: 200px;
+	text-transform: uppercase;
+}
+
+#masthead {
+	margin-top: 80px;
+	width: 90vw;
+	
+	h1 {
+		width: 100%;
+		height: 100%;
+		background: transparent url('../i/logo-flat-white-1600.png') center center no-repeat;
+		background-size: contain;
+		padding-left: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+		box-sizing: border-box;
+		
+	}
+}
+
+footer {
+	background: $color-background-footer;
+	
+	p {
+		text-align: center;
+	}
+}
 
 // :layout
 
-nav {
-	position: fixed;
-	top: 0;
-	margin: 0;
-	width: 0;
-	overflow: hidden;
-}
+$space-gutter: 5vw;
 
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: content-box;
 }
 
-// ::general
+body {
+	display: grid;
+	grid-template: 
+	"nav"
+	"masthead"
+	"hero"
+	"intro"
+	"events"
+	"about"
+	"footer";
+	
 
-// ::home
+	
+	nav {
+		grid-area: nav;
+	}
+	
+	#masthead {
+		grid-area: masthead;
+		margin-bottom: $space-gutter;
+		
+		h1 {
+			height: 27vw;
+		}
+	}
+	
+	#hero {
+		grid-area: hero;
+	}
+	
+	#intro {
+		grid-area: intro;
+	}
+	
+	#events {
+		grid-area: events;
+	}
+	
+	#about {
+		grid-area: about;
+		
+		h2 {
+			margin-bottom: 1em;
+		}
+	}
+	
+	footer {
+		grid-area: footer;
+	}
+	
+	p, div#masthead {
+		padding: 0 $space-gutter;
+	}
+	
+	h2 {
+		padding: $space-gutter / 4 $space-gutter;
+		margin-top: $space-gutter;
+	}
+	
+}
+
+nav {
+	
+	a.menu-toggle {
+		display: block;
+		position: absolute;
+		padding: 0.4em 0.8em;
+		top: $space-gutter;
+		right: $space-gutter;
+		box-sizing: border-box;
+	}
+
+	ul.main {
+		display: none;
+	}
+}
+
+p {
+	margin-bottom: 0.75em;
+}
+
+footer {
+	padding: $space-gutter 0;
+	margin-top: 2em;
+}
+
+#events .event {
+	
+	position: relative;
+	
+	.blurb {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 67vw;
+	}
+	
+	.blurb h3 {
+		margin: $space-gutter 0 0 $space-gutter;
+	}
+	
+	a {
+		border: none;
+	}
+	
+	img {
+		display: block;
+		width: 100vw;
+		height: auto;
+	}
+}
+
+#events .event.daedalus {
+	
+	h3, p {
+		color: #000;
+	}
+	
+	.blurb {
+		left: auto;
+		right: 0;
+	}
+	
+}
