@@ -10,4 +10,4 @@
 	<![endif]-->
 </head>
 
-<body id="home"> {% comment %} closed in footer.html {% endcomment %}
+<body {% if page.id %}id="{{page.id}}"{% endif %}> {% comment %} closed in footer.html {% endcomment %}

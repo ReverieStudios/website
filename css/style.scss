@@ -8,32 +8,6 @@ $text-heading: Oswald, Impact, sans-serif;
 $text-main: "Lora", Georgia, serif;
 $text-aux: Verdana, Geneva, sans-serif;
 
-body {
-	font-family: $text-main;
-	font-size: 20px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	font-family: $text-heading;
-	text-transform: uppercase;
-}
-
-h2 {
-	text-align: right;
-}
-
-p {
-	font-size: 70%;
-}
-
-footer p {
-	font-size: 60%;
-}
-
-.menu-toggle, .about-more, footer * {
-	font-family: $text-aux;
-}
-
 // :colors & deocration
 
 $color-background-main: #38383c;
@@ -42,57 +16,12 @@ $color-link-main: #fff;
 $color-background-heading: #1b1b1f;
 $color-background-footer: #191919;
 
-body {
-	background: $color-background-main;
-	color: $color-text-main
-}
-
-h2 {
-	background: $color-background-heading;
-}
-
-a {
-	color: $color-link-main;
-	text-decoration: none;
-	border-bottom: 1px solid $color-link-main;
-}
-
-a.menu-toggle {
-	border: none;
-	color: mix($color-background-main, $color-text-main, 75);
-	background: $color-text-main;
-	border-radius: 200px;
-	text-transform: uppercase;
-}
-
-#masthead {
-	margin-top: 80px;
-	width: 90vw;
-	
-	h1 {
-		width: 100%;
-		height: 100%;
-		background: transparent url('../i/logo-flat-white-1600.png') center center no-repeat;
-		background-size: contain;
-		padding-left: 100%;
-		white-space: nowrap;
-		overflow: hidden;
-		box-sizing: border-box;
-		
-	}
-}
-
-footer {
-	background: $color-background-footer;
-	
-	p {
-		text-align: center;
-	}
-}
-
 // :layout
 
 $space-gutter: 5vw;
+
+// :general
+
 
 * {
 	margin: 0;
@@ -101,6 +30,13 @@ $space-gutter: 5vw;
 }
 
 body {
+	background: $color-background-main;
+	color: $color-text-main;
+	font-family: $text-main;
+	font-size: 20px;
+}
+
+body#home {
 	display: grid;
 	grid-template: 
 	"nav"
@@ -110,58 +46,10 @@ body {
 	"events"
 	"about"
 	"footer";
-	
-
-	
-	nav {
-		grid-area: nav;
-	}
-	
-	#masthead {
-		grid-area: masthead;
-		margin-bottom: $space-gutter;
-		
-		h1 {
-			height: 27vw;
-		}
-	}
-	
-	#hero {
-		grid-area: hero;
-	}
-	
-	#intro {
-		grid-area: intro;
-	}
-	
-	#events {
-		grid-area: events;
-	}
-	
-	#about {
-		grid-area: about;
-		
-		h2 {
-			margin-bottom: 1em;
-		}
-	}
-	
-	footer {
-		grid-area: footer;
-	}
-	
-	p, div#masthead {
-		padding: 0 $space-gutter;
-	}
-	
-	h2 {
-		padding: $space-gutter / 4 $space-gutter;
-		margin-top: $space-gutter;
-	}
-	
 }
 
 nav {
+	grid-area: nav;
 	
 	a.menu-toggle {
 		display: block;
@@ -171,19 +59,91 @@ nav {
 		right: $space-gutter;
 		box-sizing: border-box;
 	}
+	
+	
 
 	ul.main {
 		display: none;
 	}
 }
 
-p {
-	margin-bottom: 0.75em;
+#masthead {
+	grid-area: masthead;
+	margin-bottom: $space-gutter;
+	margin-top: 80px;
+	width: 90vw;
+	
+	h1 {
+		width: 100%;
+		height: 27vw;
+		background: transparent url('../i/logo-flat-white-1600.png') center center no-repeat;
+		background-size: contain;
+		padding-left: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+		box-sizing: border-box;
+	}
 }
 
-footer {
-	padding: $space-gutter 0;
-	margin-top: 2em;
+h1, h2, h3, h4, h5, h6 {
+	font-family: $text-heading;
+	text-transform: uppercase;
+}
+
+h2 {
+	text-align: right;
+	padding: $space-gutter / 4 $space-gutter;
+	margin-top: $space-gutter;
+	background: $color-background-heading;
+}
+
+p {
+	font-size: 70%;
+}
+
+a {
+	color: $color-link-main;
+	text-decoration: none;
+	border-bottom: 1px solid $color-link-main;
+}
+
+a.menu-toggle, a.about-more {
+	font-family: $text-aux;
+	border: none;
+	color: mix($color-background-main, $color-text-main, 75);
+	background: $color-text-main;
+	border-radius: 200px;
+	text-transform: uppercase;
+}
+
+// :homepage
+
+#hero {
+	grid-area: hero;
+}
+
+#intro {
+	grid-area: intro;
+}
+
+#events {
+	grid-area: events;
+}
+
+#about {
+	grid-area: about;
+	
+	h2 {
+		margin-bottom: 1em;
+	}
+}
+
+p, div#masthead {
+	padding: 0 $space-gutter;
+}
+
+p {
+	margin-bottom: 0.75em;
 }
 
 #events .event {
@@ -224,3 +184,23 @@ footer {
 	}
 	
 }
+
+
+// :footer 
+
+footer * {
+	font-family: $text-aux;
+}
+
+footer {
+	background: $color-background-footer;
+	padding: $space-gutter 0;
+	margin-top: 2em;
+	grid-area: footer;
+}
+
+footer p {
+	font-size: 60%;
+	text-align: center;
+}
+
