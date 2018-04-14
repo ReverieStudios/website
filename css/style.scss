@@ -82,6 +82,11 @@ nav {
 		background: mix(rgba(0, 0, 0, 0.9), $color-background-main, 50);
 		font-family: $text-aux;
 		border-left: 5px solid $color-background-heading;
+		transition: right 0.5s ease-out;
+		
+		&.closed {
+			right: -100vw;
+		}
 		
 		li {
 			display: block;
@@ -100,7 +105,7 @@ nav {
 			font-size: 90%;
 		}
 		
-		li.btn-close {
+		li.menu-toggle {
 			text-align: right;
 			margin-top: -$space-gutter;
 			
