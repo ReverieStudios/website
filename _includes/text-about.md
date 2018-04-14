@@ -3,11 +3,26 @@ Intended to be used as a short intro paragraph (or two) on the homepage.
 Should be formatted using Markdown syntax (very easy to read).
 {% endcomment %}
 
-Reverie Studios was [founded][1] by Tyler Brown, Ken Pickering, and Garett Kopczynski with the goal of exploring "Nordic"-style immersive roleplaying, in which participants are both actor and audience.
+## About Reverie Studios
 
-We are currently focused on organizing small scale (10-15 people) immersive events in the Boston area. If you are interested in such an event, please let us know!
+### Our Vision
 
-For more information on this style of gameplay and Reverie itself, [see our FAQ][2].
+Reverie is a participatory experience design agency that produces educational and fun co-creative immersive events, generally known as 'larping' or 'live action roleplaying events'. Participants take on a persona and engage with the story directly and form strong ties to the events going on, rather than watching the drama passively from their seats.
 
-[1]: /about/staff
-[2]: /about/larp
+### Our Story
+
+Tyler, Ken and Garett have known each other for years, but recently decided that rather than participating in their passions through the experience produced by others, that they would seek to create experiences on their own. After Grand Masquerade in New Orleans 2016, they resolved to forge a new group with a new purpose in their hometown of Boston.
+
+* [Facebook][fb]
+
+* [Events][events]
+
+* [FAQ][faq]
+
+* [Staff][staff]
+{: .about-links}
+
+[fb]: #
+[events]: /events/
+[faq]: /about/faq/
+[staff]: /about/staff

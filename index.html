@@ -8,14 +8,18 @@ id: home
 {% include menu.html %}
 
 <section id = "hero">
-	
+	<div id = "banner">
+		<img src = "i/homepage_hero.jpg" />
+		<div class = "blurb">
+			<h3>D&aelig;dalvs I: COMPLETE</h3>
+			<h4>March 31, 2018</h4>
+		</div>
+	</div>
 </section>
 
 <section id = "intro">
 	{% capture intro %}{% include text-intro.md %}{% endcapture %}
 	{{intro | markdownify}}
-	
-	<p><a href = "about.html" class = "about-more">Learn More</a></p>
 </section>
 
 <section id = "events">
@@ -39,11 +43,10 @@ id: home
 </section>
 
 <section id = "about">
-	
-	<h2>About</h2>
-	
+		
 	{% capture about %}{% include text-about.md %}{% endcapture %}
 	{{about | markdownify}}
+	
 </section>
 
 {% include footer.html %}

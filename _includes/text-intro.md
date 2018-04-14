@@ -1,8 +1,6 @@
 {% comment %}
-Intended to be used as a short intro paragraph (or two) on the homepage.
+The text that appears under the banner on the front page.
 Should be formatted using Markdown syntax (very easy to read).
 {% endcomment %}
 
-Reverie Studios are an experience design group that produces collaborative and interactive theater experiences, also known as LARPs. 
-
-We seek to create fun, educational events that showcase narrative potential and connect people to the stories they participate in, rather than observing those experiences from afar.
+Our first run as a producer of new Nordic style LARPs happened on March 31st and we couldn’t be more proud of how D&AElig;DALVS went. As a first-time event, D&AElig;DALVS was an experiment in our working with new LARP writers, and Max and Jeff will both be people to watch. Please keep an eye out for future runs of this excellent LARP about 'colliding truths'.
