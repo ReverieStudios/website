@@ -25,4 +25,4 @@ Tyler, Ken and Garett have known each other for years, but recently decided that
 [fb]: #
 [events]: /events/
 [faq]: /about/larp/
-[staff]: /about/staff
+[staff]: /about/studio
