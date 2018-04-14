@@ -113,15 +113,14 @@ nav {
 				display: inline-block;
 				text-transform: uppercase;
 				background: $color-text-main;
-				color: $color-background-main;
+				color: mix($color-background-main, $color-text-main, 75);
 				padding: 0.4em 0.8em;
-				font-size: 60%;
+				font-size: 70%;
 				border-radius: 200px;
 				margin-right: -$space-gutter;
 				
 			}
 		}
-		
 	}
 }
 
@@ -382,4 +381,37 @@ footer p {
 	font-size: 60%;
 	text-align: center;
 }
+
+// :about-larp 
+
+body#about-larp {
+	display: grid;
+	grid-template: 
+	"nav"
+	"masthead"
+	"main"
+	"footer";
+}
+
+section#main {
+	grid-area: main;
+	
+	h2 {
+		margin-bottom: 1em;
+	}
+	
+	blockquote {
+		border-left: 1px solid $color-text-main;
+		margin-left: $space-gutter;
+		padding-left: $space-gutter;
+		padding-right: $space-gutter;
+		margin-bottom: 1.5em;
+		
+		p {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+
 
