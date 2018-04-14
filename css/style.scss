@@ -50,14 +50,23 @@ body#home {
 
 nav {
 	grid-area: nav;
+	padding: $space-gutter $space-gutter $space-gutter 0;
+	display: flex;
+	flex-direction: row-reverse;
 	
 	a.menu-toggle {
-		display: block;
-		position: absolute;
+		display: inline-block;
 		padding: 0.4em 0.8em;
-		top: $space-gutter;
-		right: $space-gutter;
 		box-sizing: border-box;
+		flex: 0 0 auto;
+		
+		font-family: $text-aux;
+		font-size: 80%;
+		border: none;
+		color: mix($color-background-main, $color-text-main, 75);
+		background: $color-text-main;
+		border-radius: 200px;
+		text-transform: uppercase;
 	}
 	
 	
@@ -70,7 +79,6 @@ nav {
 #masthead {
 	grid-area: masthead;
 	margin-bottom: $space-gutter;
-	margin-top: 80px;
 	width: 90vw;
 	
 	h1 {
@@ -107,7 +115,7 @@ a {
 	border-bottom: 1px solid $color-link-main;
 }
 
-a.menu-toggle, a.about-more {
+a.about-more {
 	font-family: $text-aux;
 	border: none;
 	color: mix($color-background-main, $color-text-main, 75);
