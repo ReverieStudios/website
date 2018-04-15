@@ -98,6 +98,11 @@ nav {
 			color: $color-text-menu;
 		}
 		
+		li.active a {
+			color: #fff;
+			font-weight: bold;
+		}
+		
 		ul.events, ul.about {
 			margin-left: 0.5em;
 			padding-left: 0.5em;
