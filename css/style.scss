@@ -397,9 +397,10 @@ section#main {
 	grid-area: main;
 	
 	h2 {
-		margin-bottom: 1em;
+		margin-bottom: 0.5em;
+		margin-top: 1em;
 	}
-	
+
 	blockquote {
 		border-left: 1px solid $color-text-main;
 		margin-left: $space-gutter;
@@ -411,6 +412,34 @@ section#main {
 			padding-left: 0;
 			padding-right: 0;
 		}
+	}
+}
+
+// : about-studio
+#about-studio footer {
+	margin-top: 1em;
+}
+
+.staff {
+	margin-bottom: 1em;
+}
+
+.staff h4 {
+	margin-left: $space-gutter;
+	margin-bottom: 0.5em;
+}
+
+.staff .image {
+	margin: 0 $space-gutter 0.5em $space-gutter;
+	
+	img {
+		display: block;
+		width: calc(100% - 4px);
+		height: auto;
+		padding: 1px;
+		background: black;
+		border: 1px solid white;
+		box-sizing: content-box;
 	}
 }
 

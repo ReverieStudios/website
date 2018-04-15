@@ -16,7 +16,7 @@ Where are you based out of and where do you hold your events?
 
 > The company is based out of the Greater Boston area and the surrounding smaller cities. The venue and the nature of the larp depends on the story we are trying to tell. We pick a place that fits the event and then write the story that accommodates that venue, as we are focused on 'what you see is what you get' and immersion.
 
-What is ‘immersive theater’ or ‘larp’ and what is that?
+What is ‘immersive theater’ or ‘larp’?
 
 > Immersive theater and larp are interchangeable terms, but represent different ways to present the same information. The word ‘larp’ or ‘live action role playing’ is an acronym and term that connotes something slightly different from ‘immersive theater’ but they both get at the same thing: you are a participant of a story experience rather than merely an observer. The nuance is in how some may interpret the emphasis on the systems of play. While many larps have complex rules for solving challenges within the game, immersive theater places that decision within the participant’s control by allowing them to decide what best fits their personal story narrative. Both terms have their strengths and weaknesses depending on what types of interactions the participant believes they may have. 
 >

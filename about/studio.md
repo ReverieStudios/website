@@ -14,34 +14,48 @@ Tyler, Ken and Garett have known each other for years, but recently decided that
 
 ## Meet the Team
 
-The designers and writers behind Reverie: Ken, Tyler and Garett.
+The designers and writers behind Reverie: Ken, Tyler, and Garett.
 
-Tyler Brown
-Co-Founder
-Tyler is an artist and participatory experience designer, focused on creating a tactile and visceral experience for players in all forms of immersive environments. He has worked extensively in theater and film arts and brings a breath of experience to transformational media. He has been a larper for over twenty years and has breadth both creating, running and designing games. 
+{% assign principals = site.staff | where: "type", "principal" %}
+<div id = "principals">
+	{% for p in principals %}
+	<div class = "staff">
 
-Professionally, Tyler spends most of his time designing props and building sets for stage production and films and has found both of his jobs tend to cross-pollinate skill sets. Creating brand new experiences and opening up larping to those who have never experienced it's joys is something he deeply cares about.
+		<div class = "meta">
+		<h3>{{p.first-name}} {{p.last-name}}</h3>
+		<h4>{{p.title}}</h4>
+		</div>
+		
+		{% if p.image %}
+		<div class = "image">
+			<img src = "{{p.image}}" />
+		</div>
+		{% endif %}
+		
+		<div class = "content">
+		{{p.content}}
+		</div>
+	
+	</div>
 
-Ken Pickering
-Co-Founder
-Ken is an avid gamer, be it board, roleplaying, card, video or Live Action/LARP. He has assisted running several LARP campaigns in the Boston area, including the successful conspiracy/horror game Occam's Razor.
+	{% endfor %}
+</div>
 
-By day, Ken is an engineer by training and the Director of Engineering for Rue La La, where he's responsible for web/mobile engineering for their large e-commerce platform. He is adept at running complex projects with a myriad of moving parts, and is an inspiring leader to those that work with him.
+## Collaborators
 
-His ambition is to write stories that people love to immerse themselves in, and explore topics they would not otherwise encounter in their everyday lives.
-
-Garett Kopczynski
-Co-Founder
-
-Garett is a writer and participatory experience designer, deeply invested in the concepts of collaborative and immersive techniques. He has written a number of different kinds of games and larps, including: 'Age of Iron', an experimental fantasy production that implemented myth creation with a decentralized structure to allow participants to explore stories that were interesting to them, rather than any pre-written experience.
-
-By profession, Garett is an administrative manager and has an MBA in 'Sustainable Organization and Development', with a focus on employee-ownership and fair business practice. His professional career has given him opportunities to work with health research, renewable energy, and community projects.
-
-Garett hopes to provide experiences for others that allow them to engage with stories in a very personal way, allowing an opportunity for event participants to change their perspectives on life.
-Collaborators
 At Reverie Studios we believe in cooperative production and collaboration, and as such we have worked with a number of individuals and organizations to create art. Often, these artists are those who want to see this kind of theater thrive and have given us their services free or at reduced rates. We would like to promote them and to showcase their work, and if you are interested in them to visit their pages.
-Sam Guay
 
-Sam Guay is an illustrator that provided our logo and has worked with us to provide high quality artwork. Visit her official portfolio website to learn more about this amazing artist and friend of Reverie Studios.
+{% assign collab = site.staff | where: "type", "collaborator" %}
+<div id = "collaborators">
+	{% for c in collab %}
+	<div class = "staff">
 
-Sam Guay Illustration
+		<h3>{{c.first-name}} {{c.last-name}}</h3>
+		
+		{{c.content}}
+	
+	</div>
+
+	{% endfor %}
+</div>
+

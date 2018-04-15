@@ -16,7 +16,7 @@
 title: Reverie Studios
 email: contact@reverie.studio
 description: >- # this means to ignore newlines until "baseurl:"
-  Specializing in Nordic LARP and immersive roleplay experiences.
+  Specializing in Nordic larp and immersive roleplay experiences.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -24,7 +24,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 markdown: kramdown
 collections:
   staff:
-    output: true
+    output: false
     permalink: /:collection/:name
   events:
     output: true
