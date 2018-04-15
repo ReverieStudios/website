@@ -4,6 +4,8 @@ last-name: Kopczynski
 title: Co-Founder
 type: principal
 image: /i/staff/garett_bio.jpg
+email: garett@reverie.studio
+twitter: garettkop
 ---
 
 Garett is a writer and participatory experience designer, deeply invested in the concepts of collaborative and immersive techniques. He has written a number of different kinds of games and larps, including: 'Age of Iron', an experimental fantasy production that implemented myth creation with a decentralized structure to allow participants to explore stories that were interesting to them, rather than any pre-written experience.

@@ -4,6 +4,7 @@ last-name: Pickering
 title: Co-Founder
 type: principal
 image: /i/staff/ken_bio.jpg
+email: ken@reverie.studio
 ---
 
 Ken is an avid gamer, be it board, roleplaying, card, video or Live Action/LARP. He has assisted running several larp campaigns in the Boston area, including the successful conspiracy/horror game *Occam's Razor*.

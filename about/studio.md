@@ -21,9 +21,14 @@ The designers and writers behind Reverie: Ken, Tyler, and Garett.
 	{% for p in principals %}
 	<div class = "staff">
 
-		<div class = "meta">
+		<div class = "name-title">
 		<h3>{{p.first-name}} {{p.last-name}}</h3>
 		<h4>{{p.title}}</h4>
+		</div>
+		
+		<div class = "contact">
+		{% if p.email %}<div class = "email"><a href = "mailto:{{p.email}}">{{p.email}}</a></div>{% endif %}
+		{% if p.twitter %}<div class = "twitter"><a href = "https://www.twitter.com/{{p.twitter}}">@{{p.twitter}}</a></div>{% endif %}
 		</div>
 		
 		{% if p.image %}

@@ -4,6 +4,7 @@ last-name: Brown
 title: Co-Founder
 type: principal
 image: /i/staff/tyler_bio.jpg
+email: tyler@reverie.studio
 ---
 
 Tyler is an artist and participatory experience designer, focused on creating a tactile and visceral experience for players in all forms of immersive environments. He has worked extensively in theater and film arts and brings a breath of experience to transformational media. He has been a larper for over twenty years and has breadth both creating, running and designing games. 

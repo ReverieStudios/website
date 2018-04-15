@@ -384,13 +384,16 @@ footer p {
 
 // :about-larp 
 
-body#about-larp, body#about-studio {
+body#about-larp, body#about-studio, body#contact {
+	min-height: 100vh;
 	display: grid;
 	grid-template: 
 	"nav"
 	"masthead"
 	"main"
 	"footer";
+	
+	grid-template-rows: auto auto auto 1fr;
 }
 
 section#main {
@@ -416,8 +419,64 @@ section#main {
 }
 
 // : about-studio
-#about-studio footer {
-	margin-top: 1em;
+#about-studio, #contact {
+	footer {
+		margin-top: 1em;
+	}
+}
+
+#principals .staff {
+	display: grid;
+	grid-template:
+	"name-title contact"
+	"image image"
+	"content content";
+	
+	grid-template-columns: 1fr auto;
+	
+	.name-title {
+		grid-area: name-title;
+	}
+	
+	.contact { 
+		grid-area: contact;
+		margin-right: $space-gutter;
+		
+		
+		font-size: 60%;
+		a {
+			border: none;
+			display: inline-block;
+			font-family: $text-aux;
+		}
+		
+		.email, .twitter {
+			position: relative;
+			padding-top: 0.25em;
+			padding-left: 18px;
+
+		}
+		
+		.email {
+			background: transparent url('../i/email-icon.png') left center no-repeat;
+			background-size: 15px 10px;
+			background-position: 0px 7px;
+		}
+		
+		.twitter {
+			background: transparent url('../i/twitter-icon.png') left center no-repeat;
+			background-size: 12px 10px;
+			background-position: 0px 7px;
+		}
+	}
+	
+	.image {
+		grid-area: image;
+	}
+	
+	.content {
+		grid-area: content;
+	}
 }
 
 .staff {
