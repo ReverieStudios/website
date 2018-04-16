@@ -159,7 +159,7 @@ h2 {
 	border-top: 5px solid mix($color-background-heading, #fff, 75); 
 }
 
-h3 {
+h3, h4 {
 	margin-left: $space-gutter;
 }
 
@@ -389,7 +389,7 @@ footer p {
 
 // :about-larp 
 
-body#about-larp, body#about-studio, body#contact {
+body#about-larp, body#about-studio, body#contact, body#schedule {
 	min-height: 100vh;
 	display: grid;
 	grid-template: 
@@ -424,7 +424,7 @@ section#main {
 }
 
 // : about-studio
-#about-studio, #contact {
+#about-studio, #contact, #schedule {
 	footer {
 		margin-top: 1em;
 	}
@@ -507,4 +507,34 @@ section#main {
 	}
 }
 
+// :events schedule
 
+// :event - acog
+body#acog {
+	background: $color-background-main url('../i/events/acog_homepage.jpg') center center no-repeat;
+	background-size: cover;
+	
+	#main {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 90vh;
+		
+		div.banner {
+			flex: 0 1 auto;
+		}
+		
+		.banner h2 {
+			background: transparent;
+			text-align: center;
+			color: #fff;
+			border: none;
+		}
+		
+		.banner p {
+			margin: 0;
+			padding: 0;
+			text-align: center;
+		}
+	}
+}

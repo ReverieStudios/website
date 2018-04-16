@@ -22,7 +22,7 @@ Tyler, Ken and Garett have known each other for years, but recently decided that
 * [Staff][staff]
 {: .about-links}
 
-[fb]: #
-[events]: /events/
+[fb]: https://www.facebook.com/reveriestudiosllc/
+[events]: /events/schedule/
 [faq]: /about/larp/
 [staff]: /about/studio

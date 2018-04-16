@@ -7,7 +7,7 @@
 		<li {% if page.id == "home" %}class = "active"{% endif %}><a href = "/">Home</a></li>
 		<li><a href = "/events/schedule/">Events</a></li>
 			<ul class = "events">
-				<li {% if page.id == "schedule" %}class = "active"{% endif %}><a href = "">Schedule</a></li>
+				<li {% if page.id == "schedule" %}class = "active"{% endif %}><a href = "/events/schedule/">Schedule</a></li>
 				{% assign events = site.events | sort: 'order' %}
 				{% for e in events %}
 				<li {% if page.id == "{{e.short-name}}" %}class = "active"{% endif %}><a href = "{{e.url}}">{{e.title}}</a></li>

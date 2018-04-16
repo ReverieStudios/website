@@ -13,4 +13,4 @@
 	<script src = "/js/main.js"></script>
 </head>
 
-<body {% if page.id %}id="{{page.id}}"{% endif %}> {% comment %} closed in footer.html {% endcomment %}
+<body {% if page.short-name %}id="{{page.short-name}}"{% else if page.id %}id = {{page.id}}{% endif %}> {% comment %} closed in footer.html {% endcomment %}
