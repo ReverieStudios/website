@@ -19,7 +19,7 @@ $color-background-footer: #191919;
 
 // :layout
 
-$space-gutter: 5vw;
+$space-gutter: 4vw;
 
 // :general
 
@@ -323,7 +323,7 @@ p {
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 67vw;
+		width: 75vw;
 	}
 	
 	.blurb h3 {
@@ -368,6 +368,19 @@ p {
 		background-image: url('../i/arrow-black-right.png');
 	}
 }
+
+#events .event.eskhaton {
+	
+	h3, p {
+		color: #ccc;
+	}
+	
+	.blurb {
+		left: auto;
+		right: 0;
+	}
+}
+
 
 
 // :footer 
@@ -508,9 +521,15 @@ section#main {
 }
 
 // :events schedule
+body#schedule {
+	.event {
+		margin-bottom: 1em;
+	}
+}
 
-// :event - acog
-body#acog {
+// :event - acog, eskhaton
+
+body#acog, body#eskhaton {
 	background: $color-background-main url('../i/events/acog_homepage.jpg') center center no-repeat;
 	background-size: cover;
 	
@@ -522,6 +541,7 @@ body#acog {
 		
 		div.banner {
 			flex: 0 1 auto;
+			padding: $space-gutter;
 		}
 		
 		.banner h2 {
@@ -537,4 +557,8 @@ body#acog {
 			text-align: center;
 		}
 	}
+}
+
+body#eskhaton {
+	background: $color-background-main url('../i/events/eskhaton_homepage.jpg') center center no-repeat;
 }
