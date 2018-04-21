@@ -371,10 +371,6 @@ p {
 
 #events .event.eskhaton {
 	
-	h3, p {
-		color: #ccc;
-	}
-	
 	.blurb {
 		left: auto;
 		right: 0;
@@ -669,7 +665,8 @@ body#acog, body#eskhaton {
 }
 
 body#eskhaton {
-	background: $color-background-main url('../i/events/eskhaton_homepage.jpg') center center no-repeat;
+	background: $color-background-main url('../i/events/eskhaton/eskhaton_square.jpg') center center no-repeat;
+	backgorund-size: cover;
 }
 
 // :event - seance
