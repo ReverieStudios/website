@@ -377,7 +377,38 @@ p {
 	}
 }
 
-
+#events .more-events {
+	
+	padding: 1em 0;
+	background: linear-gradient(black, #222);
+	
+	p {
+		margin: 0;
+		text-align: center;
+	}
+	
+	a {
+		color: white;
+		background: rgba(255, 255, 255, 0.2);
+		border: 1px solid white;
+		display: inline-block;
+		border-radius: 50px;
+		font-family: $text-aux;
+		padding: 8px 16px;
+	
+		&::after {
+			display: inline-block;
+			content: "_";
+			color: transparent;
+			height: 100%;
+			width: 1em;
+			margin-left: 0.5em;
+			background: transparent url('../i/arrow-white-right.png') center center no-repeat;
+			background-size: contain;
+		}
+		
+	}
+}
 
 // :footer 
 
