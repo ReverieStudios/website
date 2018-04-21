@@ -1,0 +1,24 @@
+{% assign has_gallery = false %}
+{% for r in include.runs %}
+	{% if r.gallery != nil %} {% assign has_gallery = true %} {% endif %}
+{% endfor %}
+
+{{runs}}
+
+{% if has_gallery %}
+<div id = "lightbox">
+		<div id = "controls">
+			<a href = "#" class = "prev">prev</a>
+			<a href = "#" class = "close">close</a>
+			<a href = "#" class = "next">next</a>
+		</div>
+		
+		<div class = "content">
+			
+		</div>
+		
+		<div class = "caption">
+			
+		</div>
+	</div>
+{% endif %}

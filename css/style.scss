@@ -323,7 +323,7 @@ p {
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 75vw;
+		width: 67vw;
 	}
 	
 	.blurb h3 {
@@ -437,7 +437,7 @@ section#main {
 }
 
 // : about-studio
-#about-studio, #contact, #schedule {
+#about-studio, #contact, #schedule, #seance {
 	footer {
 		margin-top: 1em;
 	}
@@ -520,10 +520,119 @@ section#main {
 	}
 }
 
+// :events general
+#out-of-game ul, ol {
+	margin: 0 $space-gutter 1em $space-gutter;
+	font-size: 70%;
+	
+	li {
+		margin-left: 20px;
+	}
+}
+
+// :lightbox
+#lightbox {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	left: 100vw;
+	top: 0;
+	background: black;
+	background: rgba(0, 0, 0, 0.9);
+	z-index: 1000;	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	
+	#controls, .content, .caption {
+		flex: 0 0 auto;
+		margin-bottom: 5vw;
+	}
+	
+	&.active {
+		left: 0;
+	}
+	
+	.content {
+		transition: background 0.25s ease-in;
+		background: transparent;
+	}
+	
+	#controls {
+		display: flex;
+		justify-content: center;
+
+		a {
+			flex: 0 0 auto;
+			position: relative;
+			width: 10vw;
+			height: 10vw;
+			display: block;
+			overflow: hidden;
+			border: none;
+			margin-left: 5vw;
+			text-indent: 100%;
+			
+			&:first-child {
+				margin-left: 0;
+			}
+			
+			&:before {
+				content: " ";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				
+			}
+			
+			&.close:before {
+				background: url('../i/close-white.png') center center no-repeat;
+				background-size: contain;
+			}
+			
+			&.next:before {
+				background: url('../i/arrow-white-right.png') center center no-repeat;
+				background-size: contain;
+			}
+			
+			&.prev:before {
+				background: url('../i/arrow-white-left.png') center center no-repeat;
+				background-size: contain;
+			}
+		}
+	}
+}
+
 // :events schedule
 body#schedule {
 	.event {
 		margin-bottom: 1em;
+	}
+}
+
+.gallery {
+	
+	margin: 20px $space-gutter;
+	display: flex;
+	flex-wrap: wrap;
+	
+	a, img {
+	    user-select: none;
+	    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	}
+	
+	.image {
+		flex: 0 0 auto;
+		width: 50%;
+	}
+	
+	.image img {
+		width: 100%;
+		height: auto;
+		display: block;
+		
 	}
 }
 
@@ -561,4 +670,106 @@ body#acog, body#eskhaton {
 
 body#eskhaton {
 	background: $color-background-main url('../i/events/eskhaton_homepage.jpg') center center no-repeat;
+}
+
+// :event - seance
+body#seance {
+	
+	display: grid;
+	grid-template: 
+	"in-game-disclaimer nav"
+	"main main"
+	"footer footer";
+	
+	grid-template-columns: 5fr 1fr;
+		
+	#in-game-disclaimer {
+		grid-area: in-game-disclaimer;
+		font-family: $text-aux;
+		font-size: 90%;
+		padding-top: $space-gutter;
+		padding-bottom: $space-gutter;
+		
+		p.skip-link {
+			margin-bottom: 0;
+		}
+	}
+	
+	#out-of-game-disclaimer {
+		font-family: $text-aux;
+		font-size: 90%;
+	}
+	
+	nav {
+		grid-area: nav;
+		width: auto;
+		
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		
+		.menu-toggle {
+			display: inline-block;
+			flex: 0 0 auto;
+		}
+	}
+	
+	#main {
+		grid-area: main;
+	}
+	
+	footer {
+		grid-area: footer;
+	}
+	
+	#in-game {
+		background: linear-gradient(#ede6c7, #fff);
+		color: #4d382b;
+		padding: $space-gutter 0;
+		margin-bottom: 1em;
+		
+		h2 {
+			background-color: transparent;
+			border: none;
+			font-family: $text-main;
+			margin: 0;
+			text-align: center;
+			padding: 145px 0 0 0;
+			background-image: url('../i/events/seance/ames_color.png');
+			background-position: center 10px;
+			background-repeat: no-repeat;
+			background-size: 125px 125px;
+			text-transform: none;
+		}
+		
+		h3 {
+			font-family: $text-main;
+			text-transform: none;
+			text-align: center;
+		}
+		
+		img {
+			float: right;
+			width: 45%;
+			height: auto;
+			box-shadow: 1px 1px 6px black;
+			margin-top: 0.25em;
+			margin-left: 10px;
+			margin-bottom: 10px;
+		}
+		
+		span.author {
+			display: block;
+			margin-left: 33%;
+			margin-top: 0.5em;
+			
+			&:before {
+				content: "\2014";
+				margin-left: -1em;
+			}
+		}
+	}
+	
+	
+	
 }

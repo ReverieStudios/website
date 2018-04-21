@@ -1,0 +1,13 @@
+{% if include.e.gallery %}
+	<div class = "gallery" data-gallery-num = {{include.idx}} data-gallery-size = {{include.e.gallery.size}}>
+	{% for i in include.e.gallery %}
+		{% assign next_image = forloop.index %}
+		{% if include.e.gallery[next_image] == nil %}
+			{% assign next_image = 0 %}
+		{% endif %}
+		<div class = "image" data-image-num = {{forloop.index0}} data-image-next = "{{include.e.gallery[next_image].full}}">
+			<a href = "{{i.full}}"><img src = "{{i.thumb}}" /></a>
+		</div>
+	{% endfor %}
+	</div>
+	{% endif %}
