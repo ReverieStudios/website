@@ -333,6 +333,20 @@ p {
 	
 	a {
 		border: none;
+		display: block;
+		position: relative;
+		
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			right: $space-gutter;
+			bottom: $space-gutter;
+			width: 7vw;
+			height: 7vw;
+			background: transparent url('../i/arrow-white-right.png');
+			background-size: contain;
+		}
 	}
 	
 	img {
@@ -341,17 +355,7 @@ p {
 		height: auto;
 	}
 	
-	&:after {
-		content: "";
-		display: block;
-		position: absolute;
-		right: $space-gutter;
-		bottom: $space-gutter;
-		width: 7vw;
-		height: 7vw;
-		background: transparent url('../i/arrow-white-right.png');
-		background-size: contain;
-	}
+	
 }
 
 #events .event.daedalus {
@@ -365,7 +369,7 @@ p {
 		right: 0;
 	}
 	
-	&:after {
+	a:after {
 		background-image: url('../i/arrow-black-right.png');
 	}
 }
