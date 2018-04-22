@@ -4,8 +4,9 @@
 	
 	<ul class = "main closed">
 		<li class = "menu-toggle"><a href = "#">Close</a></li>
-		<li {% if page.id == "home" %}class = "active"{% endif %}><a href = "/">Home</a></li>
-		<li><a href = "/events/schedule/">Events</a></li>
+		<li class = "home {% if page.id == "home" %} active{% endif %}"><a href = "/">Home</a></li>
+		<li>
+			<a href = "/events/schedule/">Events</a>
 			<ul class = "events">
 				<li {% if page.id == "schedule" %}class = "active"{% endif %}><a href = "/events/schedule/">Schedule</a></li>
 				{% assign events = site.events | sort: 'order' %}
@@ -13,11 +14,14 @@
 				<li {% if page.short-name == {{e.short-name}} || page.id == {{e.short-name}} %}class = "active"{% endif %}><a href = "{{e.url}}">{{e.title}}</a></li>
 				{% endfor %}
 			</ul>
-		<li><a href = "/about/studio/">About</a></li>
+		</li>
+		<li>
+		<a href = "/about/studio/">About</a>
 			<ul class = "about">
 				<li {% if page.id == "about-larp" %}class = "active"{% endif %}><a href = "/about/larp/">Larp Gaming</a></li>
 				<li {% if page.id == "about-studio" %}class = "active"{% endif %}><a href = "/about/studio/">Reverie Studios</a></li>
 			</ul>
+		</li>
 		<li {% if page.id == "contact" %}class = "active"{% endif %}><a href = "/contact/">Contact</a></li>
 	</ul>
 	

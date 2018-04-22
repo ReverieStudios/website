@@ -105,6 +105,7 @@ nav {
 		
 		ul.events, ul.about {
 			margin-left: 0.5em;
+			margin-top: 0.5em;
 			padding-left: 0.5em;
 			border-left: 1px solid $color-text-main;
 			font-size: 90%;
@@ -577,7 +578,7 @@ section#main {
 	
 	#controls, .content, .caption {
 		flex: 0 0 auto;
-		margin-bottom: 5vw;
+		margin-bottom: 10px;
 	}
 	
 	&.active {
@@ -587,6 +588,7 @@ section#main {
 	.content {
 		transition: background 0.25s ease-in;
 		background: transparent;
+		max-height: 75%;
 	}
 	
 	#controls {
@@ -804,3 +806,4 @@ body#seance {
 }
 
 @import 'breakpoints.scss';
+@import 'desktop.scss';

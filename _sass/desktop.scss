@@ -1,0 +1,123 @@
+// Media queries built off of main styles.
+
+// Break point for iPhone SE?
+// First break point: > 500px
+
+$width-desktop: 960px;
+$grid-gutter: 20px;
+$color-menu: rgba(73, 73, 81, 0.9);
+
+@media screen and (min-width: 1025px) {
+	
+	body#home {
+		display: grid;
+		grid-template: 
+		". masthead nav ."
+		". hero hero ."
+		". intro intro ."
+		". events events ."
+		"about about about about"
+		"footer footer footer footer";
+		
+		grid-template-columns: 1fr 470px 470px 1fr;
+		grid-column-gap: $grid-gutter;
+	}
+	
+	body.page {
+		
+		padding: $grid-gutter * 3 0 0 0;
+		
+		#masthead {
+			width: auto;
+			padding: 0;
+			margin: 0;
+		}
+		
+		#masthead h1 {
+			background-image: url('../i/logo-flat-white-1600.png');
+		}
+	}
+	
+	body.page nav {
+		
+		padding: 0;
+		margin: 0;
+		align-self: center;
+		
+		a.menu-toggle, ul.main li.menu-toggle {
+			display: none;
+		}
+		
+		ul.main {
+			position: relative;
+			height: auto;
+			right: auto;
+			padding: 0;
+			display: flex;
+			background: transparent;
+			border: none;
+			
+			&.closed {
+				right: auto;
+				left: 0;
+				width: 100%;
+			}
+			
+			li {
+				flex: 0 0 auto;
+				margin-right: $grid-gutter;
+				position: relative;
+				padding: 0.5em 0.5em;
+				
+				&.home {
+					margin-left: $grid-gutter;
+				}
+			}
+		}
+		
+		ul.main li > ul {
+			display: none;
+			border: none;
+			
+			li {
+				margin: 0;
+			}
+			
+			li:hover {
+				background: rgba(0, 0, 0, 0.3);
+			}
+		}
+		
+		ul.main li:hover {
+			background: $color-menu;
+		}
+		
+		ul.main li:hover > ul {
+			display: block;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			margin: 0;
+			padding: 0;
+			width: 200px;
+			background: $color-menu;
+			font-size: 80%;
+			
+			&:hover {
+				
+				display: block;
+			}
+		}
+	}
+	
+	body.event {
+		nav ul.main {
+			padding-left: $grid-gutter * 2;
+			padding-right: $grid-gutter * 2;
+			
+			li.menu-toggle a {
+				margin-right: 0;
+			}
+		}
+	}
+}
