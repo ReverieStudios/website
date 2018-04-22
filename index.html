@@ -26,6 +26,7 @@ id: home
 	
 	<h2>Events</h2>
 	
+	<div class = "event-list">
 	{% assign events = site.events | sort: 'order' %}
 	{% for e in events %}
 		<div class = "event {{e.short-name}}">
@@ -39,6 +40,7 @@ id: home
 			</a>
 		</div>	
 	{% endfor %}
+	</div>
 	
 	<div class = "more-events">
 		<p><a href = "/events/schedule/">Full Event Schedule</a></p>

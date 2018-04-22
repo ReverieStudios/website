@@ -14,8 +14,6 @@ Tyler, Ken and Garett have known each other for years, but recently decided that
 
 ## Meet the Team
 
-The designers and writers behind Reverie: Ken, Tyler, and Garett.
-
 {% assign principals = site.staff | where: "type", "principal" %}
 <div id = "principals">
 	{% for p in principals %}

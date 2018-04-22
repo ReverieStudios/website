@@ -22,6 +22,7 @@ layout: page
 
 <h2>Upcoming Events</h2>
 
+<div class = "upcoming-events">
 {% for f in future_events %}
 
 <div class = "event">
@@ -36,13 +37,14 @@ layout: page
 </div>
 
 {% endfor %}
+</div>
 
 {% endif %}
 	
 <h2>Past Events</h2>
 
+<div class = "past-events">
 {% for p in past_events %}
-
 <div class = "event">
 
 	<h3>{{p.title}}</h3>
@@ -55,3 +57,4 @@ layout: page
 </div>
 
 {% endfor %}
+</div>

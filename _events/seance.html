@@ -165,18 +165,22 @@ This event significantly uses audio and noises ranging in volume from low to sta
 
 {% if past_events.size > 0 %}
 
-	<h2>Past Runs</h2>
-	
-	{% for e in past_events %}
-	
-		<h3>{{e.title}}</h3>
-		<h4>{{e.display-date}}</h4>
+	<div class = "past-runs">
+
+		<h2>Past Runs</h2>
 		
-		{% include gallery.html e = e idx = forloop.index0 %}
-	
-	{% endfor %}
-	
-	{% include lightbox.html runs = past_events %}
+		{% for e in past_events %}
+		
+			<h3>{{e.title}}</h3>
+			<h4>{{e.display-date}}</h4>
+			
+			{% include gallery.html e = e idx = forloop.index0 %}
+		
+		{% endfor %}
+		
+		{% include lightbox.html runs = past_events %}
+		
+	</div>
 	
 {% endif %}
 
