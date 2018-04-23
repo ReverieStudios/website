@@ -266,7 +266,6 @@ $color-about-grad2: rgba(red($color-background-main), green($color-background-ma
 
 #about {
 	grid-area: about;
-	background: linear-gradient(0deg, $color-background-footer, $color-about-grad2);
 	padding: 0 0 2em 0;
 	
 	h2 {
@@ -423,6 +422,7 @@ footer * {
 
 footer {
 	background: $color-background-footer;
+	//background: linear-gradient(0deg, $color-background-footer, $color-about-grad2);
 	padding: $space-gutter 0;
 	grid-area: footer;
 }
@@ -695,12 +695,15 @@ body#acog, body#eskhaton {
 			text-align: center;
 			color: #fff;
 			border: none;
+			width: 100%;
+			padding: 0;
 		}
 		
 		.banner p {
 			margin: 0;
 			padding: 0;
 			text-align: center;
+			width: 100%;
 		}
 	}
 }

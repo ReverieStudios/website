@@ -12,7 +12,7 @@ At Reverie we write larps that are in the "Nordic" tradition, as defined at [Nor
 
 ## Q&A
 
-Where are you based out of and where do you hold your events?
+Where are you based and where do you hold your events?
 
 > The company is based out of the Greater Boston area and the surrounding smaller cities. The venue and the nature of the larp depends on the story we are trying to tell. We pick a place that fits the event and then write the story that accommodates that venue, as we are focused on 'what you see is what you get' and immersion.
 

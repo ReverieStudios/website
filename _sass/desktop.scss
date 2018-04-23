@@ -11,6 +11,10 @@ $color-menu: rgba(73, 73, 81, 0.9);
 	
 	body {
 		font-size: 40px;
+		
+		&.page {
+			background-image: linear-gradient(180deg, black 0px, mix($color-background-main, black, 75) 300px, $color-background-main);
+		}
 	}
 	
 	nav {
@@ -22,6 +26,17 @@ $color-menu: rgba(73, 73, 81, 0.9);
 		text-align: left;
 		padding: 0;
 		border: none;
+	}
+	
+	body#schedule, body#about-studio, body#about-larp, body#contact {
+		display: grid;
+		grid-template:
+		". masthead nav ."
+		". main main ."
+		"footer footer footer footer";
+		
+		grid-template-columns: 1fr 470px 470px 1fr;
+		grid-column-gap: $grid-gutter;
 	}
 	
 	body#home {
@@ -206,4 +221,154 @@ $color-menu: rgba(73, 73, 81, 0.9);
 			}
 		}
 	}
+	
+	#schedule {
+		.upcoming-events, .past-events {
+			.event {
+				padding-left: 0;
+				padding-right: $grid-gutter;
+			}
+		}
+	}
+	
+	.page #main p {
+		margin: 0;
+		padding: 0;
+		margin-bottom: 1em;
+		width: auto;
+	}
+	
+	.page #main blockquote {
+		margin: 0;
+		width: 100%;
+		margin-bottom: 1em;
+	}
+	
+	.page #main h2 {
+		margin-top: 0;
+	}
+	
+	#about-studio {
+		
+		#principals {
+			display: flex;
+			font-size: 60%;
+		}
+		
+		#principals .staff {
+			margin: 0;
+			grid-template:
+			"name-title"
+			"image"
+			"contact"
+			"content";
+			
+			grid-template-columns: 300px;
+			grid-template-rows: auto auto 70px 1fr; 
+			grid-gap: 0;
+						
+			flex: 0 0 300px;
+			margin-right: $grid-gutter;
+			
+			h3 {
+				width: 100%;
+			}
+			
+			.name-title {
+				align-self: flex-end;
+			}
+			
+			.contact {
+				align-self: flex-start;
+				margin-top: 1em;
+			}
+		}
+		
+		#collaborators {
+			width: 100%;
+			margin: 0;
+		}
+	}
+	
+	body#seance {
+		
+		grid-template: 
+		". in-game-disclaimer nav ."
+		"main main main main"
+		"footer footer footer footer";
+		
+		grid-template-columns: 1fr 884px 76px 1fr;
+		
+		#in-game-disclaimer, #out-of-game-disclaimer {
+			font-size: 60%;
+			padding: 1em 0;
+		}
+		
+		nav {
+			padding-right: 0;
+			display: block;
+			align-self: center;
+		}
+		
+		#in-game {
+			p {
+				width: $width-desktop;
+			}
+		}
+		
+		#out-of-game {
+			width: $width-desktop;
+			margin: 0 auto;
+			
+			p, ul, ol, h2, h3 {
+				width: 100%;
+				padding: 0;
+			}
+		}
+				
+		#out-of-game ul, #out-of-game ol {
+			padding-left: 1em;
+			
+			li {
+				margin-bottom: 0.5em;
+			}
+		} 
+		
+		#in-game img {
+			width: 300px;
+		}
+		
+		#main {
+			.past-runs, .gallery {
+				margin: 0;
+				margin-bottom: 1em;
+				
+				h3, h4 {
+					margin: 0;
+				}
+			}
+			
+			.gallery {
+				.image {
+					flex: 0 0 ($width-desktop - ($grid-gutter * 2) - 12) / 3;
+					margin-right: $grid-gutter;
+					margin-bottom: $grid-gutter;
+					padding: 1px;
+					background: #000;
+					border: 1px solid #fff;
+				}
+				
+				.image:nth-child(3n) {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+	
+	#lightbox #controls a {
+		width: 30px;
+		height: 30px;
+	}
+	
+	
 }
