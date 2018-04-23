@@ -714,7 +714,53 @@ body#acog, body#eskhaton {
 
 body#eskhaton {
 	background: $color-background-main url('../i/events/eskhaton/eskhaton_square.jpg') center center no-repeat;
-	backgorund-size: cover;
+	background-size: cover;
+}
+
+// :event - daedalus
+body#daedalus {
+	background: black url('../i/events/daedalus/daedalus-splash.jpg') center center no-repeat;
+	background-size: cover;
+	display: grid;
+	grid-template: 
+	"nav"
+	"main"
+	"footer";
+	grid-template-rows: auto auto 1fr;
+	min-height: 100vh;
+	
+	#main {
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.banner {
+		background: rgba(0, 0, 0, 0.4);
+		border: 1px dotted #fff;
+		width: 75%;
+		flex: 0 0 auto;
+		align-self: center;
+		padding: 5vw;
+		margin: 5vw;
+		margin-bottom: 20vh;
+		margin-top: 10vh;
+	}
+	
+	h2, h3 {
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		color: #fff;
+		width: auto;
+		border: none;
+		background: transparent;
+	}
+	
+	.banner p {		
+		width: auto;
+		color: #fff;
+		padding: 0;
+	}
 }
 
 // :event - seance

@@ -99,6 +99,12 @@ $width-ipad: 600px;
 		}
 	}
 	
+	body#daedalus {
+		.banner {
+			width: 50%;
+		}
+	}
+	
 	#lightbox #controls a {
 		width: 5vw;
 		height: 5vw;
