@@ -12,9 +12,7 @@ $color-menu: rgba(73, 73, 81, 0.9);
 	body {
 		font-size: 40px;
 		
-		&.page {
-			background-image: linear-gradient(180deg, black 0px, mix($color-background-main, black, 75) 300px, $color-background-main);
-		}
+		
 	}
 	
 	nav {
@@ -246,6 +244,7 @@ $color-menu: rgba(73, 73, 81, 0.9);
 	
 	.page #main h2 {
 		margin-top: 0;
+		margin-bottom: 0;
 	}
 	
 	#about-studio {
