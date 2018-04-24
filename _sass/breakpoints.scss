@@ -9,6 +9,10 @@ $width-ipad: 600px;
 	body {
 		font-size: 25px;
 	}
+	
+	body#acog #in-game .letter {
+		width: 300px;
+	}
 }
 
 @media screen and (min-width: 600px) {
@@ -27,7 +31,7 @@ $width-ipad: 600px;
 		padding-bottom: 0;
 	}
 	
-	#seance {
+	#seance, #acog {
 		nav {
 			padding-top: 0;
 		}
@@ -199,5 +203,11 @@ $width-ipad: 600px;
 	
 	#main div.past-runs h3 {
 		margin-left: $space-gutter;
+	}
+	
+	#acog #in-game .letter {
+		h2, h3, p {
+			width: auto;
+		}
 	}
 }

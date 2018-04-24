@@ -677,9 +677,9 @@ body#schedule {
 	}
 }
 
-// :event - acog, eskhaton
+// :event - eskhaton
 
-body#acog, body#eskhaton {
+body#eskhaton {
 	background: $color-background-main url('../i/events/acog_homepage.jpg') center center no-repeat;
 	background-size: cover;
 	
@@ -737,12 +737,12 @@ body#daedalus {
 	.banner {
 		background: rgba(0, 0, 0, 0.4);
 		border: 1px dotted #fff;
-		width: 75%;
+		width: 80%;
 		flex: 0 0 auto;
 		align-self: center;
 		padding: 5vw;
 		margin: 5vw;
-		margin-bottom: 20vh;
+		margin-bottom: 10vh;
 		margin-top: 10vh;
 	}
 	
@@ -763,8 +763,8 @@ body#daedalus {
 	}
 }
 
-// :event - seance
-body#seance {
+// :event - generic styles
+body#seance, body#acog {
 	
 	display: grid;
 	grid-template: 
@@ -812,7 +812,10 @@ body#seance {
 	footer {
 		grid-area: footer;
 	}
-	
+}
+
+// :event - seance
+body#seance {	
 	#in-game {
 		background: linear-gradient(#ede6c7, #fff);
 		color: #4d382b;
@@ -857,6 +860,72 @@ body#seance {
 			&:before {
 				content: "\2014";
 				margin-left: -1em;
+			}
+		}
+	}
+}
+
+// :event - acog
+
+$color-letter-accent: #ed152e;
+$color-letter-text: #472529;
+body#acog {
+	
+	#in-game {
+		background: gray url('../i/events/acog/nuke.jpg') center center no-repeat;
+		background-size: cover;
+		color: $color-letter-text;
+		padding: 20px 0 0 0;
+		overflow: hidden;
+		margin-bottom: 1em;
+		display: flex;
+		flex-direction: row-reverse;
+		
+		h2, h3, p {
+			font-family: "Courier New", "Courier", monospace;
+		}
+		
+		.letter {
+			
+			flex: 0 0 auto;
+			margin: 200px -10px -20px 0;
+			width: 220px;
+			padding: 20px;
+			border: 10px solid $color-letter-accent;
+			background: #f4f3ef;
+			font-size: 80%;
+			transform: rotate(10deg);
+			box-shadow: -3px -3px 11px black;
+			
+			.letter-body {
+				transform: rotate(1.5deg);
+			}
+			
+			h2, h3 {
+				background: $color-letter-accent;
+				color: #fff;
+				text-align: center;
+				border: none;
+				margin: 0;
+				padding: 0;
+			}
+			
+			h3 {
+				margin-bottom: 1em;
+			}
+			
+			p {
+				padding: 0;
+			}
+			
+			strong {
+				font-weight: normal;
+				border-bottom: 1px solid $color-letter-text;
+			}
+			
+			span {
+				color: black;
+				background: black;
 			}
 		}
 	}
