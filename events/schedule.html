@@ -26,14 +26,19 @@ layout: page
 {% for f in future_events %}
 
 <div class = "event">
+	
+	<div class = "image">
+		<img src = "{{f.image}}" />
+	</div>
 
-	<h3>{{f.title}}</h3>
-	<h4>{{f.display-date}}</h4>
-
-	{{f.blurb | markdownify}}
-
-
-	<p><a href = "/events/{{f.event}}">Learn more about this event.</a></p>
+	<div class = "content">
+		<h3>{{f.title}}</h3>
+		<h4>{{f.display-date}}</h4>
+	
+		{{f.blurb | markdownify}}
+		
+		<p><a href = "/events/{{f.event}}">Learn more about this event.</a></p>
+	</div>
 </div>
 
 {% endfor %}
@@ -46,14 +51,19 @@ layout: page
 <div class = "past-events">
 {% for p in past_events %}
 <div class = "event">
+	
+	<div class = "image">
+		<img src = "{{p.image}}" />
+	</div>
 
-	<h3>{{p.title}}</h3>
-	<h4>{{p.display-date}}</h4>
-
-	{{p.blurb | markdownify}}
-
-
-	<p><a href = "/events/{{p.event}}">Learn more about this event.</a></p>
+	<div class = "content">
+		<h3>{{p.title}}</h3>
+		<h4>{{p.display-date}}</h4>
+	
+		{{p.blurb | markdownify}}
+		
+		<p><a href = "/events/{{p.event}}">Learn more about this event.</a></p>
+	</div>
 </div>
 
 {% endfor %}

@@ -29,6 +29,7 @@ $(document).ready(function() {
 	$('.menu-toggle').click(function(e) {
 		e.preventDefault()
 		$('nav ul.main').toggleClass('closed')
+		$('a.menu-toggle').toggleClass('hidden')
 	})
 	
 	$('.gallery img').click(function(e) {

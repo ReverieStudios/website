@@ -142,12 +142,20 @@ nav {
 	h1 {
 		width: 100%;
 		height: 27vw;
-		background: transparent url('../i/logo-flat-white-1600.png') center center no-repeat;
-		background-size: contain;
-		padding-left: 100%;
-		white-space: nowrap;
-		overflow: hidden;
 		box-sizing: border-box;
+		
+		a {
+			display: block;
+			width: 100%;
+			height: 100%;
+			background: transparent url('../i/logo-flat-white-1600.png') center center no-repeat;
+			background-size: contain;
+			padding-left: 100%;
+			white-space: nowrap;
+			overflow: hidden;
+			border: none;
+			box-sizing: border-box;
+		}
 	}
 }
 
@@ -354,8 +362,34 @@ p {
 	
 	img {
 		display: block;
+		position: relative;
 		width: 100%;
 		height: auto;
+	}
+	
+	.gradient {
+		position: absolute;
+		display: block;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	
+	&.seance .gradient {
+		background-image: linear-gradient(90deg, black, transparent);
+	}
+	
+	&.daedalus .gradient {
+		background-image: linear-gradient(90deg, transparent, white);
+	}
+	
+	&.acog .gradient {
+		background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.75), transparent);
+	}
+	
+	&.eskhaton .gradient {
+		
 	}
 	
 	
@@ -477,7 +511,7 @@ section#main {
 }
 
 // :about-studio
-#about-studio, #contact, #schedule, #seance {
+#about-studio, #contact, #schedule, #seance, #acog {
 	footer {
 		margin-top: 1em;
 	}
@@ -594,7 +628,6 @@ section#main {
 	}
 	
 	.content {
-		transition: background 0.25s ease-in;
 		background: transparent;
 		max-height: 75%;
 	}
@@ -648,8 +681,23 @@ section#main {
 
 // :events schedule
 body#schedule {
+	
+	h2 {
+		margin-bottom: 0;
+	}
+	
+	h3 {
+		margin-top: 0.5em;
+	}
+	
 	.event {
-		margin-bottom: 1em;
+		margin-bottom: 2em;
+	}
+	
+	.event img {
+		width: 100%;
+		height: auto;
+		display: block;
 	}
 }
 
@@ -799,7 +847,7 @@ body#seance, body#acog {
 		justify-content: center;
 		flex-direction: column;
 		
-		.menu-toggle {
+		a.menu-toggle {
 			display: inline-block;
 			flex: 0 0 auto;
 		}
@@ -854,12 +902,15 @@ body#seance {
 		
 		span.author {
 			display: block;
+			position: relative;
 			margin-left: 33%;
 			margin-top: 0.5em;
 			
 			&:before {
 				content: "\2014";
-				margin-left: -1em;
+				position: absolute;
+				left: -1em;
+				top: 0;
 			}
 		}
 	}
@@ -875,11 +926,12 @@ body#acog {
 		background: gray url('../i/events/acog/nuke.jpg') center center no-repeat;
 		background-size: cover;
 		color: $color-letter-text;
-		padding: 20px 0 0 0;
+		padding: 20px 0 100px 0;
 		overflow: hidden;
 		margin-bottom: 1em;
 		display: flex;
 		flex-direction: row-reverse;
+		position: relative;
 		
 		h2, h3, p {
 			font-family: "Courier New", "Courier", monospace;
@@ -927,6 +979,17 @@ body#acog {
 				color: black;
 				background: black;
 			}
+		}
+		
+		.badge {
+			position: absolute;
+			bottom: -5px;
+			left: 0;
+			width: 33vw;
+			height: 52vw;
+			background: url('../i/events/acog/badge.png') center center no-repeat;
+			background-size: contain;
+			transform: rotate(-7deg);
 		}
 	}
 }

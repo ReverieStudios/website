@@ -5,14 +5,12 @@
 
 $width-desktop: 960px;
 $grid-gutter: 20px;
-$color-menu: rgba(73, 73, 81, 0.9);
+$color-menu: rgba(73, 73, 81, 1);
 
 @media screen and (min-width: 1025px) {
 	
 	body {
 		font-size: 40px;
-		
-		
 	}
 	
 	nav {
@@ -132,7 +130,7 @@ $color-menu: rgba(73, 73, 81, 0.9);
 			margin: 0;
 		}
 		
-		#masthead h1 {
+		#masthead h1 a {
 			background-image: url('../i/logo-flat-white-1600.png');
 		}
 	}
@@ -220,11 +218,16 @@ $color-menu: rgba(73, 73, 81, 0.9);
 		}
 	}
 	
-	#schedule {
+	body#schedule {
+		
 		.upcoming-events, .past-events {
+			
+			font-size: 80%;
+			
 			.event {
 				padding-left: 0;
-				padding-right: $grid-gutter;
+				margin-left: 0;
+				margin-right: 0;
 			}
 		}
 	}
@@ -244,7 +247,7 @@ $color-menu: rgba(73, 73, 81, 0.9);
 	
 	.page #main h2 {
 		margin-top: 0;
-		margin-bottom: 0;
+		margin-bottom: 0.25em;
 	}
 	
 	#about-studio {
@@ -374,6 +377,11 @@ $color-menu: rgba(73, 73, 81, 0.9);
 			width: 500px;
 			margin-bottom: -10px;
 			margin-right: 0;
+		}
+		
+		#in-game .badge {
+			right: 600px;
+			margin-top: 200px;
 		}
 	}
 }
