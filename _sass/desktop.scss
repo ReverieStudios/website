@@ -24,7 +24,7 @@ $color-menu: rgba(73, 73, 81, 1);
 		border: none;
 	}
 	
-	body#schedule, body#about-studio, body#about-larp, body#contact {
+	body#schedule, body#about-studio, body#about-larp, body#contact, body#not-found {
 		display: grid;
 		grid-template:
 		". masthead nav ."
@@ -32,6 +32,7 @@ $color-menu: rgba(73, 73, 81, 1);
 		"footer footer footer footer";
 		
 		grid-template-columns: 1fr 470px 470px 1fr;
+		grid-template-rows: fit-content(200px) auto 1fr;
 		grid-column-gap: $grid-gutter;
 	}
 	

@@ -37,8 +37,8 @@ body {
 	font-size: 20px;
 	
 	&.page {
-			background-image: linear-gradient(180deg, mix($color-background-main, black, 35) 0px, $color-background-main 300px, $color-background-main);
-		}
+		background-image: linear-gradient(180deg, mix($color-background-main, black, 35) 0px, $color-background-main 300px, $color-background-main);
+	}
 }
 
 body#home {
@@ -476,7 +476,7 @@ footer p {
 
 // :about-larp 
 
-body#about-larp, body#about-studio, body#contact, body#schedule {
+body#about-larp, body#about-studio, body#contact, body#schedule, body#not-found {
 	min-height: 100vh;
 	display: grid;
 	grid-template: 
@@ -515,7 +515,7 @@ section#main {
 }
 
 // :about-studio
-#about-studio, #contact, #schedule, #seance, #acog {
+#about-studio, #contact, #schedule, #seance, #acog, #not-found {
 	footer {
 		margin-top: 1em;
 	}

@@ -313,7 +313,7 @@ footer p {
   font-size: 60%;
   text-align: center; }
 
-body#about-larp, body#about-studio, body#contact, body#schedule {
+body#about-larp, body#about-studio, body#contact, body#schedule, body#not-found {
   min-height: 100vh;
   display: grid;
   grid-template: "nav" "masthead" "main" "footer";
@@ -336,7 +336,7 @@ section#main {
       padding-left: 0;
       padding-right: 0; }
 
-#about-studio footer, #contact footer, #schedule footer, #seance footer, #acog footer {
+#about-studio footer, #contact footer, #schedule footer, #seance footer, #acog footer, #not-found footer {
   margin-top: 1em; }
 
 #principals .staff {
@@ -828,10 +828,11 @@ body#acog #in-game {
     padding: 0;
     border: none; }
 
-  body#schedule, body#about-studio, body#about-larp, body#contact {
+  body#schedule, body#about-studio, body#about-larp, body#contact, body#not-found {
     display: grid;
     grid-template: ". masthead nav ." ". main main ." "footer footer footer footer";
     grid-template-columns: 1fr 470px 470px 1fr;
+    grid-template-rows: fit-content(200px) auto 1fr;
     grid-column-gap: 20px; }
 
   body#home {
