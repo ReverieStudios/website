@@ -29,7 +29,7 @@ collections:
     permalink: /:collection/:name
   events:
     output: true
-    permalink: /:collection/:name
+    permalink: /:collection/:name/index.html
 plugins:
   - jekyll-feed
 
