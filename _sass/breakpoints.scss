@@ -216,10 +216,11 @@ $width-ipad: 600px;
 	}
 	
 	#home {
-		#banner, section > p, section > h3 {
+		#banner, section > p, section > h3, section > h4 {
 			width: $width-ipad;
 			margin-left: auto;
 			margin-right: auto;
+			padding: 0;
 		}
 		
 		.event-list .event .blurb {
