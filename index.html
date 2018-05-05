@@ -30,7 +30,7 @@ id: home
 	{% assign events = site.events | sort: 'order' %}
 	{% for e in events %}
 		<div class = "event {{e.short-name}}">
-				<a href = "{{e.url}}">
+				<a href = "/events/{{e.short-name}}">
 				<img src = "{{e.thumbnail}}" />
 				<div class = "gradient"></div>
 				

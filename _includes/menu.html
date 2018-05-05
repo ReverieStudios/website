@@ -11,7 +11,7 @@
 				<li {% if page.id == "schedule" %}class = "active"{% endif %}><a href = "/events/schedule/">Schedule</a></li>
 				{% assign events = site.events | sort: 'order' %}
 				{% for e in events %}
-				<li {% if page.short-name == {{e.short-name}} || page.id == {{e.short-name}} %}class = "active"{% endif %}><a href = "{{e.url}}">{{e.title}}</a></li>
+				<li {% if page.short-name == {{e.short-name}} || page.id == {{e.short-name}} %}class = "active"{% endif %}><a href = "/events/{{e.short-name}}">{{e.title}}</a></li>
 				{% endfor %}
 			</ul>
 		</li>
