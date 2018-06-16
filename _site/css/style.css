@@ -937,7 +937,7 @@ body#acog #in-game {
       left: 0;
       margin: 0;
       padding: 0;
-      width: 200px;
+      width: 200px !important;
       background: #494951;
       font-size: 80%; }
       body.page nav ul.main li:hover > ul:hover {
