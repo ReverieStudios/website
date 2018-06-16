@@ -39,9 +39,13 @@ $width-ipad: 600px;
 	
 	nav {
 		padding-bottom: 0;
+		
+		ul {
+			width: auto !important;
+		}
 	}
 	
-	#seance, #acog {
+	#seance, #acog, #daedalus {
 		nav {
 			padding-top: 0;
 		}
@@ -154,8 +158,15 @@ $width-ipad: 600px;
 	
 	body#daedalus {
 		.banner {
-			width: 50%;
+			width: 100%;
+			padding: 1em 0 2em 0;
 		}
+		
+		.banner p {
+			width: 80%;
+			margin: 0 auto;
+		}
+
 	}
 	
 	#lightbox #controls a {
@@ -270,5 +281,11 @@ $width-ipad: 600px;
 		top: 50px;
 		bottom: inherit;
 		left: auto;
+	}
+	
+	body#daedalus {
+		h3 {
+			padding-left: 0;
+		}
 	}
 }

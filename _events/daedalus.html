@@ -11,12 +11,73 @@ runs:
    date: '2018-03-31'
    display-date: March 31, 2018
    title: D&aelig;dalvs I
+   gallery:
+   - image: 15
+     full: /i/events/daedalus/one/Daedulus-15_full.jpg
+     thumb: /i/events/daedalus/one/Daedulus-15_th.jpg
+   - image: 29
+     full: /i/events/daedalus/one/Daedulus-29_full.jpg
+     thumb: /i/events/daedalus/one/Daedulus-29_th.jpg
+   - image: 47
+     full: /i/events/daedalus/one/Daedulus-47_full.jpg
+     thumb: /i/events/daedalus/one/Daedulus-47_th.jpg
+   - image: 52
+     full: /i/events/daedalus/one/Daedulus-52_full.jpg
+     thumb: /i/events/daedalus/one/Daedulus-52_th.jpg
+   - image: 90
+     full: /i/events/daedalus/one/Daedulus-90_full.jpg
+     thumb: /i/events/daedalus/one/Daedulus-90_th.jpg
+   - image: 97
+     full: /i/events/daedalus/one/Daedulus-97_full.jpg
+     thumb: /i/events/daedalus/one/Daedulus-97_th.jpg
+   - image: 112
+     full: /i/events/daedalus/one/Daedulus-112_full.jpg
+     thumb: /i/events/daedalus/one/Daedulus-112_th.jpg
+   - image: 177
+     full: /i/events/daedalus/one/Daedulus-177_full.jpg
+     thumb: /i/events/daedalus/one/Daedulus-177_th.jpg
+   - image: 188
+     full: /i/events/daedalus/one/Daedulus-188_full.jpg
+     thumb: /i/events/daedalus/one/Daedulus-188_th.jpg
+   - image: 272
+     full: /i/events/daedalus/one/Daedulus-272_full.jpg
+     thumb: /i/events/daedalus/one/Daedulus-272_th.jpg
+   - image: 304
+     full: /i/events/daedalus/one/Daedulus-304_full.jpg
+     thumb: /i/events/daedalus/one/Daedulus-304_th.jpg
+   - image: 306
+     full: /i/events/daedalus/one/Daedulus-306_full.jpg
+     thumb: /i/events/daedalus/one/Daedulus-306_th.jpg
+     
 ---
 
-<div class = "banner">
-	<h2>D&aelig;dalvs I</h2>
-	<h3>March 31, 2018</h3>
-	<p>Our first run as a producer of new Nordic style larps happened on March 31st and we couldn’t be more proud of how DÆDALVS went. As a first-time event, DÆDALVS was an experiment in our working with new larp writers, and Max and Jeff will both be people to watch. Please keep an eye out for future runs of this excellent larp about ‘colliding truths’.</p>
+{% assign now = 'now' | date: "%Y-%m-%d" %}
+{% assign future_events = page.runs | where_exp: "r", "r.date >= now" %}
+{% assign past_events = page.runs | where_exp: "r", "r.date < now" | reverse %}
+{% comment %}"{% endcomment %}
+
+
+
+<section id = "out-of-game">
+	{% if past_events.size > 0 %}
+
+	<div class = "past-runs">
+		
+		{% for e in past_events %}
+		
+			<h3>{{e.title}}</h3>
+			<h4>{{e.display-date}}</h4>
+			
+			{% include gallery.html e = e idx = forloop.index0 %}
+		
+		{% endfor %}
+		
+		{% include lightbox.html runs = past_events %}
+		
+	</div>
 	
-	<p>Check back for more details about this exciting event!</p>
-</div>
+{% endif %}
+</section>
+
+
+	

@@ -771,8 +771,6 @@ body#eskhaton {
 
 // :event - daedalus
 body#daedalus {
-	background: black url('../i/events/daedalus/daedalus-splash.jpg') center center no-repeat;
-	background-size: cover;
 	display: grid;
 	grid-template: 
 	"nav"
@@ -787,25 +785,27 @@ body#daedalus {
 	}
 	
 	.banner {
-		background: rgba(0, 0, 0, 0.4);
-		border: 1px dotted #fff;
-		width: 80%;
-		flex: 0 0 auto;
-		align-self: center;
+		background: black url('../i/events/daedalus/daedalus-splash.jpg') center center no-repeat;
+		background-size: cover;
 		padding: 5vw;
-		margin: 5vw;
-		margin-bottom: 10vh;
-		margin-top: 10vh;
+		
+		h2 {
+			text-align: center;
+			color: #fff;
+			font-size: 180%;
+		}
 	}
 	
-	h2, h3 {
+	h2, h3, h4 {
 		margin: 0;
-		padding: 0;
-		text-align: center;
-		color: #fff;
+		padding: 0 0 0 $space-gutter;
 		width: auto;
 		border: none;
 		background: transparent;
+	}
+	
+	h3 {
+		margin-top: 1em;
 	}
 	
 	.banner p {		

@@ -501,8 +501,6 @@ body#eskhaton {
   background-size: cover; }
 
 body#daedalus {
-  background: black url("../i/events/daedalus/daedalus-splash.jpg") center center no-repeat;
-  background-size: cover;
   display: grid;
   grid-template: "nav" "main" "footer";
   grid-template-rows: auto auto 1fr;
@@ -511,23 +509,21 @@ body#daedalus {
     display: flex;
     flex-direction: column; }
   body#daedalus .banner {
-    background: rgba(0, 0, 0, 0.4);
-    border: 1px dotted #fff;
-    width: 80%;
-    flex: 0 0 auto;
-    align-self: center;
-    padding: 5vw;
-    margin: 5vw;
-    margin-bottom: 10vh;
-    margin-top: 10vh; }
-  body#daedalus h2, body#daedalus h3 {
+    background: black url("../i/events/daedalus/daedalus-splash.jpg") center center no-repeat;
+    background-size: cover;
+    padding: 5vw; }
+    body#daedalus .banner h2 {
+      text-align: center;
+      color: #fff;
+      font-size: 180%; }
+  body#daedalus h2, body#daedalus h3, body#daedalus h4 {
     margin: 0;
-    padding: 0;
-    text-align: center;
-    color: #fff;
+    padding: 0 0 0 4vw;
     width: auto;
     border: none;
     background: transparent; }
+  body#daedalus h3 {
+    margin-top: 1em; }
   body#daedalus .banner p {
     width: auto;
     color: #fff;
@@ -676,8 +672,10 @@ body#acog #in-game {
 
   nav {
     padding-bottom: 0; }
+    nav ul {
+      width: auto !important; }
 
-  #seance nav, #acog nav {
+  #seance nav, #acog nav, #daedalus nav {
     padding-top: 0; }
 
   .event-list {
@@ -737,7 +735,11 @@ body#acog #in-game {
       margin-top: 2vw; }
 
   body#daedalus .banner {
-    width: 50%; }
+    width: 100%;
+    padding: 1em 0 2em 0; }
+  body#daedalus .banner p {
+    width: 80%;
+    margin: 0 auto; }
 
   #lightbox #controls a {
     width: 5vw;
@@ -814,7 +816,10 @@ body#acog #in-game {
     width: 200px;
     top: 50px;
     bottom: inherit;
-    left: auto; } }
+    left: auto; }
+
+  body#daedalus h3 {
+    padding-left: 0; } }
 @media screen and (min-width: 1025px) {
   body {
     font-size: 40px; }
@@ -988,43 +993,43 @@ body#acog #in-game {
     width: 100%;
     margin: 0; }
 
-  body#seance, body#acog {
+  body#seance, body#acog, body#daedalus {
     grid-template: ". in-game-disclaimer nav ." "main main main main" "footer footer footer footer";
     grid-template-columns: 1fr 884px 76px 1fr; }
-    body#seance #in-game-disclaimer, body#seance #out-of-game-disclaimer, body#acog #in-game-disclaimer, body#acog #out-of-game-disclaimer {
+    body#seance #in-game-disclaimer, body#seance #out-of-game-disclaimer, body#acog #in-game-disclaimer, body#acog #out-of-game-disclaimer, body#daedalus #in-game-disclaimer, body#daedalus #out-of-game-disclaimer {
       font-size: 60%;
       padding: 1em 0; }
-    body#seance nav, body#acog nav {
+    body#seance nav, body#acog nav, body#daedalus nav {
       padding-right: 0;
       display: block;
       align-self: center; }
-    body#seance #in-game p, body#acog #in-game p {
+    body#seance #in-game p, body#acog #in-game p, body#daedalus #in-game p {
       width: 960px; }
-    body#seance #out-of-game, body#acog #out-of-game {
+    body#seance #out-of-game, body#acog #out-of-game, body#daedalus #out-of-game {
       width: 960px;
       margin: 0 auto; }
-      body#seance #out-of-game p, body#seance #out-of-game ul, body#seance #out-of-game ol, body#seance #out-of-game h2, body#seance #out-of-game h3, body#acog #out-of-game p, body#acog #out-of-game ul, body#acog #out-of-game ol, body#acog #out-of-game h2, body#acog #out-of-game h3 {
+      body#seance #out-of-game p, body#seance #out-of-game ul, body#seance #out-of-game ol, body#seance #out-of-game h2, body#seance #out-of-game h3, body#acog #out-of-game p, body#acog #out-of-game ul, body#acog #out-of-game ol, body#acog #out-of-game h2, body#acog #out-of-game h3, body#daedalus #out-of-game p, body#daedalus #out-of-game ul, body#daedalus #out-of-game ol, body#daedalus #out-of-game h2, body#daedalus #out-of-game h3 {
         width: 100%;
         padding: 0; }
-    body#seance #out-of-game ul, body#seance #out-of-game ol, body#acog #out-of-game ul, body#acog #out-of-game ol {
+    body#seance #out-of-game ul, body#seance #out-of-game ol, body#acog #out-of-game ul, body#acog #out-of-game ol, body#daedalus #out-of-game ul, body#daedalus #out-of-game ol {
       padding-left: 1em; }
-      body#seance #out-of-game ul li, body#seance #out-of-game ol li, body#acog #out-of-game ul li, body#acog #out-of-game ol li {
+      body#seance #out-of-game ul li, body#seance #out-of-game ol li, body#acog #out-of-game ul li, body#acog #out-of-game ol li, body#daedalus #out-of-game ul li, body#daedalus #out-of-game ol li {
         margin-bottom: 0.5em; }
-    body#seance #in-game img, body#acog #in-game img {
+    body#seance #in-game img, body#acog #in-game img, body#daedalus #in-game img {
       width: 300px; }
-    body#seance #main .past-runs, body#seance #main .gallery, body#acog #main .past-runs, body#acog #main .gallery {
+    body#seance #main .past-runs, body#seance #main .gallery, body#acog #main .past-runs, body#acog #main .gallery, body#daedalus #main .past-runs, body#daedalus #main .gallery {
       margin: 0;
       margin-bottom: 1em; }
-      body#seance #main .past-runs h3, body#seance #main .past-runs h4, body#seance #main .gallery h3, body#seance #main .gallery h4, body#acog #main .past-runs h3, body#acog #main .past-runs h4, body#acog #main .gallery h3, body#acog #main .gallery h4 {
+      body#seance #main .past-runs h3, body#seance #main .past-runs h4, body#seance #main .gallery h3, body#seance #main .gallery h4, body#acog #main .past-runs h3, body#acog #main .past-runs h4, body#acog #main .gallery h3, body#acog #main .gallery h4, body#daedalus #main .past-runs h3, body#daedalus #main .past-runs h4, body#daedalus #main .gallery h3, body#daedalus #main .gallery h4 {
         margin: 0; }
-    body#seance #main .gallery .image, body#acog #main .gallery .image {
+    body#seance #main .gallery .image, body#acog #main .gallery .image, body#daedalus #main .gallery .image {
       flex: 0 0 302.6666666667px;
       margin-right: 20px;
       margin-bottom: 20px;
       padding: 1px;
       background: #000;
       border: 1px solid #fff; }
-    body#seance #main .gallery .image:nth-child(3n), body#acog #main .gallery .image:nth-child(3n) {
+    body#seance #main .gallery .image:nth-child(3n), body#acog #main .gallery .image:nth-child(3n), body#daedalus #main .gallery .image:nth-child(3n) {
       margin-right: 0; }
 
   #lightbox #controls a {
@@ -1037,4 +1042,17 @@ body#acog #in-game {
     margin-right: 0; }
   body#acog #in-game .badge {
     right: 600px;
-    margin-top: 200px; } }
+    margin-top: 200px; }
+
+  body#daedalus nav {
+    display: flex;
+    flex-direction: row-reverse; }
+    body#daedalus nav > a.menu-toggle {
+      margin: 0 20px 0 0; }
+  body#daedalus .banner h2 {
+    padding-top: 300px; }
+  body#daedalus h3 {
+    margin-top: 1em !important; }
+  body#daedalus h4 {
+    padding-left: 0;
+    margin-bottom: 0.5em !important; } }

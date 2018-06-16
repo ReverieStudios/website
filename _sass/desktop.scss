@@ -293,7 +293,7 @@ $color-menu: rgba(73, 73, 81, 1);
 		}
 	}
 	
-	body#seance, body#acog {
+	body#seance, body#acog, body#daedalus {
 		
 		grid-template: 
 		". in-game-disclaimer nav ."
@@ -383,6 +383,32 @@ $color-menu: rgba(73, 73, 81, 1);
 		#in-game .badge {
 			right: 600px;
 			margin-top: 200px;
+		}
+	}
+	
+	body#daedalus {
+		
+		nav {
+			display: flex;
+			flex-direction: row-reverse;
+			
+			& > a.menu-toggle {
+				margin: 0 $grid-gutter 0 0;
+			}
+		}
+		
+		
+		.banner h2 {
+			padding-top: 300px;
+		}
+		
+		h3 {
+			margin-top: 1em !important;
+		}
+		
+		h4 {
+			padding-left: 0;
+			margin-bottom: 0.5em !important;
 		}
 	}
 }
