@@ -264,6 +264,8 @@ p {
     background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.95) 75%); }
   .event-list .event.acog .gradient {
     background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.75), transparent); }
+  .event-list .event.eskhaton .gradient {
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.75), transparent); }
 
 #events .event.daedalus h3, #events .event.daedalus p {
   color: #000; }
@@ -473,7 +475,7 @@ body#schedule .event img {
     display: block; }
 
 body#eskhaton {
-  background: #38383c url("../i/events/acog_homepage.jpg") center center no-repeat;
+  background: #38383c url("../i/events/eskhaton/eskhaton_square.jpg") center center no-repeat;
   background-size: cover; }
   body#eskhaton #main {
     display: flex;
@@ -482,7 +484,8 @@ body#eskhaton {
     height: 90vh; }
     body#eskhaton #main div.banner {
       flex: 0 1 auto;
-      padding: 4vw; }
+      padding: 4vw;
+      background: rgba(0, 0, 0, 0.33); }
     body#eskhaton #main .banner h2 {
       background: transparent;
       text-align: center;
@@ -491,14 +494,27 @@ body#eskhaton {
       width: 100%;
       padding: 0; }
     body#eskhaton #main .banner p {
-      margin: 0;
+      margin: 0 auto 1em auto;
       padding: 0;
-      text-align: center;
-      width: 100%; }
-
-body#eskhaton {
-  background: #38383c url("../i/events/eskhaton/eskhaton_square.jpg") center center no-repeat;
-  background-size: cover; }
+      width: 75%;
+      color: #fff; }
+    body#eskhaton #main .banner .learn-more {
+      display: flex;
+      justify-content: center; }
+      body#eskhaton #main .banner .learn-more a {
+        flex: 0 0 auto;
+        border: 1px solid #fff;
+        background: #333;
+        color: #fff;
+        font-family: Arial, Verdana, Geneva, sans-serif;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 0.25em 1.25em 0.25em 0.5em;
+        border-radius: 500px;
+        background-image: url("../i/arrow-white-right.png");
+        background-size: 0.75em 0.75em;
+        background-repeat: no-repeat;
+        background-position: right 0.25em center; }
 
 body#daedalus {
   display: grid;

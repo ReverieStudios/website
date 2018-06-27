@@ -393,7 +393,7 @@ p {
 	}
 	
 	&.eskhaton .gradient {
-		
+		background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.75), transparent);
 	}
 	
 	
@@ -732,7 +732,7 @@ body#schedule {
 // :event - eskhaton
 
 body#eskhaton {
-	background: $color-background-main url('../i/events/acog_homepage.jpg') center center no-repeat;
+	background: $color-background-main url('../i/events/eskhaton/eskhaton_square.jpg') center center no-repeat;
 	background-size: cover;
 	
 	#main {
@@ -744,6 +744,7 @@ body#eskhaton {
 		div.banner {
 			flex: 0 1 auto;
 			padding: $space-gutter;
+			background: rgba(0, 0, 0, 0.33);
 		}
 		
 		.banner h2 {
@@ -756,17 +757,34 @@ body#eskhaton {
 		}
 		
 		.banner p {
-			margin: 0;
+			margin: 0 auto 1em auto;
 			padding: 0;
-			text-align: center;
-			width: 100%;
+			width: 75%;
+			color: #fff;
+		}
+		
+		.banner .learn-more {
+			display: flex;
+			justify-content: center;
+			
+			a {
+				flex: 0 0 auto;
+				border: 1px solid #fff;
+				background: #333;
+				color: #fff;
+				font-family: $text-aux;
+				text-transform: uppercase;
+				font-weight: bold;
+				padding: 0.25em 1.25em 0.25em 0.5em;
+				border-radius: 500px;
+				background-image: url('../i/arrow-white-right.png');
+				background-size: 0.75em 0.75em;
+				background-repeat: no-repeat;
+				background-position: right 0.25em center;
+				
+			}
 		}
 	}
-}
-
-body#eskhaton {
-	background: $color-background-main url('../i/events/eskhaton/eskhaton_square.jpg') center center no-repeat;
-	background-size: cover;
 }
 
 // :event - daedalus
