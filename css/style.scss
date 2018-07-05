@@ -190,6 +190,11 @@ a {
 	border-bottom: 1px solid $color-link-main;
 }
 
+h4 > sup {
+	font-size: 60%;
+	line-height: 0.2em;
+}
+
 p.about-more {
 	display: flex;
 	align-items: center;

@@ -121,6 +121,10 @@ a {
   text-decoration: none;
   border-bottom: 1px solid #fff; }
 
+h4 > sup {
+  font-size: 60%;
+  line-height: 0.2em; }
+
 p.about-more {
   display: flex;
   align-items: center;
