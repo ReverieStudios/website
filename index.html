@@ -7,6 +7,7 @@ id: home
 {% include masthead-standard.html %}
 {% include menu.html %}
 
+{% comment %}
 <section id = "hero">
 	<div id = "banner">
 		<img src = "i/homepage_hero.jpg" />
@@ -17,17 +18,57 @@ id: home
 	</div>
 </section>
 
+
 <section id = "intro">
 	{% capture intro %}{% include text-intro.md %}{% endcapture %}
 	{{intro | markdownify}}
 </section>
 
+{% endcomment %}
+
+
 <section id = "events">
 	
-	<h2>Events</h2>
+
 	
+	{% assign events = site.events | sort: "order" %}
+	{% assign past_events = site.emptyArray %}
+	{% assign future_events = site.emptyArray %}
+	{% assign now = 'now' | date: '%Y-%m-%d' %}
+
+{% for e in events %}
+	{% assign last_run = e.runs | sort: "date" | last %}
+	
+	{% if last_run.date >= now %}	  
+	  {% assign future_events = future_events | push: e %}
+	 {% else %}
+	  {% assign past_events = past_events | push: e %}
+	{% endif %}	
+{% endfor %}
+
+	<h2>Upcoming Events</h2>
 	<div class = "event-list">
-	{% assign events = site.events | sort: 'order' %}
+		
+	{% assign events = future_events %}
+	{% for e in events %}
+		<div class = "event {{e.short-name}}">
+				<a href = "/events/{{e.short-name}}">
+				<img src = "{{e.thumbnail}}" />
+				<div class = "gradient"></div>
+				
+				<div class = "blurb">
+					<h3>{{e.title}}</h3>
+					{{e.blurb | markdownify}}
+				</div>
+			</a>
+		</div>	
+	{% endfor %}
+	</div>
+	
+	<h2>Past Events</h2>
+	<div class = "event-list">
+		
+	{% assign events = past_events %}
 	{% for e in events %}
 		<div class = "event {{e.short-name}}">
 				<a href = "/events/{{e.short-name}}">

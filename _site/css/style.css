@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700|Oswald:500");
+@import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700|Oswald:500|Charm");
 * {
   margin: 0;
   padding: 0;
@@ -120,6 +120,12 @@ a {
   color: #fff;
   text-decoration: none;
   border-bottom: 1px solid #fff; }
+
+img.hero {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 4vw; }
 
 h4 > sup {
   font-size: 60%;
@@ -319,7 +325,7 @@ footer p {
   font-size: 60%;
   text-align: center; }
 
-body#about-larp, body#about-studio, body#contact, body#schedule, body#not-found {
+body#about-larp, body#about-studio, body#contact, body#schedule, body#not-found, body.page {
   min-height: 100vh;
   display: grid;
   grid-template: "nav" "masthead" "main" "footer";
@@ -327,11 +333,10 @@ body#about-larp, body#about-studio, body#contact, body#schedule, body#not-found 
 
 section#main {
   grid-area: main; }
-  section#main h2 {
-    margin-bottom: 0.5em;
+  section#main h2:first-child {
+    margin-top: 0; }
+  section#main h2 + p, section#main h2 + #principals {
     margin-top: 1em; }
-    section#main h2:first-child {
-      margin-top: 0; }
   section#main blockquote {
     border-left: 1px solid #e7e7f4;
     margin-left: 4vw;
@@ -478,48 +483,6 @@ body#schedule .event img {
     height: auto;
     display: block; }
 
-body#eskhaton {
-  background: #38383c url("../i/events/eskhaton/eskhaton_square.jpg") center center no-repeat;
-  background-size: cover; }
-  body#eskhaton #main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 90vh; }
-    body#eskhaton #main div.banner {
-      flex: 0 1 auto;
-      padding: 4vw;
-      background: rgba(0, 0, 0, 0.33); }
-    body#eskhaton #main .banner h2 {
-      background: transparent;
-      text-align: center;
-      color: #fff;
-      border: none;
-      width: 100%;
-      padding: 0; }
-    body#eskhaton #main .banner p {
-      margin: 0 auto 1em auto;
-      padding: 0;
-      width: 75%;
-      color: #fff; }
-    body#eskhaton #main .banner .learn-more {
-      display: flex;
-      justify-content: center; }
-      body#eskhaton #main .banner .learn-more a {
-        flex: 0 0 auto;
-        border: 1px solid #fff;
-        background: #333;
-        color: #fff;
-        font-family: Arial, Verdana, Geneva, sans-serif;
-        text-transform: uppercase;
-        font-weight: bold;
-        padding: 0.25em 1.25em 0.25em 0.5em;
-        border-radius: 500px;
-        background-image: url("../i/arrow-white-right.png");
-        background-size: 0.75em 0.75em;
-        background-repeat: no-repeat;
-        background-position: right 0.25em center; }
-
 body#daedalus {
   display: grid;
   grid-template: "nav" "main" "footer";
@@ -549,33 +512,33 @@ body#daedalus {
     color: #fff;
     padding: 0; }
 
-body#seance, body#acog {
+body#seance, body#acog, body#eskhaton {
   display: grid;
   grid-template: "in-game-disclaimer nav" "main main" "footer footer";
   grid-template-columns: 1fr auto; }
-  body#seance #in-game-disclaimer, body#acog #in-game-disclaimer {
+  body#seance #in-game-disclaimer, body#acog #in-game-disclaimer, body#eskhaton #in-game-disclaimer {
     grid-area: in-game-disclaimer;
     font-family: Arial, Verdana, Geneva, sans-serif;
     font-size: 90%;
     padding-top: 4vw;
     padding-bottom: 4vw; }
-    body#seance #in-game-disclaimer p.skip-link, body#acog #in-game-disclaimer p.skip-link {
+    body#seance #in-game-disclaimer p.skip-link, body#acog #in-game-disclaimer p.skip-link, body#eskhaton #in-game-disclaimer p.skip-link {
       margin-bottom: 0; }
-  body#seance #out-of-game-disclaimer, body#acog #out-of-game-disclaimer {
+  body#seance #out-of-game-disclaimer, body#acog #out-of-game-disclaimer, body#eskhaton #out-of-game-disclaimer {
     font-family: Arial, Verdana, Geneva, sans-serif;
     font-size: 90%; }
-  body#seance nav, body#acog nav {
+  body#seance nav, body#acog nav, body#eskhaton nav {
     grid-area: nav;
     width: auto;
     display: flex;
     justify-content: center;
     flex-direction: column; }
-    body#seance nav a.menu-toggle, body#acog nav a.menu-toggle {
+    body#seance nav a.menu-toggle, body#acog nav a.menu-toggle, body#eskhaton nav a.menu-toggle {
       display: inline-block;
       flex: 0 0 auto; }
-  body#seance #main, body#acog #main {
+  body#seance #main, body#acog #main, body#eskhaton #main {
     grid-area: main; }
-  body#seance footer, body#acog footer {
+  body#seance footer, body#acog footer, body#eskhaton footer {
     grid-area: footer; }
 
 body#seance #in-game {
@@ -669,6 +632,94 @@ body#acog #in-game {
     background-size: contain;
     transform: rotate(-7deg); }
 
+body#eskhaton #in-game {
+  font-family: Lora;
+  background: #fff;
+  color: #222;
+  background: url("../i/events/eskhaton/paper.jpg") left top;
+  background-size: 350px 350px; }
+body#eskhaton #in-game h3 {
+  font-family: Lora;
+  text-transform: none;
+  font-weight: normal;
+  margin-bottom: 0.25em;
+  width: auto; }
+body#eskhaton #in-game p {
+  width: auto;
+  box-sizing: border-box; }
+body#eskhaton #opal::before {
+  background: url("../i/events/eskhaton/feather.png") center center no-repeat;
+  background-size: contain;
+  content: " ";
+  width: 50%;
+  height: 30vw;
+  position: relative;
+  display: block;
+  margin: 0 auto; }
+body#eskhaton #cults:before {
+  background: transparent url("../i/events/eskhaton/eskhaton_sigils_horizontal.png") center center no-repeat;
+  background-size: contain;
+  content: " ";
+  width: 80%;
+  height: 30vw;
+  position: relative;
+  display: block;
+  margin: 0 auto; }
+body#eskhaton #opal #signature {
+  margin-left: 50%;
+  position: relative; }
+  body#eskhaton #opal #signature:before {
+    content: "\2014";
+    position: absolute;
+    left: -1em;
+    top: 0; }
+  body#eskhaton #opal #signature .name, body#eskhaton #opal #signature .title {
+    display: block;
+    font-family: Charm;
+    margin-bottom: -0.25em; }
+body#eskhaton #opal .salutation {
+  font-family: Charm;
+  padding-left: 4vw; }
+body#eskhaton #cults {
+  padding-bottom: 10vw; }
+body#eskhaton #cults h3 {
+  font-family: Charm; }
+body#eskhaton #cults p:first-letter {
+  float: left;
+  font-size: 350%;
+  margin: 0.10em 0.15em 0 0;
+  font-family: Charm;
+  line-height: 1em;
+  background: #000;
+  color: #fff;
+  padding: 0.1em 0.2em;
+  border: 0.09em solid #ccc; }
+body#eskhaton #cults #mareen p:first-letter {
+  color: #323b56;
+  border-color: #323b56;
+  background: #d0e3e8 url("../i/events/eskhaton/mareen_back.jpg") top left no-repeat;
+  background-size: cover; }
+body#eskhaton #cults #extant p:first-letter {
+  color: #eaf1e4;
+  border-color: #9fa09e;
+  background: #d0e3e8 url("../i/events/eskhaton/extant_back.jpg") top left no-repeat;
+  background-size: cover; }
+body#eskhaton #cults #seekers p:first-letter {
+  color: #e0e1d4;
+  border-color: #333;
+  background: #d0e3e8 url("../i/events/eskhaton/seekers_back.jpg") top right no-repeat;
+  background-size: cover; }
+body#eskhaton #cults #expositors p:first-letter {
+  color: #b2274c;
+  border-color: #c22f57;
+  background: #d0e3e8 url("../i/events/eskhaton/expositors_back.jpg") top right no-repeat;
+  background-size: cover; }
+body#eskhaton #cults #progenus p:first-letter {
+  color: #81b1e4;
+  border-color: #6887a9;
+  background: #d0e3e8 url("../i/events/eskhaton/progenus_back.jpg") top right no-repeat;
+  background-size: cover; }
+
 @media screen and (max-width: 320px) {
   body {
     font-size: 18px; } }
@@ -677,7 +728,13 @@ body#acog #in-game {
     font-size: 25px; }
 
   body#acog #in-game .letter {
-    width: 300px; } }
+    width: 300px; }
+
+  br.mobile {
+    display: none; }
+
+  body#eskhaton #cults section {
+    margin-bottom: 1em; } }
 @media screen and (min-width: 600px) {
   body {
     font-size: 25px; }
@@ -695,7 +752,7 @@ body#acog #in-game {
     nav ul {
       width: auto !important; }
 
-  #seance nav, #acog nav, #daedalus nav {
+  #seance nav, #acog nav, #daedalus nav, #eskhaton nav {
     padding-top: 0; }
 
   .event-list {
@@ -839,7 +896,22 @@ body#acog #in-game {
     left: auto; }
 
   body#daedalus h3 {
-    padding-left: 0; } }
+    padding-left: 0; }
+
+  body#eskhaton #in-game {
+    font-size: 25px;
+    display: grid;
+    grid-template: "opal cults";
+    grid-template-columns: 40% 60%; }
+    body#eskhaton #in-game p {
+      width: 100%; }
+    body#eskhaton #in-game #opal {
+      grid-area: opal;
+      font-size: 120%; }
+    body#eskhaton #in-game #cults {
+      grid-area: cults; }
+    body#eskhaton #in-game #opal::before, body#eskhaton #in-game #cults::before {
+      height: 20vw; } }
 @media screen and (min-width: 1025px) {
   body {
     font-size: 40px; }
@@ -853,7 +925,12 @@ body#acog #in-game {
     padding: 0;
     border: none; }
 
-  body#schedule, body#about-studio, body#about-larp, body#contact, body#not-found {
+  img.hero {
+    border: 1px solid white;
+    padding: 1px;
+    background: black; }
+
+  body#schedule, body#about-studio, body#about-larp, body#contact, body#not-found, body.page {
     display: grid;
     grid-template: ". masthead nav ." ". main main ." "footer footer footer footer";
     grid-template-columns: 1fr 470px 470px 1fr;
@@ -957,7 +1034,7 @@ body#acog #in-game {
       left: 0;
       margin: 0;
       padding: 0;
-      width: 200px !important;
+      width: 300px !important;
       background: #494951;
       font-size: 80%; }
       body.page nav ul.main li:hover > ul:hover {
@@ -1013,43 +1090,43 @@ body#acog #in-game {
     width: 100%;
     margin: 0; }
 
-  body#seance, body#acog, body#daedalus {
+  body#seance, body#acog, body#daedalus, body#eskhaton {
     grid-template: ". in-game-disclaimer nav ." "main main main main" "footer footer footer footer";
     grid-template-columns: 1fr 884px 76px 1fr; }
-    body#seance #in-game-disclaimer, body#seance #out-of-game-disclaimer, body#acog #in-game-disclaimer, body#acog #out-of-game-disclaimer, body#daedalus #in-game-disclaimer, body#daedalus #out-of-game-disclaimer {
+    body#seance #in-game-disclaimer, body#seance #out-of-game-disclaimer, body#acog #in-game-disclaimer, body#acog #out-of-game-disclaimer, body#daedalus #in-game-disclaimer, body#daedalus #out-of-game-disclaimer, body#eskhaton #in-game-disclaimer, body#eskhaton #out-of-game-disclaimer {
       font-size: 60%;
       padding: 1em 0; }
-    body#seance nav, body#acog nav, body#daedalus nav {
+    body#seance nav, body#acog nav, body#daedalus nav, body#eskhaton nav {
       padding-right: 0;
       display: block;
       align-self: center; }
-    body#seance #in-game p, body#acog #in-game p, body#daedalus #in-game p {
+    body#seance #in-game p, body#acog #in-game p, body#daedalus #in-game p, body#eskhaton #in-game p {
       width: 960px; }
-    body#seance #out-of-game, body#acog #out-of-game, body#daedalus #out-of-game {
+    body#seance #out-of-game, body#acog #out-of-game, body#daedalus #out-of-game, body#eskhaton #out-of-game {
       width: 960px;
       margin: 0 auto; }
-      body#seance #out-of-game p, body#seance #out-of-game ul, body#seance #out-of-game ol, body#seance #out-of-game h2, body#seance #out-of-game h3, body#acog #out-of-game p, body#acog #out-of-game ul, body#acog #out-of-game ol, body#acog #out-of-game h2, body#acog #out-of-game h3, body#daedalus #out-of-game p, body#daedalus #out-of-game ul, body#daedalus #out-of-game ol, body#daedalus #out-of-game h2, body#daedalus #out-of-game h3 {
+      body#seance #out-of-game p, body#seance #out-of-game ul, body#seance #out-of-game ol, body#seance #out-of-game h2, body#seance #out-of-game h3, body#acog #out-of-game p, body#acog #out-of-game ul, body#acog #out-of-game ol, body#acog #out-of-game h2, body#acog #out-of-game h3, body#daedalus #out-of-game p, body#daedalus #out-of-game ul, body#daedalus #out-of-game ol, body#daedalus #out-of-game h2, body#daedalus #out-of-game h3, body#eskhaton #out-of-game p, body#eskhaton #out-of-game ul, body#eskhaton #out-of-game ol, body#eskhaton #out-of-game h2, body#eskhaton #out-of-game h3 {
         width: 100%;
         padding: 0; }
-    body#seance #out-of-game ul, body#seance #out-of-game ol, body#acog #out-of-game ul, body#acog #out-of-game ol, body#daedalus #out-of-game ul, body#daedalus #out-of-game ol {
+    body#seance #out-of-game ul, body#seance #out-of-game ol, body#acog #out-of-game ul, body#acog #out-of-game ol, body#daedalus #out-of-game ul, body#daedalus #out-of-game ol, body#eskhaton #out-of-game ul, body#eskhaton #out-of-game ol {
       padding-left: 1em; }
-      body#seance #out-of-game ul li, body#seance #out-of-game ol li, body#acog #out-of-game ul li, body#acog #out-of-game ol li, body#daedalus #out-of-game ul li, body#daedalus #out-of-game ol li {
+      body#seance #out-of-game ul li, body#seance #out-of-game ol li, body#acog #out-of-game ul li, body#acog #out-of-game ol li, body#daedalus #out-of-game ul li, body#daedalus #out-of-game ol li, body#eskhaton #out-of-game ul li, body#eskhaton #out-of-game ol li {
         margin-bottom: 0.5em; }
-    body#seance #in-game img, body#acog #in-game img, body#daedalus #in-game img {
+    body#seance #in-game img, body#acog #in-game img, body#daedalus #in-game img, body#eskhaton #in-game img {
       width: 300px; }
-    body#seance #main .past-runs, body#seance #main .gallery, body#acog #main .past-runs, body#acog #main .gallery, body#daedalus #main .past-runs, body#daedalus #main .gallery {
+    body#seance #main .past-runs, body#seance #main .gallery, body#acog #main .past-runs, body#acog #main .gallery, body#daedalus #main .past-runs, body#daedalus #main .gallery, body#eskhaton #main .past-runs, body#eskhaton #main .gallery {
       margin: 0;
       margin-bottom: 1em; }
-      body#seance #main .past-runs h3, body#seance #main .past-runs h4, body#seance #main .gallery h3, body#seance #main .gallery h4, body#acog #main .past-runs h3, body#acog #main .past-runs h4, body#acog #main .gallery h3, body#acog #main .gallery h4, body#daedalus #main .past-runs h3, body#daedalus #main .past-runs h4, body#daedalus #main .gallery h3, body#daedalus #main .gallery h4 {
+      body#seance #main .past-runs h3, body#seance #main .past-runs h4, body#seance #main .gallery h3, body#seance #main .gallery h4, body#acog #main .past-runs h3, body#acog #main .past-runs h4, body#acog #main .gallery h3, body#acog #main .gallery h4, body#daedalus #main .past-runs h3, body#daedalus #main .past-runs h4, body#daedalus #main .gallery h3, body#daedalus #main .gallery h4, body#eskhaton #main .past-runs h3, body#eskhaton #main .past-runs h4, body#eskhaton #main .gallery h3, body#eskhaton #main .gallery h4 {
         margin: 0; }
-    body#seance #main .gallery .image, body#acog #main .gallery .image, body#daedalus #main .gallery .image {
+    body#seance #main .gallery .image, body#acog #main .gallery .image, body#daedalus #main .gallery .image, body#eskhaton #main .gallery .image {
       flex: 0 0 302.6666666667px;
       margin-right: 20px;
       margin-bottom: 20px;
       padding: 1px;
       background: #000;
       border: 1px solid #fff; }
-    body#seance #main .gallery .image:nth-child(3n), body#acog #main .gallery .image:nth-child(3n), body#daedalus #main .gallery .image:nth-child(3n) {
+    body#seance #main .gallery .image:nth-child(3n), body#acog #main .gallery .image:nth-child(3n), body#daedalus #main .gallery .image:nth-child(3n), body#eskhaton #main .gallery .image:nth-child(3n) {
       margin-right: 0; }
 
   #lightbox #controls a {
@@ -1075,4 +1152,7 @@ body#acog #in-game {
     margin-top: 1em !important; }
   body#daedalus h4 {
     padding-left: 0;
-    margin-bottom: 0.5em !important; } }
+    margin-bottom: 0.5em !important; }
+
+  body#eskhaton #in-game p {
+    width: inherit; } }

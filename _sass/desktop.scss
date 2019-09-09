@@ -24,7 +24,13 @@ $color-menu: rgba(73, 73, 81, 1);
 		border: none;
 	}
 	
-	body#schedule, body#about-studio, body#about-larp, body#contact, body#not-found {
+	img.hero {
+		border: 1px solid white;
+		padding: 1px;
+		background: black;
+	}
+	
+	body#schedule, body#about-studio, body#about-larp, body#contact, body#not-found, body.page {
 		display: grid;
 		grid-template:
 		". masthead nav ."
@@ -197,7 +203,7 @@ $color-menu: rgba(73, 73, 81, 1);
 			left: 0;
 			margin: 0;
 			padding: 0;
-			width: 200px !important;
+			width: 300px !important;
 			background: $color-menu;
 			font-size: 80%;
 			
@@ -293,7 +299,7 @@ $color-menu: rgba(73, 73, 81, 1);
 		}
 	}
 	
-	body#seance, body#acog, body#daedalus {
+	body#seance, body#acog, body#daedalus, body#eskhaton {
 		
 		grid-template: 
 		". in-game-disclaimer nav ."
@@ -409,6 +415,14 @@ $color-menu: rgba(73, 73, 81, 1);
 		h4 {
 			padding-left: 0;
 			margin-bottom: 0.5em !important;
+		}
+	}
+	
+	body#eskhaton {
+		#in-game {
+			p {
+				width: inherit;
+			}
 		}
 	}
 }

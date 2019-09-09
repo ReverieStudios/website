@@ -3,7 +3,7 @@
 
 // :fonts
 
-@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700|Oswald:500');
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700|Oswald:500|Charm');
 $text-heading: Oswald, Impact, sans-serif;
 $text-main: "Lora", Georgia, serif;
 $text-aux: Arial, Verdana, Geneva, sans-serif;
@@ -188,6 +188,13 @@ a {
 	color: $color-link-main;
 	text-decoration: none;
 	border-bottom: 1px solid $color-link-main;
+}
+
+img.hero {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin-bottom: 4vw;
 }
 
 h4 > sup {
@@ -481,7 +488,7 @@ footer p {
 
 // :about-larp 
 
-body#about-larp, body#about-studio, body#contact, body#schedule, body#not-found {
+body#about-larp, body#about-studio, body#contact, body#schedule, body#not-found, body.page {
 	min-height: 100vh;
 	display: grid;
 	grid-template: 
@@ -497,11 +504,15 @@ section#main {
 	grid-area: main;
 	
 	h2 {
-		margin-bottom: 0.5em;
-		margin-top: 1em;
+		//margin-bottom: 0.5em;
+		//margin-top: 1em;
 		
 		&:first-child {
 			margin-top: 0;
+		}
+		
+		& + p, & + #principals {
+			margin-top: 1em;
 		}
 	}
 
@@ -734,64 +745,6 @@ body#schedule {
 	}
 }
 
-// :event - eskhaton
-
-body#eskhaton {
-	background: $color-background-main url('../i/events/eskhaton/eskhaton_square.jpg') center center no-repeat;
-	background-size: cover;
-	
-	#main {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		height: 90vh;
-		
-		div.banner {
-			flex: 0 1 auto;
-			padding: $space-gutter;
-			background: rgba(0, 0, 0, 0.33);
-		}
-		
-		.banner h2 {
-			background: transparent;
-			text-align: center;
-			color: #fff;
-			border: none;
-			width: 100%;
-			padding: 0;
-		}
-		
-		.banner p {
-			margin: 0 auto 1em auto;
-			padding: 0;
-			width: 75%;
-			color: #fff;
-		}
-		
-		.banner .learn-more {
-			display: flex;
-			justify-content: center;
-			
-			a {
-				flex: 0 0 auto;
-				border: 1px solid #fff;
-				background: #333;
-				color: #fff;
-				font-family: $text-aux;
-				text-transform: uppercase;
-				font-weight: bold;
-				padding: 0.25em 1.25em 0.25em 0.5em;
-				border-radius: 500px;
-				background-image: url('../i/arrow-white-right.png');
-				background-size: 0.75em 0.75em;
-				background-repeat: no-repeat;
-				background-position: right 0.25em center;
-				
-			}
-		}
-	}
-}
-
 // :event - daedalus
 body#daedalus {
 	display: grid;
@@ -839,7 +792,7 @@ body#daedalus {
 }
 
 // :event - generic styles
-body#seance, body#acog {
+body#seance, body#acog, body#eskhaton {
 	
 	display: grid;
 	grid-template: 
@@ -1019,6 +972,141 @@ body#acog {
 			transform: rotate(-7deg);
 		}
 	}
+}
+
+// :event - eskhaton
+
+body#eskhaton {
+	
+	#in-game {
+		font-family: Lora;
+		background: #fff;
+		color: #222;
+		background: url('../i/events/eskhaton/paper.jpg') left top;
+		background-size: 350px 350px;
+	}
+	
+	#in-game h3 {
+		font-family: Lora;
+		text-transform: none;
+		font-weight: normal;
+		margin-bottom: 0.25em;
+		width: auto;
+	}
+	
+	#in-game p {
+		width: auto;
+		box-sizing: border-box;
+	}
+	
+	#opal::before {
+		background: url('../i/events/eskhaton/feather.png') center center no-repeat;
+		background-size: contain;
+		content: " ";
+		width: 50%;
+		height: 30vw;
+		position: relative;
+		display: block;
+		margin: 0 auto;
+	}
+	
+	#cults:before {
+		background: transparent url('../i/events/eskhaton/eskhaton_sigils_horizontal.png') center center no-repeat;
+		background-size: contain;
+		content: " ";
+		width: 80%;
+		height: 30vw;
+		position: relative;
+		display: block;
+		margin: 0 auto;
+	}
+	
+	#opal #signature {
+		
+		margin-left: 50%;
+		position: relative;
+		
+		&:before {
+			content: "\2014";
+			position: absolute;
+			left: -1em;
+			top: 0;
+		}
+		
+		.name, .title {
+			display: block;
+			font-family: Charm;
+			margin-bottom: -0.25em;
+		}
+		
+	}
+	
+	#opal .salutation {
+		font-family: Charm;
+		padding-left: 4vw;
+	}
+	
+	#cults {
+		padding-bottom: 10vw;
+	}
+	
+	#cults h3 {
+		font-family: Charm;
+	}
+	
+	#cults p:first-letter {
+		float: left;
+		font-size: 350%;
+		margin: 0.10em 0.15em 0 0;
+		font-family: Charm;
+		line-height: 1em;
+		
+		background: #000;
+		color: #fff;
+		padding: 0.1em 0.2em;
+		border: 0.09em solid #ccc;
+	}
+	
+	#cults #mareen p:first-letter {
+		
+		color: #323b56;
+		border-color: #323b56;
+		background: #d0e3e8 url('../i/events/eskhaton/mareen_back.jpg') top left no-repeat;
+		background-size: cover;
+	}
+	
+	#cults #extant p:first-letter {
+		
+		color: #eaf1e4;
+		border-color: #9fa09e;
+		background: #d0e3e8 url('../i/events/eskhaton/extant_back.jpg') top left no-repeat;
+		background-size: cover;
+	}
+	
+	#cults #seekers p:first-letter {
+		
+		color: #e0e1d4;
+		border-color: #333;
+		background: #d0e3e8 url('../i/events/eskhaton/seekers_back.jpg') top right no-repeat;
+		background-size: cover;
+	}
+	
+	#cults #expositors p:first-letter {
+		
+		color: #b2274c;
+		border-color: #c22f57;
+		background: #d0e3e8 url('../i/events/eskhaton/expositors_back.jpg') top right no-repeat;
+		background-size: cover;
+	}
+	
+	#cults #progenus p:first-letter {
+		
+		color: #81b1e4;
+		border-color: #6887a9;
+		background: #d0e3e8 url('../i/events/eskhaton/progenus_back.jpg') top right no-repeat;
+		background-size: cover;
+	}
+	
 }
 
 @import 'breakpoints.scss';

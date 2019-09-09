@@ -20,6 +20,16 @@ $width-ipad: 600px;
 	body#acog #in-game .letter {
 		width: 300px;
 	}
+	
+	br.mobile {
+		display: none;
+	}
+	
+	body#eskhaton {
+		#cults section {
+			margin-bottom: 1em;
+		}
+	}
 }
 
 @media screen and (min-width: 600px) {
@@ -45,7 +55,7 @@ $width-ipad: 600px;
 		}
 	}
 	
-	#seance, #acog, #daedalus {
+	#seance, #acog, #daedalus, #eskhaton {
 		nav {
 			padding-top: 0;
 		}
@@ -286,6 +296,36 @@ $width-ipad: 600px;
 	body#daedalus {
 		h3 {
 			padding-left: 0;
+		}
+	}
+	
+	body#eskhaton {
+		#in-game {
+			font-size: 25px;
+			display: grid;
+			grid-template: 
+			"opal cults";
+			grid-template-columns: 40% 60%;
+			
+			p {
+				width: 100%;
+			}
+			
+			#opal {
+				grid-area: opal;
+				font-size: 120%;
+			}
+			
+			#cults {
+				grid-area: cults;
+			}
+			
+			
+			
+			#opal::before, #cults::before {
+				height: 20vw;
+			}
+			
 		}
 	}
 }
