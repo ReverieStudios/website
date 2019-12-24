@@ -25,8 +25,8 @@ Tyler, Ken and Garett have known each other for years, but recently decided that
 		</div>
 		
 		<div class = "contact">
-		{% if p.email %}<div class = "email"><a href = "mailto:{{p.email}}">{{p.email}}</a></div>{% endif %}
-		{% if p.twitter %}<div class = "twitter"><a href = "https://www.twitter.com/{{p.twitter}}">@{{p.twitter}}</a></div>{% endif %}
+			{% if p.email %}<div class = "email"><a href = "mailto:{{p.email}}">{{p.email}}</a></div>{% endif %}
+			{% if p.twitter %}<div class = "twitter"><a href = "https://www.twitter.com/{{p.twitter}}">@{{p.twitter}}</a></div>{% endif %}
 		</div>
 		
 		{% if p.image %}
