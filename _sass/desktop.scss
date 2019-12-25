@@ -9,6 +9,11 @@ $color-menu: rgba(73, 73, 81, 1);
 
 @media screen and (min-width: 1025px) {
 	
+	#main h3, #main h4, #main h5 {
+		width: auto;
+		
+	}
+	
 	body {
 		font-size: 40px;
 	}
@@ -352,7 +357,7 @@ $color-menu: rgba(73, 73, 81, 1);
 				margin: 0;
 				margin-bottom: 1em;
 				
-				h3, h4 {
+				h3, h4, h5 {
 					margin: 0;
 				}
 			}

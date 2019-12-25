@@ -1,22 +1,73 @@
 ---
 title: "The Haunting of Gray Manor"
 short-name: haunting
-layout: page
+layout: none
 thumbnail: /i/events/haunting/thumbnail.jpg
-blurb: "Coming Spring 2020"
+blurb: "Explore the world of the dead, and perhaps cross into it."
 order: 0.1
 runs:
  - event: haunting
    image: /i/events/haunting/thumbnail.jpg
-   date: '2020-03-31'
-   display-date: 'March/April 2020'
+   date: '2020-10-24'
+   display-date: 'October 24, 2020'
    title: "The Haunting of Gray Manor"
-   blurb: "Coming Spring 2020.
-"
+   blurb: "Explore the world of the dead, and perhaps cross into it."
 ---
 
-<h2>The Haunting of Gray Manor</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{page.title}}</title>
+	<link rel="stylesheet" href="/css/haunting.css">
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<script src = "/js/jquery-3.3.1.slim.min.js"></script>
+	<script src = "/js/main.js"></script>
+</head>
 
-<img class = "hero" src = "/i/events/haunting/thumbnail.jpg" />
+<body>
+	
+<div id = "menu">
+	
+	<ul>
+		<li><a href = "/">&Larr; Reverie</a></li>
+		<li class = "apply"><a href = "#">Apply</a></li>
+		<li class = "about"><a href = "#about">About</a></li>
+	</ul>
+	
+</div>
 
-<p>Coming Spring 2020.</p>
+<div id = "main">
+
+<div id = "hero">
+	<img class = "hero" src = "/i/events/haunting/framed_graphic.png" />
+</div>
+
+<div id = "event">
+	<h1 class = "title">The Haunting<br />of Gray Manor</h1>
+	<h2 class = "date">{{page.runs[0].display-date}}</h2>
+	
+	<section id = "about">
+	
+	<p class = "reverie">A larp by <a href = "/">Reverie Studios</a></p>
+
+	<p>You are a guest invited by the renowned psychic medium Walter Ames to Gray Manor, a notoriously haunted building with an ominous history. You will explore the world of the dead, and likely cross over into it!</p>
+</section>
+</div>
+
+</div>
+
+<footer>
+	
+	<p>&copy; 2016 &ndash; {{ 'now' | date: "%Y" }} Reverie Studios, LLC.</p>
+	
+	<p><a href = "mailto:{{site.email}}">{{site.email}}</a></p>
+	
+</footer>
+
+</body>
+</html> 

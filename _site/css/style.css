@@ -822,10 +822,11 @@ body#eskhaton #cults #progenus p:first-letter {
     width: 5vw;
     height: 5vw; } }
 @media screen and (min-width: 768px) {
-  #main h3 {
+  #main h3, #main h4, #main h5 {
     width: 600px;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+    padding-right: 0; }
 
   #main p, #main ol, #main ul {
     width: 600px;
@@ -913,6 +914,9 @@ body#eskhaton #cults #progenus p:first-letter {
     body#eskhaton #in-game #opal::before, body#eskhaton #in-game #cults::before {
       height: 20vw; } }
 @media screen and (min-width: 1025px) {
+  #main h3, #main h4, #main h5 {
+    width: auto; }
+
   body {
     font-size: 40px; }
 
@@ -1117,7 +1121,7 @@ body#eskhaton #cults #progenus p:first-letter {
     body#seance #main .past-runs, body#seance #main .gallery, body#acog #main .past-runs, body#acog #main .gallery, body#daedalus #main .past-runs, body#daedalus #main .gallery, body#eskhaton #main .past-runs, body#eskhaton #main .gallery {
       margin: 0;
       margin-bottom: 1em; }
-      body#seance #main .past-runs h3, body#seance #main .past-runs h4, body#seance #main .gallery h3, body#seance #main .gallery h4, body#acog #main .past-runs h3, body#acog #main .past-runs h4, body#acog #main .gallery h3, body#acog #main .gallery h4, body#daedalus #main .past-runs h3, body#daedalus #main .past-runs h4, body#daedalus #main .gallery h3, body#daedalus #main .gallery h4, body#eskhaton #main .past-runs h3, body#eskhaton #main .past-runs h4, body#eskhaton #main .gallery h3, body#eskhaton #main .gallery h4 {
+      body#seance #main .past-runs h3, body#seance #main .past-runs h4, body#seance #main .past-runs h5, body#seance #main .gallery h3, body#seance #main .gallery h4, body#seance #main .gallery h5, body#acog #main .past-runs h3, body#acog #main .past-runs h4, body#acog #main .past-runs h5, body#acog #main .gallery h3, body#acog #main .gallery h4, body#acog #main .gallery h5, body#daedalus #main .past-runs h3, body#daedalus #main .past-runs h4, body#daedalus #main .past-runs h5, body#daedalus #main .gallery h3, body#daedalus #main .gallery h4, body#daedalus #main .gallery h5, body#eskhaton #main .past-runs h3, body#eskhaton #main .past-runs h4, body#eskhaton #main .past-runs h5, body#eskhaton #main .gallery h3, body#eskhaton #main .gallery h4, body#eskhaton #main .gallery h5 {
         margin: 0; }
     body#seance #main .gallery .image, body#acog #main .gallery .image, body#daedalus #main .gallery .image, body#eskhaton #main .gallery .image {
       flex: 0 0 302.6666666667px;

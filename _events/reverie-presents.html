@@ -3,7 +3,7 @@ title: "Reverie Presents"
 short-name: reverie-presents
 layout: page
 thumbnail: /i/events/reverie-presents/thumbnail.jpg
-blurb: "A showcase for smaller-scale larps, promoting the art form for those familiar as well as new to it. October 2019."
+blurb: "A showcase for smaller-scale larps, promoting the art form for those familiar as well as new to it."
 order: 0
 runs:
  - event: reverie-presents
@@ -11,9 +11,19 @@ runs:
    date: '2019-10-26'
    display-date: 'October 26, 2019'
    title: "Reverie Presents: October 2019"
-   blurb: "Reverie Presents: Miranda Dawn Chadbourne's *Signs*, Benji Michalek and Hanging Lantern's *Nightingales*, and Hanging Lantern's *Kindling*.
-"
+   blurb: "Reverie Presents: Miranda Dawn Chadbourne's *Signs*, Benji Michalek and Hanging Lantern's *Nightingales*, and Hanging Lantern's *Kindling*."
+ - event: reverie-presents
+   image: /i/events/reverie-presents/thumbnail.jpg
+   date: '2019-12-07'
+   display-date: 'December 7, 2019'
+   title: "Reverie Presents: December 2019"
+   blurb: "*White Death* and others!"
 ---
+
+{% assign now = 'now' | date: "%Y-%m-%d" %}
+{% assign future_events = page.runs | where_exp: "r", "r.date >= now" %}
+{% assign past_events = page.runs | where_exp: "r", "r.date < now" | reverse %}
+{% comment %}"{% endcomment %}
 
 <h2>{{page.title}}</h2>
 
@@ -22,3 +32,24 @@ runs:
 <p><em>Reverie Presents</em> was started as a way to expose people to larping as an art form and to promote designers. It is an opportunity to attend with low stakes as it is free with minimal pre-time investment. It runs semi-frequently based on availability of the site and those looking to run events.</p>
 
 <p><a href = "https://www.facebook.com/groups/reveriepresents/">More information is available on Facebook</a>.
+
+{% if past_events.size > 0 %}
+
+	<div class = "past">
+
+		<h2>Past Runs</h2>
+		
+		{% for e in past_events %}
+		
+			<h3>{{e.title}}</h3>
+			<h4>{{e.display-date}}</h4>
+			
+			<p>{{e.blurb | markdownify}}</p>
+			
+		
+		{% endfor %}
+		
+		
+	</div>
+	
+{% endif %}
