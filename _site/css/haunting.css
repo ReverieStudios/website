@@ -54,7 +54,7 @@ div#menu a {
 }
 
 div#menu li.apply a {
-	color: #999;
+	
 }
 
 /* =MAIN */
@@ -127,6 +127,29 @@ div#event p.reverie {
 	border-width: 1px 0;
 	padding: 2vw 0;
 	margin: 4vw 0;
+}
+
+p.apply {
+	display: grid;
+	grid-template: ". button .";
+	grid-template-columns: 1fr auto 1fr;
+	margin-top: 4vw;
+}
+
+div#event p.apply a {
+	grid-area: button;
+	display: inline-block;
+	padding: 2vw 2vw;
+	border-radius: 4vw;
+	background: #eee;
+	color: #000;
+	border: none;
+	box-shadow: 0px 0px 2vw rgba(0, 0, 0, 0.25);
+}
+
+div#event p.apply a:hover {
+	color: #fff;
+	background: #c33232;
 }
 
 /* =FOOTER */
