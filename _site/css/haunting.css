@@ -50,13 +50,17 @@ div#menu ul {
 div#menu li {
 	display: block;
 	flex: 0 0 auto;
+	padding: 4vw 0;
 }
 
 div#menu a {
 	display: block;
-	margin: 4vw 0;
 	text-decoration: none;
 	color: #444;
+}
+
+div#menu a.active {
+	border-bottom: 1px solid #444;
 }
 
 div#menu li.apply a {
@@ -68,7 +72,7 @@ div#menu li.apply a {
 
 div#main {
 	grid-area: main;
-	margin-top: 8vw;
+	margin-top: 1em;
 	min-height: 80vh;
 	font-size: 90%;
 }
@@ -87,7 +91,6 @@ div#hero {
 	display:grid;
 	grid-template:
 	". img .";
-	
 	grid-template-columns: 1fr 80vw 1fr;
 	
 }
@@ -198,12 +201,12 @@ div#characters.panel {
 }
 
 
-div#event div.reverie {
+ div.reverie {
 	font-size: 100%;
 	border: 1px solid rgba(255, 255, 255, 0.5);
-	border-width: 1px 0;
-	padding: 2vw 0;
-	margin: 4vw 0;
+	border-width: 0 0 1px 0;
+	padding: 0 0 1em 0;
+	margin: 1em 0 1em 0;
 }
 
 p.reverie {
@@ -274,20 +277,41 @@ footer a {
 }
 
 @media screen and (min-width: 1025px) {
+	
+	
+	div#header {
+		display: flex;
+		flex-direction: row;
+		width: 1000px;
+		margin: 0 auto;
+		align-items: center;
+	}
+	
+	div#header #hero {
+		flex: 0 1 300px;
+		display: block;
+	}
+	
+	div#header .when {
+		flex: 0 1 700px;
+		margin-left: 30px;
+	}
+	
 	div#menu {
 		font-size: 30px;
 	}
-	div#menu a {
-		margin: 0.5em 0;
+	div#menu li {
+		padding: 0.5em 0;
 	}
 	
-	div#hero {
-		grid-template-columns: 1fr 50vw 1fr;
-	}
 	
 	div.panel {
 		font-size: 30px;
 		width: 1000px
+	}
+	
+	div#header .panel {
+		width: auto;
 	}
 	
 	footer {

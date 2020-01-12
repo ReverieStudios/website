@@ -36,7 +36,7 @@ runs:
 	<ul>
 		<li><a href = "/">Reverie</a></li>
 		<li class = "apply"><a href = "https://docs.google.com/forms/d/1l761udPrPn9zKOqz0M8w7R4cUbtQQnhI-NJMXtUoZV8/">Apply</a></li>
-		<li><a href = "/events/haunting">About</a></li>
+		<li><a href = "/events/haunting" class = "active">About</a></li>
 		<li><a href = "/events/haunting/gameplay">Gameplay</a></li>
 		<li><a href = "/events/haunting/conduct">Conduct</a></li>
 	</ul>
@@ -44,14 +44,25 @@ runs:
 </div>
 
 <div id = "main">
+	
+<div id = "header">
 
-<div id = "hero">
-	<img class = "hero" src = "/i/events/haunting/frame3.png" />
+	<div id = "hero">
+		<img class = "hero" src = "/i/events/haunting/frame3.png" />
+	</div>
+	
+	<div id = "event" class = "panel when">
+		<h1 class = "title">The Haunting<br />of Gray Manor</h1>
+		<h2 class = "date">{{page.runs[0].display-date}}<br />Cambridge, MA</h2>
+		
+	</div>
+
+
 </div>
 
-<div id = "event" class = "panel">
-	<h1 class = "title">The Haunting<br />of Gray Manor</h1>
-	<h2 class = "date">{{page.runs[0].display-date}}<br />Cambridge, MA</h2>
+<div class = "panel">
+	
+	<h3>About &amp; Logistics</h3>
 	
 	<section id = "intro">
 	
@@ -85,7 +96,7 @@ runs:
 	
 	<p>The <em>Gray Manor</em> team is working hard to provide a best-in-class experience for our attendees. Our goal is to provide an enjoyable vacation weekend in Boston where you will have a high quality immersive larp experience, and also enjoy social opportunities with other fellow larp enthusiasts. This section contains more information on the event’s schedule, the venue at the Cambridge Masonic Temple, and the weekend’s overall accommodations.</p>
 
-	<p>You can also read up on our <a href = "#">Rules of Play</a>, <a href = "#">Code of Conduct, and Privacy Policy</a>.</p>
+	<p>You can also read up on our <a href = "gameplay/">Rules of Play</a>, <a href = "conduct/">Code of Conduct, and Privacy Policy</a>.</p>
 
 	<p>Any questions you have about event logistics not covered here should be addressed to <a href = "mailto:hello@reverie.studio">hello@reverie.studio</a>.</p>
 	
