@@ -183,6 +183,10 @@ img.hero {
 	border-bottom: 1px dotted #ddd;
 }
 
+.panel strong {
+	color: #fff;
+}
+
 div#logistics.panel {
 	background: rgba(97, 97, 97, 0.75);
 }
@@ -194,6 +198,10 @@ div#safety.panel {
 div#characters.panel {
 	background: rgba(230, 230, 230, 0.75);
 	color: #222;
+}
+
+div#characters.panel strong {
+	color: #000;
 }
 
 #characters.panel h4:before, #characters.panel h4:after, #characters.panel h3:before, #characters.panel h3:after {
