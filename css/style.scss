@@ -666,6 +666,7 @@ section#main {
 			border: none;
 			margin-left: 5vw;
 			text-indent: 100%;
+			color: transparent;
 			
 			&:first-child {
 				margin-left: 0;
@@ -984,6 +985,7 @@ body#eskhaton {
 		color: #222;
 		background: url('../i/events/eskhaton/paper.jpg') left top;
 		background-size: 350px 350px;
+		margin-bottom: 1em;
 	}
 	
 	#in-game h3 {

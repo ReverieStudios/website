@@ -437,7 +437,8 @@ section#main {
       overflow: hidden;
       border: none;
       margin-left: 5vw;
-      text-indent: 100%; }
+      text-indent: 100%;
+      color: transparent; }
       #lightbox #controls a:first-child {
         margin-left: 0; }
       #lightbox #controls a:before {
@@ -637,7 +638,8 @@ body#eskhaton #in-game {
   background: #fff;
   color: #222;
   background: url("../i/events/eskhaton/paper.jpg") left top;
-  background-size: 350px 350px; }
+  background-size: 350px 350px;
+  margin-bottom: 1em; }
 body#eskhaton #in-game h3 {
   font-family: Lora;
   text-transform: none;

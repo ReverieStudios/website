@@ -11,8 +11,82 @@ runs:
    date: '2019-04-06'
    display-date: 'April 4&ndash;6, 2019'
    title: Eskhaton
-   blurb: "Reverie Studios is proud to announce their brand new blockbuster larp, [Eskhaton](http://www.eskhatonlarp.com). This is a cosmic horror larp that focuses on the experiences of cultists worshipping Elder Gods that are gathering to celebrate the end of the world. Their belief will help shape which apocalypse happens, and will test the limits of the rationality and self-interest.
-"
+   blurb: "Reverie Studios is proud to announce their brand new blockbuster larp, [Eskhaton](http://www.eskhatonlarp.com). This is a cosmic horror larp that focuses on the experiences of cultists worshipping Elder Gods that are gathering to celebrate the end of the world. Their belief will help shape which apocalypse happens, and will test the limits of the rationality and self-interest."
+   gallery:
+   - image: esk01
+     full: /i/events/eskhaton/gallery/esk01.JPG
+     thumb: /i/events/eskhaton/gallery/esk01.JPG
+   - image: esk02
+     full: /i/events/eskhaton/gallery/esk02.JPG
+     thumb: /i/events/eskhaton/gallery/esk02.JPG
+   - image: esk03
+     full: /i/events/eskhaton/gallery/esk03.JPG
+     thumb: /i/events/eskhaton/gallery/esk03.JPG
+   - image: esk04
+     full: /i/events/eskhaton/gallery/esk04.JPG
+     thumb: /i/events/eskhaton/gallery/esk04.JPG
+   - image: esk05
+     full: /i/events/eskhaton/gallery/esk05.JPG
+     thumb: /i/events/eskhaton/gallery/esk05.JPG
+   - image: esk06
+     full: /i/events/eskhaton/gallery/esk06.JPG
+     thumb: /i/events/eskhaton/gallery/esk06.JPG
+   - image: esk07
+     full: /i/events/eskhaton/gallery/esk07.JPG
+     thumb: /i/events/eskhaton/gallery/esk07.JPG
+   - image: esk08
+     full: /i/events/eskhaton/gallery/esk08.JPG
+     thumb: /i/events/eskhaton/gallery/esk08.JPG
+   - image: esk09
+     full: /i/events/eskhaton/gallery/esk09.JPG
+     thumb: /i/events/eskhaton/gallery/esk09.JPG
+   - image: esk10
+     full: /i/events/eskhaton/gallery/esk10.JPG
+     thumb: /i/events/eskhaton/gallery/esk10.JPG
+   - image: esk11
+     full: /i/events/eskhaton/gallery/esk11.JPG
+     thumb: /i/events/eskhaton/gallery/esk11.JPG
+   - image: esk12
+     full: /i/events/eskhaton/gallery/esk12.JPG
+     thumb: /i/events/eskhaton/gallery/esk12.JPG
+   - image: esk13
+     full: /i/events/eskhaton/gallery/esk13.JPG
+     thumb: /i/events/eskhaton/gallery/esk13_th.JPG
+   - image: esk14
+     full: /i/events/eskhaton/gallery/esk14.JPG
+     thumb: /i/events/eskhaton/gallery/esk14_th.JPG
+   - image: esk15
+     full: /i/events/eskhaton/gallery/esk15.JPG
+     thumb: /i/events/eskhaton/gallery/esk15.JPG
+   - image: esk16
+     full: /i/events/eskhaton/gallery/esk16.JPG
+     thumb: /i/events/eskhaton/gallery/esk16.JPG
+   - image: esk17
+     full: /i/events/eskhaton/gallery/esk17.JPG
+     thumb: /i/events/eskhaton/gallery/esk17_th.JPG
+   - image: esk18
+     full: /i/events/eskhaton/gallery/esk18.JPG
+     thumb: /i/events/eskhaton/gallery/esk18.JPG
+   - image: esk19
+     full: /i/events/eskhaton/gallery/esk19.JPG
+     thumb: /i/events/eskhaton/gallery/esk19.JPG
+   - image: esk20
+     full: /i/events/eskhaton/gallery/esk20.JPG
+     thumb: /i/events/eskhaton/gallery/esk20.JPG
+   - image: esk21
+     full: /i/events/eskhaton/gallery/esk21.JPG
+     thumb: /i/events/eskhaton/gallery/esk21.JPG
+   - image: esk22
+     full: /i/events/eskhaton/gallery/esk22.JPG
+     thumb: /i/events/eskhaton/gallery/esk22.JPG
+   - image: esk23
+     full: /i/events/eskhaton/gallery/esk23.JPG
+     thumb: /i/events/eskhaton/gallery/esk23.JPG
+   - image: esk24
+     full: /i/events/eskhaton/gallery/esk24.JPG
+     thumb: /i/events/eskhaton/gallery/esk24.JPG
+   
+
 ---
 
 <section id = "in-game">
@@ -84,8 +158,17 @@ runs:
 	<div id = "out-of-game-disclaimer">
 		<p>The following is practical &ldquo;out-of-game&rdquo; information describing a typical run of <em>Eskhaton</em>.</p>
 	</div>
-	
+		
 	<p>Detailed information about Eskhaton is available at its <a href ="http://www.eskhatonlarp.com">event website</a>.</p>
+	
+	{% for e in page.runs %}
+					
+			{% include gallery.html e = e idx = forloop.index0 %}
+		
+		{% endfor %}
+		
+		{% include lightbox.html runs = past_events %}
+	
 	
 	<h3>Synopsis</h3>
 	
@@ -114,3 +197,5 @@ runs:
 	<p>Character creation is a collaboration between the event writers and the players. Players will first be sent a survey to ascertain their level of comfort with larp, the type of experience they are after (broadly or specfically), whether they want connections with specific players, what broad traits their character might have, and what their preferred cult would be. The event writers then use this information to create a character and backstory sketch (2-3 pages of material). In the weeks leading up to Eskhaton, many players modified and expanded their character sketches, writing short stories, creating mood boards, and even producing a few short films! Such efforts are greatly appreciated but not strictly necessary; the goal is to become comfortable with the characters in preparation for playing them. Workshops prior to the event will also allow for character development.</p> 
 	
 </section>
+
+	{% include lightbox.html runs = page.runs %}
