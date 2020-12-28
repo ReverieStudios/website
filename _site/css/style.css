@@ -57,12 +57,35 @@ nav {
     nav ul.main li.active a {
       color: #fff;
       font-weight: bold; }
-    nav ul.main ul.events, nav ul.main ul.about {
+    nav ul.main ul.events, nav ul.main ul.about, nav ul.main ul.contact-sub {
       margin-left: 0.5em;
       margin-top: 0.5em;
       padding-left: 0.5em;
       border-left: 1px solid #e7e7f4;
       font-size: 90%; }
+      nav ul.main ul.events li, nav ul.main ul.about li, nav ul.main ul.contact-sub li {
+        width: auto; }
+      nav ul.main ul.events a, nav ul.main ul.about a, nav ul.main ul.contact-sub a {
+        display: block;
+        position: relative; }
+    nav ul.main a.facebook, nav ul.main a.discord, nav ul.main a.email {
+      padding-left: 1.25em; }
+      nav ul.main a.facebook:before, nav ul.main a.discord:before, nav ul.main a.email:before {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 1em;
+        height: 1em;
+        content: " "; }
+    nav ul.main a.facebook:before {
+      background: transparent url("../i/facebook_negative.png") center center no-repeat;
+      background-size: contain; }
+    nav ul.main a.discord:before {
+      background: transparent url("../i/discord_negative.png") center center no-repeat;
+      background-size: contain; }
+    nav ul.main a.email:before {
+      background: transparent url("../i/email_negative.png") center center no-repeat;
+      background-size: contain; }
     nav ul.main li.menu-toggle {
       text-align: right;
       margin-top: -4vw; }
@@ -215,8 +238,9 @@ a.about-more {
       padding: 0;
       margin: 0; }
     #about .about-links li p a {
+      position: relative;
       margin: 0 1em 0 0;
-      padding: 0.4em 0.8em;
+      padding: 0.4em 0.8em 0.4em 2.05em;
       border: none;
       background: #e7e7f4;
       color: #38383c;
@@ -224,8 +248,24 @@ a.about-more {
       text-transform: uppercase;
       font-size: 80%;
       font-family: Arial, Verdana, Geneva, sans-serif; }
+      #about .about-links li p a:before {
+        position: absolute;
+        top: 0.4em;
+        left: 0.8em;
+        width: 1em;
+        height: 1em;
+        content: " "; }
     #about .about-links li:last-child p a {
       margin: 0; }
+    #about .about-links li.facebook a:before {
+      background: transparent url("../i/facebook_positive.png") center center no-repeat;
+      background-size: contain; }
+    #about .about-links li.discord a:before {
+      background: transparent url("../i/discord_positive.png") center center no-repeat;
+      background-size: contain; }
+    #about .about-links li.email a:before {
+      background: transparent url("../i/email_positive.png") center center no-repeat;
+      background-size: contain; }
 
 p, div#masthead {
   padding: 0 4vw; }
@@ -290,8 +330,7 @@ p {
   right: 0; }
 
 #events .more-events {
-  padding: 1em 0;
-  background: linear-gradient(black, #222); }
+  padding: 1em 0; }
   #events .more-events p {
     margin: 0;
     text-align: center; }

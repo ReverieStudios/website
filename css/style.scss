@@ -107,12 +107,50 @@ nav {
 			font-weight: bold;
 		}
 		
-		ul.events, ul.about {
+		ul.events, ul.about, ul.contact-sub {
 			margin-left: 0.5em;
 			margin-top: 0.5em;
 			padding-left: 0.5em;
 			border-left: 1px solid $color-text-main;
 			font-size: 90%;
+			
+			li {
+				width: auto;
+			}
+			
+			a {
+				display: block;
+				position: relative;
+			}
+		}
+		
+		a.facebook, a.discord, a.email {
+			
+			padding-left: 1.25em;
+			
+			&:before {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 1em;
+				height: 1em;
+				content: " ";
+			}
+		}
+		
+		a.facebook:before {
+			background: transparent url('../i/facebook_negative.png') center center no-repeat;
+			background-size: contain;
+		}
+		
+		a.discord:before {
+			background: transparent url('../i/discord_negative.png') center center no-repeat;
+			background-size: contain;
+		}
+		
+		a.email:before {
+			background: transparent url('../i/email_negative.png') center center no-repeat;
+			background-size: contain;
 		}
 		
 		li.menu-toggle {
@@ -318,8 +356,9 @@ $color-about-grad2: rgba(red($color-background-main), green($color-background-ma
 		}
 		
 		li p a {
+			position: relative;
 			margin: 0 1em 0 0;
-			padding: 0.4em 0.8em;
+			padding: 0.4em 0.8em 0.4em 2.05em;
 			border: none;
 			background: $color-text-main;
 			color: $color-background-main;
@@ -327,10 +366,34 @@ $color-about-grad2: rgba(red($color-background-main), green($color-background-ma
 			text-transform: uppercase;
 			font-size: 80%;
 			font-family: $text-aux;
+			
+			&:before {
+				position: absolute;
+				top: 0.4em;
+				left: 0.8em;
+				width: 1em;
+				height: 1em;
+				content: " ";
+			}
 		}
 		
 		li:last-child p a {
 			margin: 0;
+		}
+		
+		li.facebook a:before {
+			background: transparent url('../i/facebook_positive.png') center center no-repeat;
+			background-size: contain;
+		}
+		
+		li.discord a:before {
+			background: transparent url('../i/discord_positive.png') center center no-repeat;
+			background-size: contain;
+		}
+		
+		li.email a:before {
+			background: transparent url('../i/email_positive.png') center center no-repeat;
+			background-size: contain;
 		}
 	}
 }
@@ -438,7 +501,6 @@ p {
 #events .more-events {
 	
 	padding: 1em 0;
-	background: linear-gradient(black, #222);
 	
 	p {
 		margin: 0;
