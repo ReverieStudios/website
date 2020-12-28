@@ -108,7 +108,11 @@ img.hero {
 	color: #ddd;
 	width: 95%;
 	margin: 0 auto 4vw auto;
-	padding: 4vw 0;
+	padding: 4vw 0 4vw 0;
+}
+
+.panel .video {
+	margin-top: -4vw;
 }
 
 .panel h1, .panel h2 {
@@ -187,6 +191,21 @@ img.hero {
 	color: #fff;
 }
 
+.video-container {
+	position: relative;
+	width:100%;
+	height: 0px;
+	padding-bottom: 56.25%;
+}
+
+.video {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
+
 div#logistics.panel {
 	background: rgba(97, 97, 97, 0.75);
 }
@@ -211,10 +230,10 @@ div#characters.panel strong {
 
  div.reverie {
 	font-size: 100%;
-	border: 1px solid rgba(255, 255, 255, 0.5);
-	border-width: 0 0 1px 0;
-	padding: 0 0 1em 0;
-	margin: 1em 0 1em 0;
+	//border: 1px solid rgba(255, 255, 255, 0.5);
+	//border-width: 0 0 1px 0;
+	//padding: 0 0 1em 0;
+	//margin: 1em 0 1em 0;
 }
 
 p.reverie {
