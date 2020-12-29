@@ -12,17 +12,3 @@ Reverie is a participatory experience design agency that produces educational an
 ### Our Story
 
 Tyler, Ken and Garett have known each other for years, but recently decided that rather than participating in their passions through the experience produced by others, that they would seek to create experiences on their own. After Grand Masquerade in New Orleans 2016, they resolved to forge a new group with a new purpose in their hometown of Boston.
-
-* {: .facebook}[Facebook][fb]
-
-* {: .discord}[Discord][discord]
-
-* {: .email}[Stay Updated][mailing-list]
-{: .about-links}
-
-[fb]: https://www.facebook.com/reveriestudiosllc/
-[discord]: https://discord.gg/mg7Rq9fA46
-[mailing-list]:	/contact
-[events]: /events/schedule/
-[faq]: /about/larp/
-[staff]: /about/studio

@@ -5,12 +5,17 @@ Should be formatted using Markdown syntax (very easy to read).
 
 ## 2021 and Beyond
 
-### The Haunting of Gray Manor
+The ongoing COVID-19 pandemic and its social distancing measures made it impossible for us at Reverie Studios to put on the types of events that we so love. But this has given us time to incubate a large number of ideas for 2021 and beyond! 
 
-Rescheduled to October 9th, 2021 due to ongoing social distancing measures. However, we have determined that this event, when it occurs, can handle more players, so we are now accepting applications! [Apply today][haunting]! 
+*[The Haunting of Gray Manor][haunting]* has been tenatively rescheduled for October 8--10, 2021. The COVID-necessitated delay gave us time to reconsider the event's scope and logistics. We are increasing the number of possible attendees to 80, and applications are once again open! The [event website][haunting] now also has a trailer video and an interview with our sound designer, Nathan Leigh.
 
-### The Hard Way
+*[Sanguis][sanguis]*, is a vampiric larp that will start online and then transition to live events (or at least, undead ones) when possible. Late 2021 will also feature Miranda Dawn Chadbourne's *[Ember][ember]* and *[Fools Rush In][fools]*.
 
-A wrestling larp coming in 2022! Participants will step into the strange, seedy, incomparable world of professional wrestling - exploring the lives of their characters both inside the ring, and behind the curtain.
+And we even have one event on the calendar for 2022. *[The Hard Way][hardway]* will be set during the final event of the fictitious Crash Wrestling Alliance, following the onstage and backstage lives of its performers and crew.
 
-[haunting]: http://reverie.studio/events/haunting/
+[haunting]: /events/haunting/
+[sanguis]: /events/sanguis/
+[ember]: /events/ember/
+[fools]: /events/fools/
+[hardway]: /events/hardway
+	

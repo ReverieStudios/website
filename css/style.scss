@@ -338,63 +338,65 @@ $color-about-grad2: rgba(red($color-background-main), green($color-background-ma
 		margin-bottom: 0.5em;
 		margin-top: 0;
 	}
+}
+
+ul.about-links {
+	display: flex;
+	justify-content: center;
+	padding: 0;
+	margin: 0 0 1em 0;
+	width: 100%;
+	font-size: 120%;
 	
-	.about-links {
-		display: flex;
-		justify-content: center;
-		padding: 0 $space-gutter;
-		margin-top: 1em;
+	li {
+		flex: 0 1 auto;
+		list-style: none;
+	}
+	
+	li p {
+		padding: 0;
+		margin: 0;
+	}
+	
+	li p a {
+		position: relative;
+		margin: 0 1em 0 0;
+		padding: 0.4em 0.8em 0.4em 2.05em;
+		border: none;
+		background: $color-text-main;
+		color: $color-background-main;
+		border-radius: 200px;
+		text-transform: uppercase;
+		font-size: 80%;
+		font-family: $text-aux;
 		
-		li {
-			flex: 0 1 auto;
-			list-style: none;
+		&:before {
+			position: absolute;
+			top: 0.4em;
+			left: 0.8em;
+			width: 1em;
+			height: 1em;
+			content: " ";
 		}
-		
-		li p {
-			padding: 0;
-			margin: 0;
-		}
-		
-		li p a {
-			position: relative;
-			margin: 0 1em 0 0;
-			padding: 0.4em 0.8em 0.4em 2.05em;
-			border: none;
-			background: $color-text-main;
-			color: $color-background-main;
-			border-radius: 200px;
-			text-transform: uppercase;
-			font-size: 80%;
-			font-family: $text-aux;
-			
-			&:before {
-				position: absolute;
-				top: 0.4em;
-				left: 0.8em;
-				width: 1em;
-				height: 1em;
-				content: " ";
-			}
-		}
-		
-		li:last-child p a {
-			margin: 0;
-		}
-		
-		li.facebook a:before {
-			background: transparent url('../i/facebook_positive.png') center center no-repeat;
-			background-size: contain;
-		}
-		
-		li.discord a:before {
-			background: transparent url('../i/discord_positive.png') center center no-repeat;
-			background-size: contain;
-		}
-		
-		li.email a:before {
-			background: transparent url('../i/email_positive.png') center center no-repeat;
-			background-size: contain;
-		}
+	}
+	
+	li:last-child p a {
+		margin: 0;
+	}
+	
+	li.facebook a:before {
+		background: transparent url('../i/facebook_positive.png') center center no-repeat;
+		background-size: contain;
+	}
+	
+	li.discord a:before {
+		background: transparent url('../i/discord_positive.png') center center no-repeat;
+		background-size: contain;
+	}
+	
+	li.email a:before {
+		background: transparent url('../i/email_positive.png') center center no-repeat;
+		background-size: contain;
 	}
 }
 
@@ -1222,6 +1224,33 @@ body#sanguis {
 		font-variant: all-small-caps;
 		font-family: $text-main;
 		color: #fff;
+	}
+	
+	ul.about-links {
+		margin-bottom: 1em;
+		
+		li {
+			a {
+				color: $sanguis-red;
+				border: 1px solid $sanguis-red;
+				background: transparent;
+			}
+		}
+		
+		li.facebook a:before {
+			background: transparent url('../i/facebook_sanguis.png') center center no-repeat;
+			background-size: contain;
+		}
+		
+		li.discord a:before {
+			background: transparent url('../i/discord_sanguis.png') center center no-repeat;
+			background-size: contain;
+		}
+		
+		li.email a:before {
+			background: transparent url('../i/email_sanguis.png') center center no-repeat;
+			background-size: contain;
+		}
 	}
 	
 	nav > a.menu-toggle {

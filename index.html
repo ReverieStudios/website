@@ -18,15 +18,13 @@ id: home
 	</div>
 </section>
 
+{% endcomment %}
 
 
 <section id = "intro">
 	{% capture intro %}{% include text-intro.md %}{% endcapture %}
 	{{intro | markdownify}}
 </section>
-
-{% endcomment %}
-
 
 
 <section id = "events">
