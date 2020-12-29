@@ -316,13 +316,15 @@ p {
     background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.75), transparent); }
   .event-list .event.eskhaton .gradient {
     background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.75), transparent); }
+  .event-list .event.hardway .gradient {
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.85), transparent); }
 
-#events .event.daedalus h3, #events .event.daedalus p {
+#events .event.daedalus h3, #events .event.daedalus p, #events .event.hardway h3, #events .event.hardway p {
   color: #000; }
-#events .event.daedalus .blurb {
+#events .event.daedalus .blurb, #events .event.hardway .blurb {
   left: auto;
   right: 0; }
-#events .event.daedalus a:after {
+#events .event.daedalus a:after, #events .event.hardway a:after {
   background-image: url("../i/arrow-black-right.png"); }
 
 #events .event.eskhaton .blurb {
@@ -1200,4 +1202,17 @@ body#eskhaton #cults #progenus p:first-letter {
     margin-bottom: 0.5em !important; }
 
   body#eskhaton #in-game p {
-    width: inherit; } }
+    width: inherit; }
+
+  body#hardway p {
+    padding: 0;
+    margin-left: 0; }
+  body#hardway .hardway-grid {
+    display: grid;
+    column-gap: 1em;
+    grid-template-columns: 1fr 480px 480px 1fr;
+    grid-template: ". poster text ."; }
+    body#hardway .hardway-grid .hero {
+      grid-area: poster; }
+    body#hardway .hardway-grid .hardway-text {
+      grid-area: text; } }

@@ -471,10 +471,14 @@ p {
 		background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.75), transparent);
 	}
 	
+	&.hardway .gradient {
+		background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.85), transparent);
+	}
+	
 	
 }
 
-#events .event.daedalus {
+#events .event.daedalus, #events .event.hardway {
 	
 	h3, p {
 		color: #000;
@@ -1170,6 +1174,16 @@ body#eskhaton {
 		background: #d0e3e8 url('../i/events/eskhaton/progenus_back.jpg') top right no-repeat;
 		background-size: cover;
 	}
+	
+}
+
+// :event - the hard way
+
+body#hardway {
+		
+
+	
+	
 	
 }
 

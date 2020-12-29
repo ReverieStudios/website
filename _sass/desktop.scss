@@ -430,4 +430,29 @@ $color-menu: rgba(73, 73, 81, 1);
 			}
 		}
 	}
+	
+	body#hardway {
+		p {
+			padding: 0;
+			margin-left: 0;
+		}
+		
+		.hardway-grid {
+			display: grid;
+			column-gap: 1em;
+			grid-template-columns: 1fr 480px 480px 1fr;
+			grid-template: ". poster text .";
+			
+			.hero {
+				grid-area: poster;
+			}
+			
+			.hardway-text {
+				grid-area: text;
+			}
+		}
+		
+		
+		
+	}
 }
