@@ -7,6 +7,9 @@
 		<li class = "home {% if page.id == "home" %} active{% endif %}"><a href = "/">Home</a></li>
 		<li>
 			<a href = "/events/schedule/">Events</a>
+			
+			{% comment %}
+			Old events submenu. It has become too unwieldy.
 			<ul class = "events">
 				<li {% if page.id == "schedule" %}class = "active"{% endif %}><a href = "/events/schedule/">Schedule</a></li>
 				{% assign events = site.events | sort: 'order' %}
@@ -14,6 +17,7 @@
 				<li {% if page.short-name == {{e.short-name}} || page.id == {{e.short-name}} %}class = "active"{% endif %}><a href = "/events/{{e.short-name}}">{{e.title}}</a></li>
 				{% endfor %}
 			</ul>
+			{% endcomment %}
 		</li>
 		<li>
 		<a href = "/about/studio/">About</a>
