@@ -5,7 +5,7 @@
 	<ul class = "main closed">
 		<li class = "menu-toggle"><a href = "#">Close</a></li>
 		<li class = "home {% if page.id == "home" %} active{% endif %}"><a href = "/">Home</a></li>
-		<li>
+		<li {% if page.id == "schedule" %}class = "active"{% endif %}>
 			<a href = "/events/schedule/">Events</a>
 			
 			{% comment %}

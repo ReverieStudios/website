@@ -153,6 +153,11 @@ nav {
 			background-size: contain;
 		}
 		
+		li.active ul.contact-sub li a {
+			color: $color-text-menu;
+			font-weight: normal;
+		}
+		
 		li.menu-toggle {
 			text-align: right;
 			margin-top: -$space-gutter;
