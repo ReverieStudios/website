@@ -208,13 +208,17 @@ $color-menu: rgba(73, 73, 81, 1);
 			left: 0;
 			margin: 0;
 			padding: 0;
-			width: 300px !important;
+			width: auto !important;
 			background: $color-menu;
 			font-size: 80%;
+			white-space: nowrap;
 			
 			&:hover {
-				
 				display: block;
+			}
+			
+			li {
+				
 			}
 		}
 	}

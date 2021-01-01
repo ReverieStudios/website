@@ -1138,9 +1138,10 @@ body#sanguis {
       left: 0;
       margin: 0;
       padding: 0;
-      width: 300px !important;
+      width: auto !important;
       background: #494951;
-      font-size: 80%; }
+      font-size: 80%;
+      white-space: nowrap; }
       body.page nav ul.main li:hover > ul:hover {
         display: block; }
 
