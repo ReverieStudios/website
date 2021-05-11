@@ -138,14 +138,7 @@ $width-ipad: 600px;
 	#about-studio {
 		
 		#principals .staff {
-			grid-template: 
-			"name-title name-title"
-			"image content"
-			"contact content";
-			
-			grid-template-rows: auto 250px 1fr;
-			grid-template-columns: 250px 1fr;
-			grid-column-gap: $space-gutter / 2;			
+		
 			margin: 0 $space-gutter;
 			
 			h3, h4 {
@@ -161,7 +154,7 @@ $width-ipad: 600px;
 			}
 			
 			.contact {
-				margin-top: $space-gutter / 2;
+				margin: 0 0 1em 0;
 			}
 		}
 	}
@@ -196,8 +189,6 @@ $width-ipad: 600px;
 	
 	#main p, #main ol, #main ul {
 		width: $width-ipad;
-		margin-left: auto;
-		margin-right: auto;
 	}
 	
 	section#main blockquote {
@@ -215,25 +206,22 @@ $width-ipad: 600px;
 	}
 	
 	#main .staff p {
-		width: auto;
+		width: 600px;
 		margin-left: 0;
 		margin-right: 0;
 	}
 	
 	div#collaborators {
 		width: 600px;
-		margin-left: auto;
-		margin-right: auto;
+
 		
 		h3 {
-			margin: 0;
+			padding-left: 4vw;
 		}
 		
 		p {
 			margin-left: 0;
 			margin-right: 0;
-			padding-left: 0;
-			padding-right: 0;
 		}
 	}
 	
@@ -327,6 +315,18 @@ $width-ipad: 600px;
 				height: 20vw;
 			}
 			
+		}
+	}
+	
+	body#sanguis {
+		#main p {
+			width: 600px;
+			margin: 0 auto 1em auto;
+			padding: 0;
+		}
+		
+		div#masthead {
+			padding: 0;
 		}
 	}
 }

@@ -7,8 +7,8 @@ Should be formatted using Markdown syntax (very easy to read).
 
 ### Our Vision
 
-Reverie is a participatory experience design agency that produces educational and fun co-creative immersive events, generally known as 'larping' or 'live action roleplaying events'. Participants take on a persona and engage with the story directly and form strong ties to the events going on, rather than watching the drama passively from their seats.
+Reverie is a participatory experience design agency based in Boston, MA that produces educational and fun co-creative immersive events, generally known as ‘larping’ or ‘live action roleplaying events’. Participants take on a persona and engage with the story directly and form strong ties to the events going on, rather than watching passively.
 
 ### Our Story
 
-Tyler, Ken and Garett have known each other for years, but recently decided that rather than participating in their passions through the experience produced by others, that they would seek to create experiences on their own. After Grand Masquerade in New Orleans 2016, they resolved to forge a new group with a new purpose in their hometown of Boston.
+Reverie Studios began in 2016 with small, bespoke larp events. Since then the studio has run or hosted half a dozen larp events ranging from intimate and intense affairs to large scale blockbuster style events. Reverie continues to grow and explore new larp formats and experiences, with plans on the horizon to partner with other organizations and run even more events.

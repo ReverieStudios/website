@@ -8,13 +8,19 @@ layout: page
 
 Reverie is a participatory experience design agency based in Boston, MA that produces educational and fun co-creative immersive events, generally known as 'larping' or 'live action roleplaying events'. Participants take on a persona and engage with the story directly and form strong ties to the events going on, rather than watching passively.
 
+## Our Ethos
+
+Reverie believes that the stories that are generated within the larp by the participants are more important than the story that Reverie would tell. Participants and organizers collaborate to develop character and scene sketches, and then Reverie assists the participants to express themselves during the event. Reverie aims to provide all of the tools we can to assist participants in having a meaningful and impactful story experience.
+
 ## Our Story
 
-Tyler, Ken and Garett have known each other for years, but recently decided that rather than participating in their passions through the experience produced by others, that they would seek to create experiences on their own. After Grand Masquerade in New Orleans 2016, they resolved to forge a new group with a new purpose in their hometown of Boston.
+Reverie Studios began in 2016 with small, bespoke larp events. Since then the studio has run or hosted half a dozen larp events ranging from intimate and intense affairs to large scale blockbuster style events. Reverie continues to grow and explore new larp formats and experiences, with plans on the horizon to partner with other organizations and run even more events. 
 
 ## Meet the Team
 
-{% assign principals = site.staff | where: "type", "principal" %}
+The designers and writers behind Reverie
+
+{% assign principals = site.staff | where: "type", "principal" | sort: "order" %}
 <div id = "principals">
 	{% for p in principals %}
 	<div class = "staff">
@@ -25,8 +31,10 @@ Tyler, Ken and Garett have known each other for years, but recently decided that
 		</div>
 		
 		<div class = "contact">
-			{% if p.email %}<div class = "email"><a href = "mailto:{{p.email}}">{{p.email}}</a></div>{% endif %}
-			{% if p.twitter %}<div class = "twitter"><a href = "https://www.twitter.com/{{p.twitter}}">@{{p.twitter}}</a></div>{% endif %}
+			{% if p.email %}<div class = "email"><a class = "email" href = "mailto:{{p.email}}">{{p.email}}</a></div>{% endif %}
+			{% if p.twitter %}<div class = "twitter"><a class = "twitter" href = "https://www.twitter.com/{{p.twitter}}">@{{p.twitter}}</a></div>{% endif %}
+			<div class = "pronouns">({{p.pronouns}})</div>
+
 		</div>
 		
 		{% if p.image %}

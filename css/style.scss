@@ -8,7 +8,7 @@ $text-heading: Oswald, Impact, sans-serif;
 $text-main: "Lora", Georgia, serif;
 $text-aux: Arial, Verdana, Geneva, sans-serif;
 
-// :colors & deocration
+// :colors & decoration
 
 $color-background-main: #38383c;
 $color-text-main: #e7e7f4;
@@ -624,56 +624,61 @@ section#main {
 }
 
 #principals .staff {
-	display: grid;
-	grid-template:
-	"name-title contact"
-	"image image"
-	"content content";
-	
-	grid-template-columns: 1fr auto;
-	
-	.name-title {
-		grid-area: name-title;
-	}
+	display: flex;
+	flex-direction: column;
 	
 	.contact { 
-		grid-area: contact;
-		margin-right: $space-gutter;
-		
-		
+		margin: 0 $space-gutter 1em $space-gutter;
+		font-family: $text-aux;
 		font-size: 60%;
+		
+		& > div {
+			padding-top: 0.25em;
+		}
+		
 		a {
 			border: none;
-			display: inline-block;
-			font-family: $text-aux;
-		}
-		
-		.email, .twitter {
+			display: flex;
 			position: relative;
-			padding-top: 0.25em;
-			padding-left: 18px;
-
+			
+			&:before {
+				width: 1em;
+				height: 1em;
+				content: " ";
+				margin-right: 0.25em;
+			}
 		}
 		
-		.email {
+		.email, .twitter, .pronouns {
+			position: relative;
+		}
+		
+		.pronouns {
+			display: flex;
+			
+			&:before {
+				width: 1em;
+				height: 1em;
+				content: " ";
+				margin-right: 0.25em;
+				background: transparent url('../i/pronoun-icon.png') left center no-repeat;
+				background-size: contain;
+			}
+		}
+		
+		a.email:before {
 			background: transparent url('../i/email-icon.png') left center no-repeat;
-			background-size: 15px 10px;
-			background-position: 0px 7px;
+			background-size: contain;
 		}
 		
-		.twitter {
+		a.twitter:before {
 			background: transparent url('../i/twitter-icon.png') left center no-repeat;
-			background-size: 12px 10px;
-			background-position: 0px 7px;
+			background-size: contain;
 		}
-	}
-	
-	.image {
-		grid-area: image;
-	}
-	
-	.content {
-		grid-area: content;
+		
+		.pronouns {
+			color: $color-link-main;
+		}
 	}
 }
 

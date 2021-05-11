@@ -406,35 +406,42 @@ section#main {
   margin-top: 1em; }
 
 #principals .staff {
-  display: grid;
-  grid-template: "name-title contact" "image image" "content content";
-  grid-template-columns: 1fr auto; }
-  #principals .staff .name-title {
-    grid-area: name-title; }
+  display: flex;
+  flex-direction: column; }
   #principals .staff .contact {
-    grid-area: contact;
-    margin-right: 4vw;
+    margin: 0 4vw 1em 4vw;
+    font-family: Arial, Verdana, Geneva, sans-serif;
     font-size: 60%; }
+    #principals .staff .contact > div {
+      padding-top: 0.25em; }
     #principals .staff .contact a {
       border: none;
-      display: inline-block;
-      font-family: Arial, Verdana, Geneva, sans-serif; }
-    #principals .staff .contact .email, #principals .staff .contact .twitter {
-      position: relative;
-      padding-top: 0.25em;
-      padding-left: 18px; }
-    #principals .staff .contact .email {
+      display: flex;
+      position: relative; }
+      #principals .staff .contact a:before {
+        width: 1em;
+        height: 1em;
+        content: " ";
+        margin-right: 0.25em; }
+    #principals .staff .contact .email, #principals .staff .contact .twitter, #principals .staff .contact .pronouns {
+      position: relative; }
+    #principals .staff .contact .pronouns {
+      display: flex; }
+      #principals .staff .contact .pronouns:before {
+        width: 1em;
+        height: 1em;
+        content: " ";
+        margin-right: 0.25em;
+        background: transparent url("../i/pronoun-icon.png") left center no-repeat;
+        background-size: contain; }
+    #principals .staff .contact a.email:before {
       background: transparent url("../i/email-icon.png") left center no-repeat;
-      background-size: 15px 10px;
-      background-position: 0px 7px; }
-    #principals .staff .contact .twitter {
+      background-size: contain; }
+    #principals .staff .contact a.twitter:before {
       background: transparent url("../i/twitter-icon.png") left center no-repeat;
-      background-size: 12px 10px;
-      background-position: 0px 7px; }
-  #principals .staff .image {
-    grid-area: image; }
-  #principals .staff .content {
-    grid-area: content; }
+      background-size: contain; }
+    #principals .staff .contact .pronouns {
+      color: #fff; }
 
 .staff {
   margin-bottom: 1em; }
@@ -897,10 +904,6 @@ body#sanguis {
       box-sizing: border-box; }
 
   #about-studio #principals .staff {
-    grid-template: "name-title name-title" "image content" "contact content";
-    grid-template-rows: auto 250px 1fr;
-    grid-template-columns: 250px 1fr;
-    grid-column-gap: 2vw;
     margin: 0 4vw; }
     #about-studio #principals .staff h3, #about-studio #principals .staff h4 {
       margin-left: 0; }
@@ -909,7 +912,7 @@ body#sanguis {
     #about-studio #principals .staff .content p {
       padding: 0; }
     #about-studio #principals .staff .contact {
-      margin-top: 2vw; }
+      margin: 0 0 1em 0; }
 
   body#daedalus .banner {
     width: 100%;
@@ -929,9 +932,7 @@ body#sanguis {
     padding-right: 0; }
 
   #main p, #main ol, #main ul {
-    width: 600px;
-    margin-left: auto;
-    margin-right: auto; }
+    width: 600px; }
 
   section#main blockquote {
     width: 600px;
@@ -945,21 +946,17 @@ body#sanguis {
       margin-right: 0; }
 
   #main .staff p {
-    width: auto;
+    width: 600px;
     margin-left: 0;
     margin-right: 0; }
 
   div#collaborators {
-    width: 600px;
-    margin-left: auto;
-    margin-right: auto; }
+    width: 600px; }
     div#collaborators h3 {
-      margin: 0; }
+      padding-left: 4vw; }
     div#collaborators p {
       margin-left: 0;
-      margin-right: 0;
-      padding-left: 0;
-      padding-right: 0; }
+      margin-right: 0; }
 
   #home #banner, #home section > p, #home section > h3, #home section > h4 {
     width: 600px;
@@ -1012,7 +1009,14 @@ body#sanguis {
     body#eskhaton #in-game #cults {
       grid-area: cults; }
     body#eskhaton #in-game #opal::before, body#eskhaton #in-game #cults::before {
-      height: 20vw; } }
+      height: 20vw; }
+
+  body#sanguis #main p {
+    width: 600px;
+    margin: 0 auto 1em auto;
+    padding: 0; }
+  body#sanguis div#masthead {
+    padding: 0; } }
 @media screen and (min-width: 1025px) {
   #main h3, #main h4, #main h5 {
     width: auto; }
@@ -1175,25 +1179,18 @@ body#sanguis {
 
   #about-studio #principals {
     display: flex;
-    font-size: 60%; }
+    flex-wrap: wrap; }
   #about-studio #principals .staff {
+    flex: 0 0 460px;
     margin: 0;
-    grid-template: "name-title" "image" "contact" "content";
-    grid-template-columns: 300px;
-    grid-template-rows: auto auto 70px 1fr;
-    grid-gap: 0;
-    flex: 0 0 300px;
     margin-right: 20px; }
-    #about-studio #principals .staff h3 {
-      width: 100%; }
-    #about-studio #principals .staff .name-title {
-      align-self: flex-end; }
-    #about-studio #principals .staff .contact {
-      align-self: flex-start;
-      margin-top: 1em; }
+    #about-studio #principals .staff .content {
+      font-size: 80%; }
   #about-studio #collaborators {
     width: 100%;
     margin: 0; }
+  #about-studio div#collaborators h3 {
+    padding-left: 0; }
 
   body#seance, body#acog, body#daedalus, body#eskhaton {
     grid-template: ". in-game-disclaimer nav ." "main main main main" "footer footer footer footer";
@@ -1276,4 +1273,6 @@ body#sanguis {
       grid-area: text; }
 
   body#sanguis {
-    font-size: 2em; } }
+    font-size: 2em; }
+    body#sanguis h2 {
+      margin-bottom: 0.5em; } }

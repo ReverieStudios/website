@@ -270,41 +270,26 @@ $color-menu: rgba(73, 73, 81, 1);
 		
 		#principals {
 			display: flex;
-			font-size: 60%;
+			flex-wrap: wrap;
 		}
 		
 		#principals .staff {
+			flex: 0 0 $width-desktop / 2 - $grid-gutter;
 			margin: 0;
-			grid-template:
-			"name-title"
-			"image"
-			"contact"
-			"content";
-			
-			grid-template-columns: 300px;
-			grid-template-rows: auto auto 70px 1fr; 
-			grid-gap: 0;
-						
-			flex: 0 0 300px;
 			margin-right: $grid-gutter;
 			
-			h3 {
-				width: 100%;
-			}
-			
-			.name-title {
-				align-self: flex-end;
-			}
-			
-			.contact {
-				align-self: flex-start;
-				margin-top: 1em;
+			.content {
+				font-size: 80%;
 			}
 		}
 		
 		#collaborators {
 			width: 100%;
 			margin: 0;
+		}
+		
+		div#collaborators h3 {
+			padding-left: 0;
 		}
 	}
 	
@@ -458,7 +443,12 @@ $color-menu: rgba(73, 73, 81, 1);
 	}
 	
 	body#sanguis {
-		
 		font-size: 2em;
+		
+		h2 {
+			margin-bottom: 0.5em;
+		}
 	}
+	
+	
 }
