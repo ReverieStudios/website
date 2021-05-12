@@ -939,7 +939,7 @@ body#sanguis {
 @media screen and (min-width: 768px) {
   #main h3, #main h4, #main h5 {
     width: 600px;
-    margin-left: auto;
+    margin-left: 4vw;
     margin-right: auto;
     padding-right: 0; }
 
@@ -1030,7 +1030,8 @@ body#sanguis {
     padding: 0; } }
 @media screen and (min-width: 1025px) {
   #main h3, #main h4, #main h5 {
-    width: auto; }
+    width: auto;
+    margin-left: 0; }
 
   body {
     font-size: 40px; }
@@ -1049,6 +1050,9 @@ body#sanguis {
     border: 1px solid white;
     padding: 1px;
     background: black; }
+
+  section#main ul {
+    margin: 0; }
 
   body#schedule, body#about-studio, body#about-larp, body#contact, body#not-found, body.page {
     display: grid;

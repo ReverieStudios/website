@@ -11,6 +11,7 @@ $color-menu: rgba(73, 73, 81, 1);
 	
 	#main h3, #main h4, #main h5 {
 		width: auto;
+		margin-left: 0;
 		
 	}
 	
@@ -36,6 +37,9 @@ $color-menu: rgba(73, 73, 81, 1);
 		background: black;
 	}
 	
+	section#main ul {
+		margin: 0;
+	}
 	
 	body#schedule, body#about-studio, body#about-larp, body#contact, body#not-found, body.page {
 		display: grid;

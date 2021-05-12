@@ -186,7 +186,7 @@ $width-ipad: 600px;
 	
 	#main h3, #main h4, #main h5 {
 		width: $width-ipad;
-		margin-left: auto;
+		margin-left: $space-gutter;
 		margin-right: auto;
 		padding-right: 0;
 	}
