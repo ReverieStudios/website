@@ -635,6 +635,9 @@ body#seance #in-game {
     font-family: "Lora", Georgia, serif;
     text-transform: none;
     text-align: center; }
+  body#seance #in-game p {
+    margin-left: auto;
+    margin-right: auto; }
   body#seance #in-game img {
     float: right;
     width: 45%;
