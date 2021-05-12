@@ -47,6 +47,14 @@ $width-ipad: 600px;
 		background-size: contain;
 	}
 	
+	section#main ul {
+		width: auto;
+		
+		li {
+			margin: 0 0 0.5em 1em;
+		}
+	}
+	
 	nav {
 		padding-bottom: 0;
 		
@@ -160,10 +168,6 @@ $width-ipad: 600px;
 	}
 	
 	body#daedalus {
-		.banner {
-			width: 100%;
-			padding: 1em 0 2em 0;
-		}
 		
 		.banner p {
 			width: 80%;

@@ -392,6 +392,11 @@ section#main {
     margin-top: 0; }
   section#main h2 + p, section#main h2 + #principals {
     margin-top: 1em; }
+  section#main ul {
+    font-size: 70%;
+    margin: 0 4vw 1em 4vw; }
+    section#main ul li {
+      margin: 0 4vw 0.5em 4vw; }
   section#main blockquote {
     border-left: 1px solid #e7e7f4;
     margin-left: 4vw;
@@ -557,7 +562,8 @@ body#daedalus {
   body#daedalus .banner {
     background: black url("../i/events/daedalus/daedalus-splash.jpg") center center no-repeat;
     background-size: cover;
-    padding: 5vw; }
+    padding: 5vw;
+    padding-top: 25vw; }
     body#daedalus .banner h2 {
       text-align: center;
       color: #fff;
@@ -574,6 +580,10 @@ body#daedalus {
     width: auto;
     color: #fff;
     padding: 0; }
+  body#daedalus nav {
+    position: absolute;
+    right: 5vw;
+    top: 5vw; }
 
 body#seance, body#acog, body#eskhaton {
   display: grid;
@@ -854,6 +864,11 @@ body#sanguis {
     background: transparent url("../i/logo-white-single-line.png") center center no-repeat;
     background-size: contain; }
 
+  section#main ul {
+    width: auto; }
+    section#main ul li {
+      margin: 0 0 0.5em 1em; }
+
   nav {
     padding-bottom: 0; }
     nav ul {
@@ -914,9 +929,6 @@ body#sanguis {
     #about-studio #principals .staff .contact {
       margin: 0 0 1em 0; }
 
-  body#daedalus .banner {
-    width: 100%;
-    padding: 1em 0 2em 0; }
   body#daedalus .banner p {
     width: 80%;
     margin: 0 auto; }
@@ -1030,7 +1042,8 @@ body#sanguis {
     background: transparent;
     text-align: left;
     padding: 0;
-    border: none; }
+    border: none;
+    margin-top: 0; }
 
   img.hero {
     border: 1px solid white;
@@ -1247,6 +1260,8 @@ body#sanguis {
     flex-direction: row-reverse; }
     body#daedalus nav > a.menu-toggle {
       margin: 0 20px 0 0; }
+  body#daedalus .banner {
+    padding-top: 100px; }
   body#daedalus .banner h2 {
     padding-top: 300px; }
   body#daedalus h3 {

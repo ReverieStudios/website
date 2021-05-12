@@ -27,6 +27,7 @@ $color-menu: rgba(73, 73, 81, 1);
 		text-align: left;
 		padding: 0;
 		border: none;
+		margin-top: 0;
 	}
 	
 	img.hero {
@@ -34,6 +35,7 @@ $color-menu: rgba(73, 73, 81, 1);
 		padding: 1px;
 		background: black;
 	}
+	
 	
 	body#schedule, body#about-studio, body#about-larp, body#contact, body#not-found, body.page {
 		display: grid;
@@ -397,6 +399,9 @@ $color-menu: rgba(73, 73, 81, 1);
 			}
 		}
 		
+		.banner {
+			padding-top: 100px;
+		}
 		
 		.banner h2 {
 			padding-top: 300px;
