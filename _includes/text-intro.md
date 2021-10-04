@@ -5,9 +5,7 @@ Should be formatted using Markdown syntax (very easy to read).
 
 ## 2021 and Beyond
 
-The ongoing COVID-19 pandemic and its social distancing measures made it impossible for us at Reverie Studios to put on the types of events that we so love. But this has given us time to incubate a large number of ideas for 2021 and beyond! 
-
-*[The Haunting of Gray Manor][haunting]* has been tentatively rescheduled for October 8--10, 2021. The COVID-necessitated delay gave us time to reconsider the event's scope and logistics. We are increasing the number of possible attendees to 80, and applications are once again open! The [event website][haunting] now also has a trailer video and an interview with our sound designer, Nathan Leigh.
+*[The Haunting of Gray Manor][haunting]* is set for October 8--10, 2021. The COVID-necessitated delay gave us time to reconsider the event's scope and logistics, and we're looking forward to having sixty attendees!
 
 *[Sanguis][sanguis]* is a vampiric larp that will start online and then transition to live events (or at least, undead ones) when possible. Late 2021 will also feature Miranda Dawn Chadbourne's *[Ember][ember]* and *[Fools Rush In][fools]*.
 
