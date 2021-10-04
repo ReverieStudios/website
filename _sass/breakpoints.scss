@@ -332,4 +332,47 @@ $width-ipad: 600px;
 			padding: 0;
 		}
 	}
+	
+	body#saturnalia {
+		
+		.saturnalia-grid {
+			display: grid;
+			grid-template: 
+			"hero partnership"
+			"kickstarter kickstarter"
+			"story story"
+			"logistics logistics";
+			grid-template-columns: 50% 1fr;
+			margin: 2em auto 2em auto;
+			padding: 0 4vw 0 4vw;
+			max-width: 760px;
+			column-gap: 2vw;
+			
+			.hero {
+				grid-area: hero;
+			}
+			
+			.kickstarter {
+				grid-area: kickstarter;
+			}
+			
+			.partnership {
+				grid-area: partnership;
+				width: 100%;
+				padding: 0;
+			}
+			
+			.story {
+				grid-area: story;
+			}
+			
+			.logistics {
+				grid-area: logistics;
+			}
+			
+		    p {
+				width: 100%;   
+		   	}
+		}
+	}
 }

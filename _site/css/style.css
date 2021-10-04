@@ -328,6 +328,8 @@ p {
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), transparent); }
   .event-list .event.ember .gradient {
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.75), transparent); }
+  .event-list .event.saturnalia .gradient {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.25), transparent); }
 
 #events .event.daedalus h3, #events .event.daedalus p, #events .event.hardway h3, #events .event.hardway p {
   color: #000; }
@@ -840,6 +842,41 @@ body#sanguis {
     background: transparent;
     color: #fff; }
 
+body#saturnalia .saturnalia-grid {
+  display: grid;
+  grid-template: "hero" "kickstarter" "partnership" "story" "logistics";
+  margin: 1em 4vw 0 4vw; }
+  body#saturnalia .saturnalia-grid .hero {
+    grid-area: hero; }
+  body#saturnalia .saturnalia-grid .kickstarter {
+    grid-area: kickstarter;
+    margin-top: 1em; }
+  body#saturnalia .saturnalia-grid .partnership {
+    grid-area: partnership; }
+  body#saturnalia .saturnalia-grid .story {
+    grid-area: story; }
+  body#saturnalia .saturnalia-grid .logistics {
+    grid-area: logistics; }
+  body#saturnalia .saturnalia-grid p {
+    box-sizing: border-box;
+    padding: 0; }
+body#saturnalia .kickstarter a {
+  display: block;
+  background: #05ce78;
+  background: linear-gradient(#03ad64, #05ce78);
+  color: #000;
+  border: none;
+  font-family: Arial, Verdana, Geneva, sans-serif;
+  font-size: 90%;
+  font-weight: bold;
+  margin: 0 auto 1em auto;
+  padding: 1em 0;
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10em;
+  line-height: 1em; }
+
 @media screen and (max-width: 320px) {
   body {
     font-size: 18px; } }
@@ -1030,7 +1067,30 @@ body#sanguis {
     margin: 0 auto 1em auto;
     padding: 0; }
   body#sanguis div#masthead {
-    padding: 0; } }
+    padding: 0; }
+
+  body#saturnalia .saturnalia-grid {
+    display: grid;
+    grid-template: "hero partnership" "kickstarter kickstarter" "story story" "logistics logistics";
+    grid-template-columns: 50% 1fr;
+    margin: 2em auto 2em auto;
+    padding: 0 4vw 0 4vw;
+    max-width: 760px;
+    column-gap: 2vw; }
+    body#saturnalia .saturnalia-grid .hero {
+      grid-area: hero; }
+    body#saturnalia .saturnalia-grid .kickstarter {
+      grid-area: kickstarter; }
+    body#saturnalia .saturnalia-grid .partnership {
+      grid-area: partnership;
+      width: 100%;
+      padding: 0; }
+    body#saturnalia .saturnalia-grid .story {
+      grid-area: story; }
+    body#saturnalia .saturnalia-grid .logistics {
+      grid-area: logistics; }
+    body#saturnalia .saturnalia-grid p {
+      width: 100%; } }
 @media screen and (min-width: 1025px) {
   #main h3, #main h4, #main h5 {
     width: auto;
@@ -1296,4 +1356,9 @@ body#sanguis {
   body#sanguis {
     font-size: 2em; }
     body#sanguis h2 {
-      margin-bottom: 0.5em; } }
+      margin-bottom: 0.5em; }
+
+  body#saturnalia .saturnalia-grid {
+    max-width: 960px; }
+    body#saturnalia .saturnalia-grid p.partnership {
+      font-size: 60%; } }

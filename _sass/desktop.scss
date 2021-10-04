@@ -459,5 +459,16 @@ $color-menu: rgba(73, 73, 81, 1);
 		}
 	}
 	
+	body#saturnalia {
+		
+		.saturnalia-grid {
+			max-width: 960px;
+			
+			p.partnership {
+				font-size: 60%;
+			}
+		}
+	}
+	
 	
 }
