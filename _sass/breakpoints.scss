@@ -1,378 +1,364 @@
-// Media queries built off of main styles.
+/*
 
-// Break point for iPhone SE?
-// First break point: > 500px
+Styles that define how the site design changes as the device window size increases.
+These rules are almost entirely changes to basic font sizes, grid layout, and margins.
+The one exception is {body#home section#main section#events}, which has some minor decorative changes throughout.
 
-$width-ipad: 600px;
+*/
 
-// pretty much only the iPhone SE is this small
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) {
+	
 	body {
-		font-size: 18px;
+		font-size: 12px;
 	}
 }
 
-@media screen and (min-width: 500px) {
-	body {  
-		font-size: 25px;
+@media screen and (min-width: 375px) {
+	
+	body#home div.event-list p {
+		font-size: 120%;
 	}
 	
-	body#acog #in-game .letter {
-		width: 300px;
-	}
-	
-	br.mobile {
-		display: none;
-	}
-	
-	body#eskhaton {
-		#cults section {
-			margin-bottom: 1em;
+	body#acog section#main section#in-game div.inner {
+		padding-left: 5em;
+		
+		img.badge {
+			width: 50%;
+			margin-left: -6em;
 		}
 	}
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 414px) {
+	
 	body {
-		font-size: 25px;
+		font-size: 15px;
 	}
 	
-	#masthead h1 {
-		height: 16.4vw;
-	}
-	
-	#masthead h1 a {
-		width: 100%;
-		background: transparent url('../i/logo-white-single-line.png') center center no-repeat;
-		background-size: contain;
-	}
-	
-	section#main ul {
-		width: auto;
+	body#acog section#main section#in-game div.inner {
+		padding-left: 2em;
 		
-		li {
-			margin: 0 0 0.5em 1em;
+		img.badge {
+			width: 45%;
+			margin-left: -1em;
 		}
-	}
-	
-	nav {
-		padding-bottom: 0;
-		
-		ul {
-			width: auto !important;
-		}
-	}
-	
-	#seance, #acog, #daedalus, #eskhaton {
-		nav {
-			padding-top: 0;
-		}
-	}
-	
-	.event-list {
-		display: flex;
-		flex-wrap: wrap;
-		
-		.event {
-			flex: 0 0 50%;
-		}
-		
-		.event a:after {
-			width: 4vw;
-			height: 4vw;
-		}
-		
-		.event .blurb {
-			width: 100%;
-			font-size: 75%;
-		}
-		
-		.event img {
-			width: 100%;
-		}
-		
-		.event.seance .gradient {
-			background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
-		}
-		
-		.event.daedalus .gradient {
-			background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.85) 50%);
-		}
-		
-		.event.acog .gradient {
-			background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.75), transparent);
-		}
-	}
-	
-	body#schedule {
-		
-		h2 {
-			margin-bottom: 1em;
-		}
-		
-		.upcoming-events, .past-events {
-			
-			
-			.event {
-				display: flex;
-				flex-direction: row-reverse;
-				margin-left: 20px;
-				margin-right: 20px;
-				
-				h3 {
-					margin-top: -0.25em;
-				}
-				
-				.image, .content {
-					flex: 0 0 50%;
-				}
-				
-				.image img {
-					padding: 1px;
-					background: black;
-					border: 1px solid mix(white, $color-background-main, 50);
-					box-sizing: border-box;
-				}
-				
-				.content {
-					font-size: 90%;
-					padding-right: 20px;
-					box-sizing: border-box;
-				}
-			}
-		}
-	}
-	
-	#about-studio {
-		
-		#principals .staff {
-		
-			margin: 0 $space-gutter;
-			
-			h3, h4 {
-				margin-left: 0;
-			}
-			
-			.image {
-				margin: 0;
-			}
-			
-			.content p {
-				padding: 0;
-			}
-			
-			.contact {
-				margin: 0 0 1em 0;
-			}
-		}
-	}
-	
-	body#daedalus {
-		
-		.banner p {
-			width: 80%;
-			margin: 0 auto;
-		}
-
-	}
-	
-	#lightbox #controls a {
-		width: 5vw;
-		height: 5vw;
 	}
 }
 
 @media screen and (min-width: 768px) {
 	
-	#main h3, #main h4, #main h5 {
-		width: $width-ipad;
-		margin-left: $space-gutter;
-		margin-right: auto;
-		padding-right: 0;
+	body {
+		font-size: 20px;
 	}
 	
-	#main p, #main ol, #main ul {
-		width: $width-ipad;
-	}
-	
-	section#main blockquote {
-		width: $width-ipad;
-		margin-right: auto;
-		padding: 0.5em 0 0.5em 1em;
-		box-sizing: border-box;
+	section#masthead {
+		img.logo-one-line {
+			display: block;
+		}
 		
-		p {
-			width: auto;
-			margin-left: 0;
-			margin-right: 0;
+		img.logo-two-line {
+			display: none;
 		}
 	}
 	
-	#main .staff p {
-		width: 600px;
-		margin-left: 0;
-		margin-right: 0;
+	body#home nav, body.page nav {
+		align-self: center;
+		margin-bottom: 0;
 	}
 	
-	div#collaborators {
-		width: 600px;
-
-		
-		h3 {
-			padding-left: 4vw;
-		}
-		
-		p {
-			margin-left: 0;
-			margin-right: 0;
-		}
+	body.page {
+		grid-template: 
+		". masthead nav ."
+		". main main ."
+		"footer footer footer footer";
+		grid-template-columns: 2rem 5fr 1fr 2rem;
 	}
 	
-	#home {
-		#banner, section > p, section > h3, section > h4 {
-			width: $width-ipad;
-			margin-left: auto;
-			margin-right: auto;
-			padding: 0;
-		}
+	body#home, body#seance, body#eskhaton, body#acog, body#daedalus {
+		grid-template:
+		". masthead nav ."
+		"main main main main"
+		"footer footer footer footer";
+		grid-template-columns: 2rem 5fr 1fr 2rem;
 		
-		.event-list .event .blurb {
-			font-size: 95%;
+		section#main {
+			grid-template-columns: 2rem 1fr 2rem;
 			
-			h3 {
-				margin-top: 0.5em;
+			section#in-game {
+				grid-template-columns: 2rem 1fr 2rem;
 			}
 		}
 	}
 	
-	#schedule {
-		.upcoming-events, .past-events {
-			p, h3, h4 {
-				width: 100%;
-				padding: 0;
-				margin-left: 0;
-			}
+	body#home {
 			
-			.event {
-				padding-left: 20px;
-				box-sizing: border-box;
-			}
-			
-
-		}
-	}
-	
-	#main div.past-runs h3 {
-		margin-left: $space-gutter;
-	}
-	
-	#acog #in-game .letter {
-		h2, h3, p {
-			width: auto;
-		}
-	}
-	
-	body#acog #in-game .letter {
-		margin-top: 0;
-		margin-bottom: 300px;
-	}
-	
-	body#acog #in-game .badge {
-		right: 380px;
-		width: 200px;
-		top: 50px;
-		bottom: inherit;
-		left: auto;
-	}
-	
-	body#daedalus {
-		h3 {
-			padding-left: 0;
-		}
-	}
-	
-	body#eskhaton {
-		#in-game {
-			font-size: 25px;
+		section#main {
 			display: grid;
 			grid-template: 
-			"opal cults";
-			grid-template-columns: 40% 60%;
+			". intro ."
+			"events events events"
+			". about .";
+			grid-template-columns: 2rem 1fr 2rem;
+		}
+		
+		section#events h2 {
+			margin-left: 2rem;
+		}
+		
+		div.event-list {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 0;
+			border-top: 1px solid $color-text-main;
 			
-			p {
-				width: 100%;
+			div.event {
+				margin-bottom: 0;
+				padding: 0;
+				border: 0;
+				
+				div.blurb {
+					padding: 1rem 2rem;
+				}
+				
+				h3 {
+					font-size: 180%;
+					margin-bottom: 0.25em;
+				}
+				
+				p {
+					font-size: 85%;
+				}
 			}
-			
-			#opal {
-				grid-area: opal;
-				font-size: 120%;
-			}
-			
-			#cults {
-				grid-area: cults;
-			}
-			
-			
-			
-			#opal::before, #cults::before {
-				height: 20vw;
-			}
-			
 		}
 	}
 	
-	body#sanguis {
-		#main p {
-			width: 600px;
-			margin: 0 auto 1em auto;
-			padding: 0;
+	body#schedule {
+		div.upcoming-events, div.past-events {
+			display: grid;
 		}
-		
-		div#masthead {
-			padding: 0;
+	}
+	
+	body#acog section#main section#in-game {
+		div.inner {
+			padding-left: 0;
+			flex-direction: row-reverse;
+			align-items: flex-end;
+			
+			img.badge {
+				width: 30%;
+				height: 55%;
+				margin: 0;
+			}
 		}
+	}
+}
+
+@media screen and (min-width: 900px) {
+	
+	body {
+		font-size: 23px;
+	}
+	
+	body#schedule {
+		div.upcoming-events, div.past-events {
+			grid-template-columns: 1fr 1fr;
+			column-gap: 1rem;
+		}
+	}
+	
+	div.gallery {
+		grid-template-columns: 1fr 1fr 1fr;
 	}
 	
 	body#saturnalia {
-		
-		.saturnalia-grid {
+		div.saturnalia-grid {
+			
 			display: grid;
 			grid-template: 
 			"hero partnership"
 			"kickstarter kickstarter"
 			"story story"
 			"logistics logistics";
-			grid-template-columns: 50% 1fr;
-			margin: 0 auto 2em auto;
-			padding: 0 4vw 0 4vw;
-			max-width: 760px;
-			column-gap: 2vw;
-			
-			.hero {
-				grid-area: hero;
+			grid-template-columns: 1.5fr 1fr;
+			column-gap: 1rem;
+		}
+		
+		img.hero {
+			grid-area: hero;
+		}
+		
+		p.partnership {
+			grid-area: partnership;
+		}
+		
+		div.kickstarter {
+			grid-area: kickstarter;
+		}
+		
+		p.story {
+			grid-area: story;
+		}
+		
+		p.logistics {
+			grid-area: logistics;
+		}
+	}
+	
+	body#hardway {
+		
+		div.hardway-grid {
+			display: grid;
+			grid-template: "img text";
+			grid-template-columns: 2fr 1fr;
+			column-gap: 1rem;
+		}
+		
+		img.hero {
+			grid-area: img;
+			width: 100%;
+			height: auto;
+		}
+		
+		div.hardway-text {
+			grid-area: text;
+		}
+	}
+	
+	body#eskhaton {
+		section#in-game div.inner {
+			display: grid;
+			grid-template: ". opal . cults .";
+			grid-template-columns: 1fr fit-content(470px) 1em fit-content(670px) 1fr;
+			column-gap: 0;
+		}
+		
+		section#cults {
+			font-size: 80%;
+		}
+	}
+}
+
+@media screen and (min-width: 1025px) {
+	
+	body {
+		font-size: 25px;
+	}
+	
+	body.page {
+		grid-template-columns: 1fr fit-content($width-double-column) fit-content($width-double-column) 1fr;
+		column-gap: $width-desktop-gap;
+		padding-top: 4em;
+	}
+	
+	section#masthead {
+		img.logo-two-line {
+			display: block;
+		}
+		
+		img.logo-one-line {
+			display: none;
+		}
+	}
+	
+	body#home {
+		
+		grid-template: 
+		". masthead nav ."
+		". main main ."
+		"footer footer footer footer";
+		grid-template-columns: 1fr fit-content($width-double-column) fit-content($width-double-column) 1fr;
+		column-gap: $width-desktop-gap;
+		
+		section#main {
+			grid-template:
+			"intro"
+			"events"
+			"about";
+		}
+		
+		section#events {
+			h2 {
+				margin-left: 0;
+				border: none;
 			}
 			
-			.kickstarter {
-				grid-area: kickstarter;
+			div.event-list {
+				gap: 1em;	
+				border: none;
 			}
 			
-			.partnership {
-				grid-area: partnership;
-				width: 100%;
-				padding: 0;
+			div.event {
+				border: 1px solid $color-img-border;
+				background: #000;
+				padding: 1px;
 			}
 			
-			.story {
-				grid-area: story;
+			div.blurb {
+				padding: 1em;
 			}
 			
-			.logistics {
-				grid-area: logistics;
+			div.blurb p {
+				font-size: 80%;
 			}
+		}
+	}
+	
+	body#schedule {
+		div.event p {
+			font-size: 80%;
+		}
+	}
+	
+	body#about-studio {
+		div#principals, div#collaborators {
+			grid-template-columns: 1fr 1fr;
+			column-gap: 2em;
 			
-		    p {
-				width: 100%;   
-		   	}
+			div.contact, p {
+				font-size: 80%;
+			}
+		}
+	}
+	
+	body#hardway {
+		div.hardway-grid {
+			grid-template-columns: 1.5fr 1fr;
+			column-gap: 1em;
+		}
+	}
+	
+	body#eskhaton, body#acog, body#seance, body#daedalus {
+		grid-template: 
+		". masthead nav ."
+		"main main main main"
+		"footer footer footer footer";
+		grid-template-columns: 1fr fit-content($width-double-column) $width-double-column 1fr;
+		column-gap: $width-desktop-gap;
+		
+		section#main {
+			display: grid;
+			grid-template: 
+			". in-disclaim ."
+			"in in in"
+			". out .";
+			grid-template-columns: 1fr fit-content($width-desktop-full) 1fr;
+			column-gap: 0rem;
+			
+			section#in-game {
+				grid-template-columns: 1fr $width-desktop-full 1fr;
+			}
+		}
+	}
+	
+	body#eskhaton {
+		section#in-game {
+			font-size: 80%;
+		}
+	}
+	
+	body#daedalus {
+		section#main section#in-game {
+			padding-bottom: 4em;
 		}
 	}
 }

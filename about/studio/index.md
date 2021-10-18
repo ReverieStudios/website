@@ -18,7 +18,7 @@ Reverie Studios began in 2016 with small, bespoke larp events. Since then the st
 
 ## Meet the Team
 
-The designers and writers behind Reverie
+The designers and writers behind Reverie Studios.
 
 {% assign principals = site.staff | where: "type", "principal" | sort: "order" %}
 <div id = "principals">

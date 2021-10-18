@@ -13,14 +13,21 @@
 	<script src = "/js/main.js"></script>
 </head>
 
-<body id="seance" class = "event"> 
+<body id="seance" class = "page"> 
 
+<section id = "masthead">
+	<a href = "/">
+		<img src = "/i/logo-flat-white-1600.png" class = "logo-two-line" alt = "Reverie Studios Logo" />
+		<img src = "/i/logo-white-single-line.png" class = "logo-one-line" alt = "Reverie Studios Logo" />
+		<h1 class = "hidden">Reverie Studios</h1>
+	</a>
+</section>
 <nav>
 	
-	<a href = "#" class = "menu-toggle">menu</a>				
+	<a href = "#" class = "menu-toggle button">menu</a>				
 	
 	<ul class = "main closed">
-		<li class = "menu-toggle"><a href = "#">Close</a></li>
+		<li class = "menu-toggle"><a href class = "button" = "#">close</a></li>
 		<li class = "home "><a href = "/">Home</a></li>
 		<li >
 			<a href = "/events/schedule/">Events</a>
@@ -47,11 +54,6 @@
 	</ul>
 	
 </nav>
-<section id = "in-game-disclaimer">
-	<p class = "disclaimer">The following is written from an in-game perspective.</p>
-	
-	<p class = "skip-link"><a href = "#out-of-game">Skip to out-of-game information.</a></p>
-</section>
 
 <section id = "main">
 	
@@ -59,18 +61,27 @@
 
 
 
+<section id = "in-game-disclaimer">
+   <p class = "disclaimer">The following is written from an in-game perspective. <a href = "#out-of-game" class = "button skip-link">Skip to out-of-game</a></p>
+</section>
+
 <section id = "in-game">
+   
+   <div class = "inner">
 	
-	<h2>The Door and Its Key</h2>
-	
-	<p class = "intro"><img src = "/i/events/seance/ames_bio.jpg" class = "ames_photo" />This website serves to inform you of the accomplishments of a medium of the like which has not been seen in a millennia: the esteemed <strong>Walter Ames</strong>. While we recognize that claims to authenticity are not new, and the skepticism associated with communicating with spirits is strong, the myths of the world are not without their sources. It is a matter of finding the right key to unlock that door, and untold many have sought it without success. What defines the parlor fare from the likes of Walter Ames is the rigidness and discipline of research that Walter utilizes in his pursuit of the unknown. While we would not claim to be scientific, we’ll claim to be methodological.</p>
+   	<h2>The Door and Its Key</h2>
+   	
+   	<p class = "intro"><img src = "/i/events/seance/ames_bio.jpg" class = "ames_photo" />This website serves to inform you of the accomplishments of a medium of the like which has not been seen in a millennium: the esteemed <strong>Walter Ames</strong>. While we recognize that claims to authenticity are not new, and the skepticism associated with communicating with spirits is strong, the myths of the world are not without their sources. It is a matter of finding the right key to unlock that door, and untold many have sought it without success. What defines the parlor fare from the likes of Walter Ames is the rigidness and discipline of research that Walter utilizes in his pursuit of the unknown. While we would not claim to be scientific, we’ll claim to be methodological.</p>
+   
+   	<p class = "guests">Walter Ames has had a number of notable guests at his Seances that range from dignitaries of state to eminent minds of our age. Always Walter’s method is to invite those to come that should. The mystique and prestige of this is essential, and preserves an element of the unknown, which is an ingredient that cannot be left out.</p>
+   
+      <h3>Testimonials</h3>
+   
+      <p class = "quote">&ldquo;I was absolutely skeptical of what this experience would be like, and whether Mr. Ames was a charlatan, a fraud, a run of the mill trickster. What I discovered is that I have to concede there are things I don’t know, that there might be a kernel of truth to the longstanding interest in the occult. <strong>Mr. Ames is the real thing.</strong>&rdquo;</p>
+      
+      <p class = "author">Dr. Cynthia Redham, Professor of Brain and Cognitive Sciences, author of <em>The Brain is a Muscle</em></p>
 
-	<p class = "guests">Walter Ames has had a number of notable guests at his Seances that range from dignitaries of state to eminent minds of our age. Always Walter’s method is to invite those to come that should. The mystique and prestige of this is essential, and preserves an element of the unknown, which is an ingredient that cannot be left out.
-</p>
-
-<h3>Testimonials</h3>
-
-<p><span class = "quote">&ldquo;I was absolutely skeptical of what this experience would be like, and whether Mr. Ames was a charlatan, a fraud, a run of the mill trickster. What I discovered is that I have to concede there are things I don’t know, that there might be a kernel of truth to the longstanding interest in the occult. <strong>Mr. Ames is the real thing.</strong>&rdquo;</span> <span class = "author">Dr. Cynthia Redham, Professor of Brain and Cognitive Sciences, author of <em>The Brain is a Muscle</em></span></p>
+   </div>
 
 </section>
 
@@ -325,13 +336,13 @@ This event significantly uses audio and noises ranging in volume from low to sta
 	
 	<ul class="about-links">
 		 <li class="facebook">
-		   <p><a href="https://www.facebook.com/reveriestudiosllc/">Facebook</a></p>
+		   <p><a class = "button facebook" href="https://www.facebook.com/reveriestudiosllc/">Facebook</a></p>
 		 </li>
 		 <li class="discord">
-		   <p><a href="https://discord.gg/mg7Rq9fA46">Discord</a></p>
+		   <p><a class = "button discord" href="https://discord.gg/mg7Rq9fA46">Discord</a></p>
 		 </li>
 		 <li class="email">
-		   <p><a href="mailto:contact@reverie.studio?subject=Mailing%20List%20Inquiry&body=Please%20add%20me%20to%20the%20Reverie%20Studios%20mailing%20list!">Stay Updated</a></p>
+		   <p><a class = "button email" href="mailto:contact@reverie.studio?subject=Mailing%20List%20Inquiry&body=Please%20add%20me%20to%20the%20Reverie%20Studios%20mailing%20list!">Stay Updated</a></p>
 		 </li>
 	  </ul>
 	

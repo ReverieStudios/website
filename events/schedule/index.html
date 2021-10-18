@@ -27,17 +27,20 @@ layout: page
 
 <div class = "event">
 	
+	{% assign event_uri = "/events/" | append: f.event %}
+	
 	<div class = "image">
-		<img src = "{{f.image}}" />
+		<a href = "{{event_uri}}"><img src = "{{f.image}}" /></a>
 	</div>
 
 	<div class = "content">
 		<h3>{{f.title}}</h3>
 		<h4>{{f.display-date}}</h4>
-	
-		{{f.blurb | markdownify}}
 		
-		<p><a href = "/events/{{f.event}}">Learn more about this event.</a></p>
+		{% assign event_link = " [Learn more &#8594;](" | append: event_uri | append: ")" %}
+		{% assign blurb = f.blurb | append: event_link | markdownify  %}
+		{{blurb}}
+			
 	</div>
 </div>
 
@@ -52,17 +55,19 @@ layout: page
 {% for p in past_events %}
 <div class = "event">
 	
+	{% assign event_uri = "/events/" | append: p.event %}
+
 	<div class = "image">
-		<img src = "{{p.image}}" />
+		<a href = "{{event_uri}}"><img src = "{{p.image}}" /></a>
 	</div>
 
 	<div class = "content">
 		<h3>{{p.title}}</h3>
 		<h4>{{p.display-date}}</h4>
 	
-		{{p.blurb | markdownify}}
-		
-		<p><a href = "/events/{{p.event}}">Learn more about this event.</a></p>
+		{% assign event_link = " [Learn more &#8594;](" | append: event_uri | append: ")" %}
+		{% assign blurb = p.blurb | append: event_link | markdownify  %}
+		{{blurb}}
 	</div>
 </div>
 

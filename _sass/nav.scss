@@ -1,0 +1,222 @@
+/*
+
+Styles for the main nav menu. 
+
+There are two sets of style rules, defined using mutually exclusive media queries.
+The two rule sets do NOT inherit from each other. This reduces rule confusion but adds some duplicate rules.
+
+Mobile
+- used when the device window is <= 1024px
+- a single button that triggers an overlay containing the full menu hierarchy
+
+Desktop
+- used when the device window is > 1024px
+- a small number of top-level items and dropdowns under them
+
+*/
+
+// :: mobile styles
+@media screen and (max-width: 1024px) {
+	
+	nav {
+		font-family: $text-aux;
+		font-size: 120%;
+		align-self: center;
+		
+		ul {
+			list-style: none;
+		}
+		
+		li {
+			margin: 0;
+		}
+		
+		li a {
+			border: none;
+			color: $color-text-menu;
+		}
+		
+		li.active a {
+			font-weight: bold;
+			color: #fff;
+		}
+		
+		li.active ul a {
+			font-weight: normal;
+			color: $color-text-menu;
+		}
+		
+		ul.main {
+			display: block;
+			position: fixed;
+			right: 0;
+			top: 0;
+			height: 100%;
+			padding: 2em 1rem 0 1rem;
+			width: auto;
+			z-index: 100;
+			background: mix(rgba(0, 0, 0, 0.9), $color-background-main, 50);
+			border-left: 0.25rem solid mix(rgba(0, 0, 0, 0.9), $color-text-menu, 50);
+			transition: opacity 0.25s ease-in;
+			
+			&.closed {
+				opacity: 0;
+				right: -100vw;
+			}
+		}
+		
+		ul.main li.menu-toggle {
+			text-align: right;
+		}
+		
+		ul.main > li {
+			margin-bottom: 0.75em;
+		}
+		
+		ul.main li > ul {
+			margin-left: 0.5em;
+			margin-top: 0.5em;
+			padding-left: 0.5em;
+			border-left: 1px solid $color-text-main;
+		}
+		
+		ul.main li > ul li {
+			margin-bottom: 0.25em;
+		}
+		
+		a.facebook:before {
+			background: transparent url('../i/facebook_negative.png') center center no-repeat;
+		}
+		
+		a.discord:before {
+			background: transparent url('../i/discord_negative.png') center center no-repeat;
+		}
+		
+		a.email:before {
+			background: transparent url('../i/email_negative.png') center center no-repeat;
+		}
+		
+		a.facebook, a.discord, a.email {
+			
+			display: flex;
+			
+			&:before {
+				display: flex;
+				content: "_";
+				color: transparent;
+				width: 1em;
+				height: 1.3em;
+				margin-right: 0.5em;
+				background-size: contain;
+			}
+		}
+	}
+	
+}
+
+// ::desktop styles
+
+@media screen and (min-width: 1025px) {
+	nav {
+		
+		font-family: $text-aux;
+		font-size: 90%;
+		display: flex;
+		align-self: center;
+		
+		a.menu-toggle, ul.main li.menu-toggle {
+			display: none;
+		}
+		
+		ul {
+			border: none;
+			list-style: none;
+		}
+		
+		ul.main {
+			width: 100%;
+			display: flex;
+			justify-content: space-around;
+		
+			li {
+				flex: 0 1 auto;
+				position: relative;
+				margin: 0;		
+			}
+			
+			a {
+				border: none;
+				color: $color-text-menu;
+				display: block;
+				padding: 0.5em 0.75em;
+			}
+			
+			li.active a {
+				color: #fff;
+				font-weight: bold;
+			}
+			
+			li.active ul a {
+				font-weight: normal;
+				color: $color-text-menu;
+			}
+			
+			a.facebook:before {
+				background: transparent url('../i/facebook_negative.png') center center no-repeat;
+			}
+			
+			a.discord:before {
+				background: transparent url('../i/discord_negative.png') center center no-repeat;
+			}
+			
+			a.email:before {
+				background: transparent url('../i/email_negative.png') center center no-repeat;
+			}
+			
+			a.facebook, a.discord, a.email {
+				
+				display: flex;
+				
+				&:before {
+					display: flex;
+					content: "_";
+					color: transparent;
+					width: 1em;
+					height: 1em;
+					margin-right: 0.5em;
+					background-size: contain;
+				}
+			}
+		}
+		
+		ul.main li > ul {
+			display: none;
+			border: none;
+			z-index: 99;
+			
+			li:hover {
+				background: rgba(0, 0, 0, 0.3);
+			}
+		}
+		
+		ul.main li:hover {
+			background: $color-menu;
+		}
+		
+		ul.main li:hover > ul {
+			display: block;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			margin: 0;
+			padding: 0;
+			background: $color-menu;
+			font-size: 80%;
+			white-space: nowrap;
+			
+			&:hover {
+				display: block;
+			}
+		}
+	}
+}

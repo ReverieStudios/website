@@ -1,10 +1,10 @@
 ---
 title: D&aelig;dalvs
-layout: event-daedalus
+layout: page
 short-name: daedalus
 blurb: "The innovators at the Trondant Foundation invite you to an exclusive unboxing. Experience the cosmic disruption of realizing nobody’s in charge."
 order: 2
-thumbnail: i/events/daedalus_homepage.jpg
+thumbnail: i/events/daedalus/daedalus_homepage.jpg
 runs:
  - event: daedalus
    image: /i/events/daedalus/daedalus-splash.jpg
@@ -56,7 +56,17 @@ runs:
 {% assign past_events = page.runs | where_exp: "r", "r.date < now" | reverse %}
 {% comment %}"{% endcomment %}
 
-
+<section id = "in-game">
+   
+   <div class = "inner">
+   
+      <h2 class = "title">D&aelig;dalvs</h2>
+      
+      <p class = "blurb">Our first run as a producer of new Nordic style larps happened on March 31st and we couldn’t be more proud of how D&AElig;DALVS went. As a first-time event, D&AElig;DALVS was an experiment in our working with new larp writers, and Max and Jeff will both be people to watch. Please keep an eye out for future runs of this excellent larp about &lsquo;colliding truths&rsquo;.</p>
+   
+   </div>
+   
+</section>
 
 <section id = "out-of-game">
 	{% if past_events.size > 0 %}

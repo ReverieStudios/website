@@ -13,14 +13,21 @@
 	<script src = "/js/main.js"></script>
 </head>
 
-<body id="eskhaton" class = "event"> 
+<body id="eskhaton" class = "page"> 
 
+<section id = "masthead">
+	<a href = "/">
+		<img src = "/i/logo-flat-white-1600.png" class = "logo-two-line" alt = "Reverie Studios Logo" />
+		<img src = "/i/logo-white-single-line.png" class = "logo-one-line" alt = "Reverie Studios Logo" />
+		<h1 class = "hidden">Reverie Studios</h1>
+	</a>
+</section>
 <nav>
 	
-	<a href = "#" class = "menu-toggle">menu</a>				
+	<a href = "#" class = "menu-toggle button">menu</a>				
 	
 	<ul class = "main closed">
-		<li class = "menu-toggle"><a href = "#">Close</a></li>
+		<li class = "menu-toggle"><a href class = "button" = "#">close</a></li>
 		<li class = "home "><a href = "/">Home</a></li>
 		<li >
 			<a href = "/events/schedule/">Events</a>
@@ -47,85 +54,88 @@
 	</ul>
 	
 </nav>
-<section id = "in-game-disclaimer">
-	<p class = "disclaimer">The following is written from an in-game perspective.</p>
-	
-	<p class = "skip-link"><a href = "#out-of-game">Skip to out-of-game information.</a></p>
-</section>
 
 <section id = "main">
-	<section id = "in-game">
+	<section id = "in-game-disclaimer">
+	<p class = "disclaimer">The following is written from an in-game perspective. <a href = "#out-of-game" class = "button skip-link">Skip to out-of-game</a></p>
+</section>
+
+<section id = "in-game">
 	
-	<section id = "opal">
+	<div class = "inner">
+	
+		<section id = "opal">
+			
+			<section id = "salutation">
+				<p>Dear Honored Guest,</p>
+			</section>
+					
+			<section id = "main-text">
+				<p>It has always come to me in dreams&mdash;the call to serve. Perhaps a color I cannot name, or a voice I cannot understand, or a memory I have never lived. These impressions, always just beyond my grasp, signal the coming of one of the chosen. For generations, we Allertons have lived and died to serve these gifted few, assisting them in their strange, unknowable ways. Though we have never ourselves been blessed by the power of the Old Ones, it has long been our family's sacred privilege to know of them, and to aide their vessels whenever called.</p>
+	
+				<p>But never have so many called to me at once! In a few days&rsquo; time there shall be a truly unprecedented gathering of the five cults, each summoned here by their god for the grand revelation of the <strong>Eskhaton</strong>&mdash;the end of all things. Time is short, and my cousins and I must make ready our ancestral home! What follows are my notes on the honored assembly that shall soon join us.</p>
+	
+				<p>That I have lived to see this day is a joy. That I might die for this day would be an honor. </p>
+	
+			</section>
+			
+			<section id = "signature">
+				<p class = "name">Opal Allerton</p>
+				<p class = "title">Servant to the End</p>
+			</section>
+	
+			
+		</section>
 		
-		<span class = "salutation">Dear Honored Guest,</span>
+		<section id = "cults">
+			
+			<section id = "mareen">
 				
-		<section id = "main-text">
-			<p>It has always come to me in dreams&mdash;the call to serve. Perhaps a color I cannot name, or a voice I cannot understand, or a memory I have never lived. These impressions, always just beyond my grasp, signal the coming of one of the chosen. For generations, we Allertons have lived and died to serve these gifted few, assisting them in their strange, unknowable ways. Though we have never ourselves been blessed by the power of the Old Ones, it has long been our family's sacred privilege to know of them, and to aide their vessels whenever called.</p>
-
-			<p>But never have so many called to me at once! In a few days' time there shall be a truly unprecedented gathering of the five cults, each summoned here by their god for the grand revelation of the <strong>Eskhaton</strong>&mdash;the end of all things. Time is short, and my cousins and I must make ready our ancestral home! What follows are my notes on the honored assembly that shall soon join us.</p>
-
-			<p>That I have lived to see this day is a joy. That I might die for this day would be an honor. </p>
-
+				<h3>The Mareen</h3>
+				
+				<p>An ancient, matriarchal cult with strong ties to that most primal source of life&mdash;the ocean and her limitless waters. The Mareen draw their power from the depths, be it the sea itself or the unending well of preternatural memory. Each Mareen carries within them a growing chorus of departed minds, preserved via sacred rituals in service to their abyssal goddess, <strong>Illuket</strong>. A chorus&rsquo;s united song may lift up the acolyte to perform superhuman feats, or she may lose herself amid the dissonant bickering of lifetimes past. It is each member&rsquo;s duty to tame the raging waters within, and without. Serene as a frozen lake, ferocious as a tsunami, as implacable as the very tides, or all of these at once, the Mareen are not to be taken lightly.</p>
+			</section>
+			
+			<section id = "extant">
+				
+				<h3>The Anglesey Extant</h3>
+				
+				<p>Druids of the Extant worship the goddess <strong>N&rsquo;Klaste</strong> and her ever-turning trinity of life, death, and rebirth. The natural world&mdash;lush with plants, animals, and blood&mdash;forms the basis of Extant rituals. Through these rites, adherents strive to bridge our world with N&rsquo;Klaste's realm: a mysterious, primordial space which the worshipful call the Otherworld. Much power is to be found there, and it has blessed many adherents with gifts such as second sight and unnaturally long life. Access to the Otherworld is closely guarded by the Extant&rsquo;s ArchDruids, though it remains to be seen whether they do this to protect fragile novice minds, or for some more sinister reason.</p>
+			</section>
+			
+			<section id = "seekers">
+				
+				<h3>The Pattern Seekers</h3>
+				
+				<p>Unique among the five cults, the Pattern Seekers exist without doctrine or hierarchy. They are united solely by the will of <strong>Zhahdahdahdon</strong>, the god of the Whispering Labyrinth. The Seekers know that all things are governed by the Pattern, and through it, all can be understood. Each Seeker serves the Pattern in his or her own way&mdash;through art, through obsession, through inscrutable choices. A Seeker may be the beneficiary of improbable coincidences or the victim of terrible misfortunes, if the Pattern wills it. It is no easy path, but the Seekers know its worth: to become Wise in the Pattern is to walk naked through a storm, untouched by a single raindrop.</p>
+			</section>
+			
+			<section id = "expositors">
+				
+				<h3>The Expositors <br class = "mobile" />of the Unspoken</h3>
+				
+				<p>In the Beginning was the Word, and <strong>Nomen Nescio</strong> was the god who heard it. Thus the god was transformed into a language, dying in the process; or so the Expositors of the Unspoken theorize. These are the learned scholars who devote themselves to unlocking the secrets of this haunted language. Centuries of meticulous research, risky experimentation, and necessary sacrifice have granted the Expositors terrible power in their pursuit of this understanding. Each Expositor works tirelessly to increase the cult&rsquo;s collective knowledge of Nomen Nescio, in hopes they may finally reveal the god&rsquo;s True Name, and wield it to rewrite creation itself. Until then, the Expositors publish, or they perish.</p>
+			</section>
+			
+			<section id = "progenus">
+				
+				<h3>ProGenus</h3>
+				
+				<p>Fifty years ago, clandestine research efforts of the great Cold War powers culminated in an event known as the Unveiling&mdash;a prophecy of the end times. If that prophecy was a question, ProGenus purports to be its answer. Chartered as a corporation after the Unveiling, ProGenus rose to its highest prominence in the 1980s, leading the fields of biotechnology and computer science. It now has tendrils in countless other areas. Of course, ProGenus&rsquo;s true core value proposition, from which all its innovations flow, is the goddess <strong>Aletheia</strong>. It was she who delivered the Unveiling and she who will deliver a new world of predators and prey. Every one of the company&rsquo;s fanatical researchers, accountants, and salespersons believes in her paradise of unending competition and consumption. ProGenus is, simply put, peak capitalism&rsquo;s apex predator.</p>
+			</section>
+			
 		</section>
-		
-		<section id = "signature">
-			<span class = "name">Opal Allerton</span>
-			<span class = "title">Servant to the End</span>
-		</section>
-
-		
-	</section>
 	
-	<section id = "cults">
-		
-		<section id = "mareen">
-			
-			<h3>The Mareen</h3>
-			
-			<p>An ancient, matriarchal cult with strong ties to that most primal source of life&mdash;the ocean and her limitless waters. The Mareen draw their power from the depths, be it the sea itself or the unending well of preternatural memory. Each Mareen carries within them a growing chorus of departed minds, preserved via sacred rituals in service to their abyssal goddess, <strong>Illuket</strong>. A chorus&rsquo;s united song may lift up the acolyte to perform superhuman feats, or she may lose herself amid the dissonant bickering of lifetimes past. It is each member&rsquo;s duty to tame the raging waters within, and without. Serene as a frozen lake, ferocious as a tsunami, as implacable as the very tides, or all of these at once, the Mareen are not to be taken lightly.</p>
-		</section>
-		
-		<section id = "extant">
-			
-			<h3>The Anglesey Extant</h3>
-			
-			<p>Druids of the Extant worship the goddess <strong>N&rsquo;Klaste</strong> and her ever-turning trinity of life, death, and rebirth. The natural world&mdash;lush with plants, animals, and blood&mdash;forms the basis of Extant rituals. Through these rites, adherents strive to bridge our world with N&rsquo;Klaste's realm: a mysterious, primordial space which the worshipful call the Otherworld. Much power is to be found there, and it has blessed many adherents with gifts such as second sight and unnaturally long life. Access to the Otherworld is closely guarded by the Extant&rsquo;s ArchDruids, though it remains to be seen whether they do this to protect fragile novice minds, or for some more sinister reason.</p>
-		</section>
-		
-		<section id = "seekers">
-			
-			<h3>The Pattern Seekers</h3>
-			
-			<p>Unique among the five cults, the Pattern Seekers exist without doctrine or hierarchy. They are united solely by the will of <strong>Zhahdahdahdon</strong>, the god of the Whispering Labyrinth. The Seekers know that all things are governed by the Pattern, and through it, all can be understood. Each Seeker serves the Pattern in his or her own way&mdash;through art, through obsession, through inscrutable choices. A Seeker may be the beneficiary of improbable coincidences or the victim of terrible misfortunes, if the Pattern wills it. It is no easy path, but the Seekers know its worth: to become Wise in the Pattern is to walk naked through a storm, untouched by a single raindrop.</p>
-		</section>
-		
-		<section id = "expositors">
-			
-			<h3>The Expositors <br class = "mobile" />of the Unspoken</h3>
-			
-			<p>In the Beginning was the Word, and <strong>Nomen Nescio</strong> was the god who heard it. Thus the god was transformed into a language, dying in the process; or so the Expositors of the Unspoken theorize. These are the learned scholars who devote themselves to unlocking the secrets of this haunted language. Centuries of meticulous research, risky experimentation, and necessary sacrifice have granted the Expositors terrible power in their pursuit of this understanding. Each Expositor works tirelessly to increase the cult&rsquo;s collective knowledge of Nomen Nescio, in hopes they may finally reveal the god&rsquo;s True Name, and wield it to rewrite creation itself. Until then, the Expositors publish, or they perish.</p>
-		</section>
-		
-		<section id = "progenus">
-			
-			<h3>ProGenus</h3>
-			
-			<p>Fifty years ago, clandestine research efforts of the great Cold War powers culminated in an event known as the Unveiling&mdash;a prophecy of the end times. If that prophecy was a question, ProGenus purports to be its answer. Chartered as a corporation after the Unveiling, ProGenus rose to its highest prominence in the 1980s, leading the fields of biotechnology and computer science. It now has tendrils in countless other areas. Of course, ProGenus&rsquo;s true core value proposition, from which all its innovations flow, is the goddess <strong>Aletheia</strong>. It was she who delivered the Unveiling and she who will deliver a new world of predators and prey. Every one of the company&rsquo;s fanatical researchers, accountants, and salespersons believes in her paradise of unending competition and consumption. ProGenus is, simply put, peak capitalism&rsquo;s apex predator.</p>
-		</section>
-		
-	</section>
+	</div>
 	
 </section>
 
 <section id = "out-of-game">
 	
 	<div id = "out-of-game-disclaimer">
-		<p>The following is practical &ldquo;out-of-game&rdquo; information describing a typical run of <em>Eskhaton</em>.</p>
+		<p>The following is practical &ldquo;out-of-game&rdquo; information describing a typical run of <em>Eskhaton</em>. Detailed information about Eskhaton is available at its <a href ="http://www.eskhatonlarp.com">event website</a>.</p>
 	</div>
-		
-	<p>Detailed information about Eskhaton is available at its <a href ="http://www.eskhatonlarp.com">event website</a>.</p>
-	
+			
 	
 					
 			
@@ -345,13 +355,13 @@
 	
 	<ul class="about-links">
 		 <li class="facebook">
-		   <p><a href="https://www.facebook.com/reveriestudiosllc/">Facebook</a></p>
+		   <p><a class = "button facebook" href="https://www.facebook.com/reveriestudiosllc/">Facebook</a></p>
 		 </li>
 		 <li class="discord">
-		   <p><a href="https://discord.gg/mg7Rq9fA46">Discord</a></p>
+		   <p><a class = "button discord" href="https://discord.gg/mg7Rq9fA46">Discord</a></p>
 		 </li>
 		 <li class="email">
-		   <p><a href="mailto:contact@reverie.studio?subject=Mailing%20List%20Inquiry&body=Please%20add%20me%20to%20the%20Reverie%20Studios%20mailing%20list!">Stay Updated</a></p>
+		   <p><a class = "button email" href="mailto:contact@reverie.studio?subject=Mailing%20List%20Inquiry&body=Please%20add%20me%20to%20the%20Reverie%20Studios%20mailing%20list!">Stay Updated</a></p>
 		 </li>
 	  </ul>
 	

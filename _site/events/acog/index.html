@@ -13,14 +13,21 @@
 	<script src = "/js/main.js"></script>
 </head>
 
-<body id="acog" class = "event"> 
+<body id="acog" class = "page"> 
 
+<section id = "masthead">
+	<a href = "/">
+		<img src = "/i/logo-flat-white-1600.png" class = "logo-two-line" alt = "Reverie Studios Logo" />
+		<img src = "/i/logo-white-single-line.png" class = "logo-one-line" alt = "Reverie Studios Logo" />
+		<h1 class = "hidden">Reverie Studios</h1>
+	</a>
+</section>
 <nav>
 	
-	<a href = "#" class = "menu-toggle">menu</a>				
+	<a href = "#" class = "menu-toggle button">menu</a>				
 	
 	<ul class = "main closed">
-		<li class = "menu-toggle"><a href = "#">Close</a></li>
+		<li class = "menu-toggle"><a href class = "button" = "#">close</a></li>
 		<li class = "home "><a href = "/">Home</a></li>
 		<li >
 			<a href = "/events/schedule/">Events</a>
@@ -47,30 +54,31 @@
 	</ul>
 	
 </nav>
-<section id = "in-game-disclaimer">
-	<p class = "disclaimer">The following is written from an in-game perspective.</p>
-	
-	<p class = "skip-link"><a href = "#out-of-game">Skip to out-of-game information.</a></p>
-</section>
 
 <section id = "main">
-	<section id = "in-game">
-	
-	<div class = "letter">
-		
-		<h2>Top Secret</h2>
-		<h3>C.O.G. Protocol</h3>
-		
-		<div class = "letter-body">
-			<p>You have been chosen to participate in the last line of defense against total annihilation of our values as a people: <strong>Continuity of Governance</strong>.</p>
+	<section id = "in-game-disclaimer">
+	<p class = "disclaimer">The following is written from an in-game perspective. <a href = "#out-of-game" class = "button skip-link">Skip to out-of-game</a></p>
+</section>
 
-			<p>Should you never have to operate in this capacity would be ideal, a continuation of the <span>importance</span> of defense and diplomacy in the age of <strong>nuclear destruction</strong>. If you must however, you are the shoulders upon which rests all of <span>humanity</span> rebuilding in an age anew. The United States confers upon you the <strong>full authority of control</strong> at all levels of governance in this instance. If you are <strong>activated</strong>, you are expected to work with others in a similar capacity to make the decisions that must be made under duress. Countless lives will be at stake, but you have been selected precisely because you are the right individual to do so.</p>
-		</div>
+<section id = "in-game">
 	
-	</div>
+	<div class = "inner">
 	
-	<div class = "badge">
+		<div class = "letter">
+			
+			<h2>Top Secret</h2>
+			<h3>C.O.G. Protocol</h3>
+			
+			<div class = "letter-body">
+				<p>You have been chosen to participate in the last line of defense against total annihilation of our values as a people: <strong>Continuity of Governance</strong>.</p>
+	
+				<p>Should you never have to operate in this capacity would be ideal, a continuation of the <span>importance</span> of defense and diplomacy in the age of <strong>nuclear destruction</strong>. If you must however, you are the shoulders upon which rests all of <span>humanity</span> rebuilding in an age anew. The United States confers upon you the <strong>full authority of control</strong> at all levels of governance in this instance. If you are <strong>activated</strong>, you are expected to work with others in a similar capacity to make the decisions that must be made under duress. Countless lives will be at stake, but you have been selected precisely because you are the right individual to do so.</p>
+			</div>
 		
+		</div>
+		
+		<img src = "/i/events/acog/badge.png" class = "badge" />
+	
 	</div>
 </section>
 
@@ -140,13 +148,13 @@ The event is designed for up to 20 participants taking place over the course of 
 	
 	<ul class="about-links">
 		 <li class="facebook">
-		   <p><a href="https://www.facebook.com/reveriestudiosllc/">Facebook</a></p>
+		   <p><a class = "button facebook" href="https://www.facebook.com/reveriestudiosllc/">Facebook</a></p>
 		 </li>
 		 <li class="discord">
-		   <p><a href="https://discord.gg/mg7Rq9fA46">Discord</a></p>
+		   <p><a class = "button discord" href="https://discord.gg/mg7Rq9fA46">Discord</a></p>
 		 </li>
 		 <li class="email">
-		   <p><a href="mailto:contact@reverie.studio?subject=Mailing%20List%20Inquiry&body=Please%20add%20me%20to%20the%20Reverie%20Studios%20mailing%20list!">Stay Updated</a></p>
+		   <p><a class = "button email" href="mailto:contact@reverie.studio?subject=Mailing%20List%20Inquiry&body=Please%20add%20me%20to%20the%20Reverie%20Studios%20mailing%20list!">Stay Updated</a></p>
 		 </li>
 	  </ul>
 	

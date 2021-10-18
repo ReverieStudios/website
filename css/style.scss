@@ -1,14 +1,26 @@
 ---
 ---
 
+/*
+
+Primary look and layout styles for Reverie Studios website.
+Base styles are meant for small smartphones.
+Layout-specific changes for different devices are in breakpoints.scss.
+Nav menu styles are in nav.scss.
+
+This design makes extensive use of grid layout rules, with some flexbox.
+
+*/
+
 // :fonts
 
 @import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700|Oswald:500|Charm');
 $text-heading: Oswald, Impact, sans-serif;
 $text-main: "Lora", Georgia, serif;
 $text-aux: Arial, Verdana, Geneva, sans-serif;
+$text-eskhaton: Charm, Palatino, Georgia, sans-serif;
 
-// :colors & decoration
+// :colors 
 
 $color-background-main: #38383c;
 $color-text-main: #e7e7f4;
@@ -16,215 +28,72 @@ $color-text-menu: mix($color-text-main, $color-background-main, 75);
 $color-link-main: #fff;
 $color-background-heading: #1b1b1f;
 $color-background-footer: #191919;
+$color-img-border: mix($color-text-main, #000, 80);
+$color-menu: rgba(73, 73, 81, 1);
 
-// :layout
+// :sizes
+$width-desktop-full: 960px;
+$width-desktop-gap: 30px;
+$width-double-column: $width-desktop-full / 2 - $width-desktop-gap / 2;
 
-$space-gutter: 4vw;
-
-// :general
-
+// :basic styling
 
 * {
 	margin: 0;
 	padding: 0;
-	box-sizing: content-box;
+	line-height: 1em;
+	box-sizing: border-box; // adding borders/padding will not extend boxes
 }
 
 body {
 	background: $color-background-main;
+	background-image: linear-gradient(180deg, mix($color-background-main, black, 35) 0px, $color-background-main 300px, $color-background-main);
 	color: $color-text-main;
 	font-family: $text-main;
 	font-size: 20px;
-	
-	&.page {
-		background-image: linear-gradient(180deg, mix($color-background-main, black, 35) 0px, $color-background-main 300px, $color-background-main);
-	}
-}
-
-body#home {
-	display: grid;
-	grid-template: 
-	"nav"
-	"masthead"
-	"hero"
-	"intro"
-	"events"
-	"about"
-	"footer";
-}
-
-nav {
-	grid-area: nav;
-	padding: $space-gutter $space-gutter $space-gutter 0;
-	display: flex;
-	flex-direction: row-reverse;
-	
-	a.menu-toggle {
-		display: inline-block;
-		padding: 0.4em 0.8em;
-		box-sizing: border-box;
-		flex: 0 0 auto;
-		
-		font-family: $text-aux;
-		font-size: 70%;
-		border: none;
-		color: mix($color-background-main, $color-text-main, 75);
-		background: $color-text-main;
-		border-radius: 200px;
-		text-transform: uppercase;
-	}
-	
-	ul.main {
-		display: block;
-		position: fixed;
-		height: 100vh;
-		width: auto;
-		right: 0;
-		top: 0;
-		z-index: 100;
-		padding: $space-gutter * 2;
-		background: mix(rgba(0, 0, 0, 0.9), $color-background-main, 50);
-		font-family: $text-aux;
-		border-left: 5px solid $color-background-heading;
-		transition: right 0.5s ease-out;
-		
-		&.closed {
-			right: -100vw;
-		}
-		
-		li {
-			display: block;
-			margin-bottom: 0.5em;
-		}
-		
-		li a {
-			border: none;
-			color: $color-text-menu;
-		}
-		
-		li.active a {
-			color: #fff;
-			font-weight: bold;
-		}
-		
-		ul.events, ul.about, ul.contact-sub {
-			margin-left: 0.5em;
-			margin-top: 0.5em;
-			padding-left: 0.5em;
-			border-left: 1px solid $color-text-main;
-			font-size: 90%;
-			
-			li {
-				width: auto;
-			}
-			
-			a {
-				display: block;
-				position: relative;
-			}
-		}
-		
-		a.facebook, a.discord, a.email {
-			
-			padding-left: 1.25em;
-			
-			&:before {
-				position: absolute;
-				top: 0px;
-				left: 0px;
-				width: 1em;
-				height: 1em;
-				content: " ";
-			}
-		}
-		
-		a.facebook:before {
-			background: transparent url('../i/facebook_negative.png') center center no-repeat;
-			background-size: contain;
-		}
-		
-		a.discord:before {
-			background: transparent url('../i/discord_negative.png') center center no-repeat;
-			background-size: contain;
-		}
-		
-		a.email:before {
-			background: transparent url('../i/email_negative.png') center center no-repeat;
-			background-size: contain;
-		}
-		
-		li.active ul.contact-sub li a {
-			color: $color-text-menu;
-			font-weight: normal;
-		}
-		
-		li.menu-toggle {
-			text-align: right;
-			margin-top: -$space-gutter;
-			
-			a {
-				display: inline-block;
-				text-transform: uppercase;
-				background: $color-text-main;
-				color: mix($color-background-main, $color-text-main, 75);
-				padding: 0.4em 0.8em;
-				font-size: 70%;
-				border-radius: 200px;
-				margin-right: -$space-gutter;
-				
-			}
-		}
-	}
-}
-
-#masthead {
-	grid-area: masthead;
-	margin-bottom: $space-gutter;
-	width: 90vw;
-	
-	h1 {
-		width: 100%;
-		height: 27vw;
-		box-sizing: border-box;
-		
-		a {
-			display: block;
-			width: 100%;
-			height: 100%;
-			background: transparent url('../i/logo-flat-white-1600.png') center center no-repeat;
-			background-size: contain;
-			padding-left: 100%;
-			white-space: nowrap;
-			overflow: hidden;
-			border: none;
-			box-sizing: border-box;
-		}
-	}
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: $text-heading;
 	text-transform: uppercase;
+	margin: 0 0 0.5em 0;
 }
 
-h2 {
-	text-align: right;
-	padding: $space-gutter / 4 $space-gutter;
-	margin-top: $space-gutter;
-	background: $color-background-heading;
-	border-top: 5px solid mix($color-background-heading, #fff, 75); 
+h6 {
+	font-size: 110%;
 }
 
-h3, h4 {
-	margin-left: $space-gutter;
+h5 {
+	font-size: 125%;
 }
 
 h4 {
-	padding-right: $space-gutter;
+	font-size: 140%;
 }
 
-p {
-	font-size: 70%;
+h3 {
+	font-size: 155%;
+}
+
+h2 {
+	font-size: 170%;
+}
+
+h1 {
+	font-size: 185%;
+}
+
+p, ol, li {
+	margin-bottom: 1em;
+	line-height: 1.3em;
+}
+
+ol, li {
+	margin-left: 1em;
+	
+	section & {
+		margin-left: 1.5em;
+	}
 }
 
 a {
@@ -233,516 +102,336 @@ a {
 	border-bottom: 1px solid $color-link-main;
 }
 
-img.hero {
-	display: block;
-	width: 100%;
-	height: auto;
-	margin-bottom: 4vw;
-}
-
-h4 > sup {
-	font-size: 60%;
-	line-height: 0.2em;
-}
-
-p.about-more {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-a.about-more {
+a.button {
 	display: inline-block;
-	position: relative;
-	font-family: $text-aux;
-	border: none;
-	color: mix($color-background-main, $color-text-main, 75);
+	border: 1px solid #000;
+	border-radius: 4em;
 	background: $color-text-main;
-	border-radius: 200px;
-	padding: 0.4em 2em 0.4em 0.8em;
-	text-transform: uppercase;
-	flex: 0 0 auto;
-	
-	
-	&:after {
-		content: "";
-		display: block;
-		position: absolute;
-		right: 8px;
-		top: 50%;
-		margin-top: -7.5px;
-		background: transparent url('../i/arrow-dusk-right.png');
+	color: $color-background-main;
+	font-family: $text-aux;
+	line-height: 1em;
+	padding: 0.5em 0.75em;
+}
+
+a.skip-link {
+	&::after {
+		display: inline-block;
+		content: "_";
+		color: transparent;
+		height: 100%;
+		width: 1em;
+		transform: rotate(90deg);
+		margin-left: 0.5em;
+		background: transparent url('../i/arrow-dusk-right.png') center center no-repeat;
 		background-size: contain;
-		width: 15px;
-		height: 15px;
-		margin-left: 5px;
+	}
+}
+
+img {
+	display: block;
+	background: #000;
+	padding: 1px;
+	border: 1px solid $color-img-border;
+}
+
+a.hidden {
+	  opacity: 0;
+}
+
+h1.hidden {
+	height: 0px;
+	overflow: hidden;
+	margin: 0
+}
+
+// :header 
+
+section#masthead {
+	
+	a {
+		display: block;
+		border: none;
+	}
+	
+	img {
+		border: none;
+		background: transparent;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+		height: auto;
+	}
+	
+	img.logo-one-line {
+		display: none;
+	}
+}
+
+// :footer
+footer {
+	
+	font-family: $text-aux;
+	margin: 2em 0 0 0;
+	padding: 2em 0 1em 0;
+	background: $color-background-footer;
+	
+	ul {
+		list-style: none;
+		display: flex;
+		justify-content: center;
+		gap: 1em;
+		
+		li {
+			margin: 0;
+		}
+		
+		a.facebook:before {
+			background: transparent url('../i/facebook_positive.png') center center no-repeat;
+		}
+		
+		a.discord:before {
+			background: transparent url('../i/discord_positive.png') center center no-repeat;
+		}
+		
+		a.email:before {
+			background: transparent url('../i/email_positive.png') center center no-repeat;
+		}
+		
+		a.facebook, a.discord, a.email {
+			
+			display: flex;
+			
+			&:before {
+				display: flex;
+				content: " ";
+				width: 1em;
+				height: 1em;
+				margin-right: 0.5em;
+				background-size: contain;
+			}
+		}
+	}
+	
+	p {
+		font-size: 80%;
+		text-align: center;
+	}
+}
+
+// :generic page
+body.page {
+	display: grid;
+	grid-template: 
+	". nav ."
+	". masthead ."
+	". main ."
+	"footer footer footer";
+	grid-template-columns: 1rem 1fr 1rem;
+	padding: 2em 0 0 0;
+	column-gap: 0;
+	
+	nav {
+		grid-area: nav;
+	}
+	
+	section#masthead {
+		grid-area: masthead;
+	}
+	
+	section#main {
+		grid-area: main;
+		margin-top: 2em;
+	}
+	
+	footer {
+		grid-area: footer;
+	}
+	
+	nav {
+		text-align: right;
+		margin-bottom: 1em;
+		
+		ul.main {
+			text-align: left;
+		}
 	}
 }
 
 // :homepage
 
-#hero {
-	grid-area: hero;
-	margin-bottom: 1em;
+body#home {
 	
-	#banner {
-		width: 100%;
-		position: relative;
+	// layout outside of section#main defined by body.page above
+	
+	section#main {
+		display: grid;
+		grid-template: 
+		". intro ."
+		". events ."
+		". about .";
+		grid-template-columns: 0rem 1fr 0rem;
+		column-gap: 0rem;
+	}
+	
+	section#intro {
+		grid-area: intro;
+	}
+	
+	section#events {
+		grid-area: events;
+	}
+	
+	section#about {
+		grid-area: about;
+	}
+	
+	div.event-list {
+		margin-bottom: 1em;
+	}
+	
+	section#events h2 {
+		margin-top: 1em;
+	}
+	
+	div.event {
 		
-		&:after {
-			content: " ";
+		border: 1px solid $color-img-border;
+		background: #000;
+		padding: 1px;
+		margin-bottom: 1em;
+				
+		a {
+			position: relative;
 			display: block;
+			border: none;
+			
+			&:after {
+				position: absolute;
+				bottom: 1em;
+				right: 0.75em;
+				width: 2em;
+				height: 2em;
+				background: transparent url('/i/arrow-white-right.png') center center no-repeat;
+				background-size: contain;
+				content: " ";
+			}
+		}
+		
+		div.blurb {
 			position: absolute;
+			top: 0;
+			left: 0;
+			padding: 1rem;
+		}
+		
+		div.gradient {
+			position: absolute;
+			display: block;
 			top: 0;
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), transparent);
-			z-index: 0;
-		}
-	}
-	
-	#banner img {
-		width: 100%;
-		height: auto;
-		display: block;
-		position: relative;
-
-	}
-	
-	#banner .blurb {
-		position: absolute;
-		bottom: 0;
-		left: $space-gutter;
-		bottom: $space-gutter / 2;
-		z-index: 1;
-	}
-	
-	h3, h4 {
-		color: #fff;
-		margin-left: 0;
-	}
-}
-
-#intro {
-	grid-area: intro;
-}
-
-#events {
-	grid-area: events;
-}
-
-$color-about-grad1: mix(#000, $color-background-main, 50);
-$color-about-grad2: rgba(red($color-background-main), green($color-background-main), blue($color-background-main), 1);
-
-#about {
-	grid-area: about;
-	padding: 0 0 2em 0;
-	
-	h2 {
-		margin-bottom: 0.5em;
-		margin-top: 0;
-	}
-}
-
-ul.about-links {
-	display: flex;
-	justify-content: center;
-	padding: 0;
-	margin: 0 0 1em 0;
-	width: 100%;
-	font-size: 120%;
-	
-	li {
-		flex: 0 1 auto;
-		list-style: none;
-	}
-	
-	li p {
-		padding: 0;
-		margin: 0;
-	}
-	
-	li p a {
-		position: relative;
-		margin: 0 1em 0 0;
-		padding: 0.4em 0.8em 0.4em 2.05em;
-		border: none;
-		background: $color-text-main;
-		color: $color-background-main;
-		border-radius: 200px;
-		text-transform: uppercase;
-		font-size: 80%;
-		font-family: $text-aux;
-		
-		&:before {
-			position: absolute;
-			top: 0.4em;
-			left: 0.8em;
-			width: 1em;
-			height: 1em;
-			content: " ";
-		}
-	}
-	
-	li:last-child p a {
-		margin: 0;
-	}
-	
-	li.facebook a:before {
-		background: transparent url('../i/facebook_positive.png') center center no-repeat;
-		background-size: contain;
-	}
-	
-	li.discord a:before {
-		background: transparent url('../i/discord_positive.png') center center no-repeat;
-		background-size: contain;
-	}
-	
-	li.email a:before {
-		background: transparent url('../i/email_positive.png') center center no-repeat;
-		background-size: contain;
-	}
-}
-
-p, div#masthead {
-	padding: 0 $space-gutter;
-}
-
-p {
-	margin-bottom: 0.75em;
-}
-
-.event-list .event {
-	
-	position: relative;
-	
-	.blurb {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 67vw;
-	}
-	
-	.blurb h3 {
-		margin: $space-gutter 0 0 $space-gutter;
-	}
-	
-	a {
-		border: none;
-		display: block;
-		position: relative;
-		
-		&:after {
-			content: "";
-			display: block;
-			position: absolute;
-			right: $space-gutter;
-			bottom: $space-gutter;
-			width: 7vw;
-			height: 7vw;
-			background: transparent url('../i/arrow-white-right.png');
-			background-size: contain;
-		}
-	}
-	
-	img {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: auto;
-	}
-	
-	.gradient {
-		position: absolute;
-		display: block;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	}
-	
-	&.seance .gradient {
-		background-image: linear-gradient(90deg, black, transparent);
-	}
-	
-	&.daedalus .gradient {
-		background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.95) 75%);
-	}
-	
-	&.acog .gradient {
-		background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.75), transparent);
-	}
-	
-	&.eskhaton .gradient {
-		background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.75), transparent);
-	}
-	
-	&.hardway .gradient {
-		background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.85), transparent);
-	}
-	
-	&.sanguis .gradient {
-		background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), transparent);
-	}
-	
-	&.ember .gradient {
-		background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.75), transparent);
-	}
-	
-	&.saturnalia .gradient {
-		background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.25), transparent);
-	}
-}
-
-#events .event.daedalus, #events .event.hardway {
-	
-	h3, p {
-		color: #000;
-	}
-	
-	.blurb {
-		left: auto;
-		right: 0;
-	}
-	
-	a:after {
-		background-image: url('../i/arrow-black-right.png');
-	}
-}
-
-#events .event.hardway {
-	.blurb {
-		right: auto;
-		left: 0;
-	}
-}
-
-#events .event.eskhaton {
-	
-	.blurb {
-		left: auto;
-		right: 0;
-	}
-}
-
-#events .more-events {
-	
-	padding: 1em 0;
-	
-	p {
-		margin: 0;
-		text-align: center;
-	}
-	
-	a {
-		color: white;
-		background: rgba(255, 255, 255, 0.2);
-		border: 1px solid white;
-		display: inline-block;
-		border-radius: 50px;
-		font-family: $text-aux;
-		padding: 8px 16px;
-	
-		&::after {
-			display: inline-block;
-			content: "_";
-			color: transparent;
-			height: 100%;
-			width: 1em;
-			margin-left: 0.5em;
-			background: transparent url('../i/arrow-white-right.png') center center no-repeat;
-			background-size: contain;
 		}
 		
-	}
-}
-
-// :footer 
-
-footer * {
-	font-family: $text-aux;
-}
-
-footer {
-	background: $color-background-footer;
-	//background: linear-gradient(0deg, $color-background-footer, $color-about-grad2);
-	padding: $space-gutter 0;
-	grid-area: footer;
-}
-
-footer p {
-	font-size: 60%;
-	text-align: center;
-}
-
-// :about-larp 
-
-body#about-larp, body#about-studio, body#contact, body#schedule, body#not-found, body.page {
-	min-height: 100vh;
-	display: grid;
-	grid-template: 
-	"nav"
-	"masthead"
-	"main"
-	"footer";
-	
-	grid-template-rows: auto auto auto 1fr;
-}
-
-section#main {
-	grid-area: main;
-	
-	h2 {
-		//margin-bottom: 0.5em;
-		//margin-top: 1em;
-		
-		&:first-child {
-			margin-top: 0;
+		&.seance div.gradient {
+			background-image: linear-gradient(90deg, black, transparent);
 		}
 		
-		& + p, & + #principals {
-			margin-top: 1em;
-		}
-	}
-	
-	ul {
-		font-size: 70%;
-		margin: 0 $space-gutter 1em $space-gutter;
-		
-		li {
-			margin: 0 $space-gutter 0.5em $space-gutter;
-		}
-	}
-
-	blockquote {
-		border-left: 1px solid $color-text-main;
-		margin-left: $space-gutter;
-		padding-left: $space-gutter;
-		padding-right: $space-gutter;
-		margin-bottom: 1.5em;
-		
-		p {
-			padding-left: 0;
-			padding-right: 0;
-		}
-	}
-}
-
-// :about-studio
-#about-studio, #contact, #schedule, #seance, #acog, #not-found {
-	footer {
-		margin-top: 1em;
-	}
-}
-
-#principals .staff {
-	display: flex;
-	flex-direction: column;
-	
-	.contact { 
-		margin: 0 $space-gutter 1em $space-gutter;
-		font-family: $text-aux;
-		font-size: 60%;
-		
-		& > div {
-			margin-top: 0.5em;
+		&.daedalus div.gradient {
+			background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.85) 75%);
 		}
 		
-		a {
-			border: none;
-			display: flex;
-			position: relative;
+		&.acog div.gradient {
+			background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.75), transparent);
+		}
+		
+		&.eskhaton div.gradient {
+			background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.75), transparent);
+		}
+		
+		&.hardway div.gradient {
+			background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.85), transparent);
+		}
+		
+		&.sanguis div.gradient {
+			background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), transparent);
+		}
+		
+		&.ember div.gradient {
+			background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.75), transparent);
+		}
+		
+		&.saturnalia div.gradient {
+			background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), transparent);
+		}
+		
+		h3 {
+			font-size: 2em;
+		}
+		
+		&.daedalus, &.hardway {
 			
-			&:before {
-				width: 1.25em;
-				height: 1.25em;
-				content: " ";
-				margin-right: 0.5em;
+			h3, p {
+				color: #000;
+			}
+			
+			div.blurb {
+				left: auto;
+				right: 0;
+			}
+			
+			a:after {
+				background-image: url('../i/arrow-black-right.png');
 			}
 		}
+	} // end div.event
+	
+	div.event img {
+		width: 100%;
+		height: auto;
+		border: none;
+		padding: 0;
+		position: relative;
+	}
+	
+	div.more-events {
+		text-align: center;
+		padding-bottom: 1em;
 		
-		.email, .twitter, .pronouns {
-			position: relative;
-		}
+		a {
+			color: white;
+			background: rgba(255, 255, 255, 0.2);
+			border: 1px solid white;
 		
-		.pronouns {
-			display: flex;
-			
-			&:before {
-				width: 1.25em;
-				height: 1.25em;
-				content: " ";
-				margin-right: 0.5em;
-				background: transparent url('../i/person-icon.png') left center no-repeat;
+			&::after {
+				display: inline-block;
+				content: "_";
+				color: transparent;
+				height: 100%;
+				width: 1em;
+				margin-left: 0.5em;
+				background: transparent url('../i/arrow-white-right.png') center center no-repeat;
 				background-size: contain;
 			}
 		}
-		
-		a.email:before {
-			background: transparent url('../i/email-icon.png') left center no-repeat;
-			background-size: contain;
-		}
-		
-		a.twitter:before {
-			background: transparent url('../i/twitter-icon.png') left center no-repeat;
-			background-size: contain;
-		}
-		
-		.pronouns {
-			color: $color-link-main;
-		}
-	}
-}
-
-.staff {
-	margin-bottom: 1em;
-}
-
-.staff h4 {
-	margin-left: $space-gutter;
-	margin-bottom: 0.5em;
-}
-
-.staff .image {
-	margin: 0 $space-gutter 0.5em $space-gutter;
-	
-	img {
-		display: block;
-		width: calc(100% - 4px);
-		height: auto;
-		padding: 1px;
-		background: black;
-		border: 1px solid white;
-		box-sizing: content-box;
-	}
-}
-
-// :events general
-#out-of-game ul, ol {
-	margin: 0 $space-gutter 1em $space-gutter;
-	font-size: 70%;
-	
-	li {
-		margin-left: 20px;
 	}
 }
 
 // :lightbox
-#lightbox {
+div#lightbox {
 	position: fixed;
 	width: 100vw;
 	height: 100vh;
-	left: 100vw;
+	left: 100%;
 	top: 0;
 	background: black;
-	background: rgba(0, 0, 0, 0.9);
+	background: rgba(0, 0, 0, 0.8);
 	z-index: 1000;	
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	
-	#controls, .content, .caption {
+	div#controls, div.content, div.caption {
 		flex: 0 0 auto;
 		margin-bottom: 10px;
 	}
@@ -751,24 +440,26 @@ section#main {
 		left: 0;
 	}
 	
-	.content {
+	div.content {
 		background: transparent;
 		max-height: 75%;
 	}
 	
-	#controls {
+	div#controls {
 		display: flex;
-		justify-content: center;
+		justify-content: space-between;
+		width: 50%;
+		margin: 0 auto 0.5em auto;
 
 		a {
 			flex: 0 0 auto;
 			position: relative;
-			width: 10vw;
-			height: 10vw;
+			width: 2em;
+			height: 2em;
+			gap: 1em;
 			display: block;
 			overflow: hidden;
 			border: none;
-			margin-left: 5vw;
 			text-indent: 100%;
 			color: transparent;
 			
@@ -804,200 +495,433 @@ section#main {
 	}
 }
 
-// :events schedule
+// :gallery
+div.gallery {
+	
+	margin: 1em 0 2em 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+	
+	a, img {
+		user-select: none;
+		-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	}
+	
+	div.image img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+// :events page
+
 body#schedule {
 	
-	h2 {
-		margin-bottom: 0;
+	img {
+		width: 100%;
+		height: auto;
+	}
+	
+	div.upcoming-events, div.past-events {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 0rem;
+	}
+	
+	div.event {
+		margin: 0 0 2em 0;
 	}
 	
 	h3 {
 		margin-top: 0.5em;
 	}
-	
-	.event {
-		margin-bottom: 2em;
-	}
-	
-	.event img {
-		width: 100%;
-		height: auto;
-		display: block;
-	}
 }
 
-.gallery {
-	
-	margin: 20px $space-gutter;
-	display: flex;
-	flex-wrap: wrap;
-	
-	a, img {
-	    user-select: none;
-	    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-	}
-	
-	.image {
-		flex: 0 0 auto;
-		width: 50%;
-	}
-	
-	.image img {
-		width: 100%;
-		height: auto;
-		display: block;
-		
-	}
-}
+// :about-studio page
 
-// :event - daedalus
-body#daedalus {
-	display: grid;
-	grid-template: 
-	"nav"
-	"main"
-	"footer";
-	grid-template-rows: auto auto 1fr;
-	min-height: 100vh;
+body#about-studio {
 	
-	#main {
-		display: flex;
-		flex-direction: column;
-	}
-	
-	.banner {
-		background: black url('../i/events/daedalus/daedalus-splash.jpg') center center no-repeat;
-		background-size: cover;
-		padding: 5vw;
-		padding-top: 25vw;
+	div#principals, div#collaborators {
 		
-		h2 {
-			text-align: center;
-			color: #fff;
-			font-size: 180%;
+		display: grid;
+		grid-template-columns: 1fr;
+		row-gap: 0em;
+		column-gap: 0em;
+		
+		div.staff {
+			margin-bottom: 1em;
 		}
 	}
 	
-	h2, h3, h4 {
-		margin: 0;
-		padding: 0 0 0 $space-gutter;
-		width: auto;
-		border: none;
-		background: transparent;
-	}
-	
-	h3 {
-		margin-top: 1em;
-	}
-	
-	.banner p {		
-		width: auto;
+	div.contact {
+		margin: 1em 0;
+		font-size: 100%;
+		font-family: $text-aux;
 		color: #fff;
-		padding: 0;
 	}
 	
-	nav {
-		position: absolute;
-		right: 5vw;
-		top: 5vw;
+	section#main a.email, a.twitter, div.pronouns {
+		display: flex;
+		border: none;
+		margin: 0 0 0.5em 0;
+		color: inherit;
+		
+		&:before {
+			display: flex;
+			content: "_";
+			color: transparent;
+			width: 1em;
+			height: 1em;
+			margin-right: 0.5em;
+		}
+	}
+	
+	section#main a.email:before {
+		background: transparent url('/i/email-icon.png') center center no-repeat;
+		background-size: contain;
+	}
+	
+	a.twitter:before {
+		background: transparent url('/i/twitter-icon.png') center center no-repeat;
+		background-size: contain;
+	}
+	
+	div.pronouns:before {
+		background: transparent url('/i/person-icon.png') center center no-repeat;
+		background-size: contain;
 	}
 }
 
-// :event - generic styles
-body#seance, body#acog, body#eskhaton {
+// :about-larp page
+
+body#about-larp {
 	
-	display: grid;
-	grid-template: 
-	"in-game-disclaimer nav"
-	"main main"
-	"footer footer";
-	
-	grid-template-columns: 1fr auto;
+	blockquote {
 		
-	#in-game-disclaimer {
-		grid-area: in-game-disclaimer;
-		font-family: $text-aux;
-		font-size: 90%;
-		padding-top: $space-gutter;
-		padding-bottom: $space-gutter;
+		margin: 0 0 1em 0.5em;
+		padding: 0.5em 0 0.5em 1em;
+		border-left: 1px solid $color-text-main;
 		
-		p.skip-link {
+		p:last-child {
 			margin-bottom: 0;
 		}
 	}
+}
+
+// :EVENT PAGES
+
+//: saturnalia
+
+body#saturnalia {
 	
-	#out-of-game-disclaimer {
-		font-family: $text-aux;
-		font-size: 90%;
+	img {
+		width: 100%;
+		height: auto;
 	}
 	
-	nav {
-		grid-area: nav;
-		width: auto;
+	div.kickstarter a {
+		display: block;
+		background: #05ce78;
+		background: linear-gradient(#03ad64, #05ce78);
+		color: #000;
+		font-weight: bold;
+		font-size: 110%;
+		margin: 1em 0 1em 0;
+		text-align: center;
+		text-transform: uppercase;
+		border: 1px solid rgba(255, 255, 255, 0.5);
+		line-height: 1em;
+	}
+}
+
+// :hardway
+
+body#hardway {
+	div.hardway-grid img {
+		width: 100%;
+		margin-bottom: 2em;
+	}
+}
+
+// :event in-game / out-game format
+body#eskhaton, body#acog, body#seance, body#daedalus {
+	
+	grid-template:
+	". nav ."
+	". masthead ."
+	"main main main"
+	"footer footer footer";
+	grid-template-columns: 1rem 1fr 1rem;
+	
+	section#main {
+		display: grid;
+		grid-template: 
+		". in-disclaim ."
+		"in in in"
+		". out .";
+		grid-template-columns: 1rem 1fr 1rem;
+		column-gap: 0rem;
 		
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
+		section#in-game-disclaimer {
+			grid-area: in-disclaim;
+		}
 		
-		a.menu-toggle {
-			display: inline-block;
-			flex: 0 0 auto;
+		section#in-game {
+			grid-area: in;
+			margin-bottom: 2em;
+			display: grid;
+			grid-template: ". ingame .";
+			grid-template-columns: 1rem 1fr 1rem;
+			
+			div.inner {
+				grid-area: ingame;
+			}
+		}
+		
+		section#out-of-game {
+			grid-area: out;
 		}
 	}
+}
+
+// :eskhaton 
+body#eskhaton {
 	
-	#main {
-		grid-area: main;
+	section#opal, section#cults {
+		margin-top: 1em;
 	}
 	
-	footer {
-		grid-area: footer;
+	section#opal {
+		grid-area: opal;
+	}
+	
+	section#cults {
+		grid-area: cults;
+	}
+	
+	section#in-game {
+		background: #fff;
+		background: linear-gradient(180deg, #d3ccba 0%, #f7f0dc 50%);
+		color: #000;
+		padding: 2em 0;
+		
+		section#opal::before {
+			background: url('../i/events/eskhaton/feather.png') center center no-repeat;
+			background-size: contain;
+			content: " ";
+			width: 70%;
+			height: 6rem;
+			position: relative;
+			display: block;
+			margin: 0 auto 1em auto;
+		}
+		
+		section#cults:before {
+			background: transparent url('../i/events/eskhaton/eskhaton_sigils_horizontal.png') center center no-repeat;
+			background-size: contain;
+			content: " ";
+			width: 100%;
+			height: 6rem;
+			position: relative;
+			display: block;
+			margin: 0 auto 1em 0;
+		}
+		
+		section#salutation, section#signature, section#cults h3 {
+			font-family: $text-eskhaton;
+			text-transform: none;
+			font-weight: normal;
+			font-size: 150%;
+		}
+		
+		section#opal {
+			
+			section#salutation p, section#signature p {
+				margin: 0;
+			}
+			
+			section#signature {
+				
+				margin-left: 50%;
+				margin-top: 1em;
+				position: relative;
+				
+				&:before {
+					content: "\2014";
+					position: absolute;
+					left: -1em;
+					top: 0;
+				}
+			}
+			
+			section#main-text p {
+				text-indent: 2em;
+				margin-bottom: 0;
+			}
+		} 
+		
+		section#cults {
+						
+			p:first-letter {
+				float: left;
+				font-size: 350%;
+				margin: 0.10em 0.15em 0 0;
+				font-family: $text-eskhaton;
+				line-height: 1em;
+				
+				background: #000;
+				color: #fff;
+				padding: 0.1em 0.2em;
+				border: 0.09em solid #ccc;
+			}
+			
+			br.mobile {
+				display: none;
+			}
+		}
+		
+		section#cults section#mareen p:first-letter {
+			
+			color: #323b56;
+			border-color: #323b56;
+			background: #d0e3e8 url('../i/events/eskhaton/mareen_back.jpg') top left no-repeat;
+			background-size: cover;
+		}
+		
+		section#cults section#extant p:first-letter {
+			
+			color: #eaf1e4;
+			border-color: #9fa09e;
+			background: #d0e3e8 url('../i/events/eskhaton/extant_back.jpg') top left no-repeat;
+			background-size: cover;
+		}
+		
+		section#cults section#seekers p:first-letter {
+			
+			color: #e0e1d4;
+			border-color: #333;
+			background: #d0e3e8 url('../i/events/eskhaton/seekers_back.jpg') top right no-repeat;
+			background-size: cover;
+		}
+		
+		section#cults section#expositors p:first-letter {
+			
+			color: #b2274c;
+			border-color: #c22f57;
+			background: #d0e3e8 url('../i/events/eskhaton/expositors_back.jpg') top right no-repeat;
+			background-size: cover;
+		}
+		
+		section#cults section#progenus p:first-letter {
+			
+			color: #81b1e4;
+			border-color: #6887a9;
+			background: #d0e3e8 url('../i/events/eskhaton/progenus_back.jpg') top right no-repeat;
+			background-size: cover;
+		}
+	}
+}
+
+// :event - acog
+
+$color-letter-accent: #ed152e;
+$color-letter-text: #472529;
+body#acog {
+	
+	section#in-game {
+		background: gray url('../i/events/acog/nuke.jpg') center center no-repeat;
+		background-size: cover;
+		color: $color-letter-text;
+		overflow: hidden;
+		
+		div.inner {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			margin-top: 10em;
+		}
+		
+		h2, h3, p {
+			font-family: "Courier New", "Courier", monospace;
+		}
+		
+		div.letter {
+			width: 25em;
+			padding: 1em;
+			border: 10px solid $color-letter-accent;
+			background: #f4f3ef;
+			box-shadow: -3px -3px 11px black;
+			transform: rotate(10deg);
+			justify-self: flex-start;
+			
+			h2, h3 {
+				background: $color-letter-accent;
+				color: #fff;
+				text-align: center;
+				margin: 0;
+			}
+			
+			h3 {
+				margin-bottom: 1em;
+			}
+			
+			p {
+				font-size: 90%;
+			}
+			
+			strong {
+				font-weight: normal;
+				border-bottom: 1px solid $color-letter-text;
+			}
+			
+			span {
+				color: black;
+				background: black;
+			}
+		}
+		
+		img.badge {
+			width: 30%;
+			height: 55%;
+			background: transparent;
+			border: none;
+			margin-top: -6em;
+			margin-left: -1em;
+			z-index: 10;
+			transform: rotate(-8deg);
+		}
 	}
 }
 
 // :event - seance
-body#seance {	
-	#in-game {
-		background: linear-gradient(#ede6c7, #fff);
-		color: #4d382b;
-		padding: $space-gutter 0;
-		margin-bottom: 1em;
+body#seance {
+	
+	section#in-game {
+		background: rgba(145, 124, 100, 1);
+		color: #efe8e0;
+		padding: 2em 0;
 		
-		h2 {
-			background-color: transparent;
-			border: none;
-			font-family: $text-main;
-			margin: 0;
-			text-align: center;
-			padding: 145px 0 0 0;
-			background-image: url('../i/events/seance/ames_color.png');
-			background-position: center 10px;
-			background-repeat: no-repeat;
-			background-size: 125px 125px;
-			text-transform: none;
-		}
-		
-		h3 {
+		h2, h3 {
 			font-family: $text-main;
 			text-transform: none;
-			text-align: center;
+			font-weight: normal;
+			font-style: italic;
 		}
-		
-		p {
-			margin-left: auto;
-			margin-right: auto;
-		}
-		
-		img {
-			float: right;
-			width: 45%;
+
+		img.ames_photo {
+			width: 10em;
 			height: auto;
-			box-shadow: 1px 1px 6px black;
-			margin-top: 0.25em;
-			margin-left: 10px;
-			margin-bottom: 10px;
+			float: right;
+			margin: 0 0 1em 1em;
+			transform: rotate(2.5deg);
+			padding: 0;
+			border: 0.5em solid #fff;
+			border-bottom-width: 2em;
+			box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
 		}
 		
-		span.author {
+		p.author {
 			display: block;
 			position: relative;
 			margin-left: 33%;
@@ -1013,355 +937,35 @@ body#seance {
 	}
 }
 
-// :event - acog
+// :event - daedalus
 
-$color-letter-accent: #ed152e;
-$color-letter-text: #472529;
-body#acog {
+body#daedalus {
 	
-	#in-game {
-		background: gray url('../i/events/acog/nuke.jpg') center center no-repeat;
+	section#in-game {
+
+		padding: 8em 0 2em 0;
+		background: black url('../i/events/daedalus/daedalus-splash.jpg') center center no-repeat;
 		background-size: cover;
-		color: $color-letter-text;
-		padding: 20px 0 100px 0;
-		overflow: hidden;
-		margin-bottom: 1em;
-		display: flex;
-		flex-direction: row-reverse;
-		position: relative;
 		
-		h2, h3, p {
-			font-family: "Courier New", "Courier", monospace;
+		div.inner {
+			color: #fff;
 		}
 		
-		.letter {
-			
-			flex: 0 0 auto;
-			margin: 200px -10px -20px 0;
-			width: 220px;
-			padding: 20px;
-			border: 10px solid $color-letter-accent;
-			background: #f4f3ef;
-			font-size: 80%;
-			transform: rotate(10deg);
-			box-shadow: -3px -3px 11px black;
-			
-			.letter-body {
-				transform: rotate(1.5deg);
-			}
-			
-			h2, h3 {
-				background: $color-letter-accent;
-				color: #fff;
-				text-align: center;
-				border: none;
-				margin: 0;
-				padding: 0;
-			}
-			
-			h3 {
-				margin-bottom: 1em;
-			}
-			
-			p {
-				padding: 0;
-			}
-			
-			strong {
-				font-weight: normal;
-				border-bottom: 1px solid $color-letter-text;
-			}
-			
-			span {
-				color: black;
-				background: black;
-			}
-		}
-		
-		.badge {
-			position: absolute;
-			bottom: -5px;
-			left: 0;
-			width: 33vw;
-			height: 52vw;
-			background: url('../i/events/acog/badge.png') center center no-repeat;
-			background-size: contain;
-			transform: rotate(-7deg);
-		}
-	}
-}
-
-// :event - eskhaton
-
-body#eskhaton {
-	
-	#in-game {
-		font-family: Lora;
-		background: #fff;
-		color: #222;
-		background: url('../i/events/eskhaton/paper.jpg') left top;
-		background-size: 350px 350px;
-		margin-bottom: 1em;
-	}
-	
-	#in-game h3 {
-		font-family: Lora;
-		text-transform: none;
-		font-weight: normal;
-		margin-bottom: 0.25em;
-		width: auto;
-	}
-	
-	#in-game p {
-		width: auto;
-		box-sizing: border-box;
-	}
-	
-	#opal::before {
-		background: url('../i/events/eskhaton/feather.png') center center no-repeat;
-		background-size: contain;
-		content: " ";
-		width: 50%;
-		height: 30vw;
-		position: relative;
-		display: block;
-		margin: 0 auto;
-	}
-	
-	#cults:before {
-		background: transparent url('../i/events/eskhaton/eskhaton_sigils_horizontal.png') center center no-repeat;
-		background-size: contain;
-		content: " ";
-		width: 80%;
-		height: 30vw;
-		position: relative;
-		display: block;
-		margin: 0 auto;
-	}
-	
-	#opal #signature {
-		
-		margin-left: 50%;
-		position: relative;
-		
-		&:before {
-			content: "\2014";
-			position: absolute;
-			left: -1em;
-			top: 0;
-		}
-		
-		.name, .title {
-			display: block;
-			font-family: Charm;
-			margin-bottom: -0.25em;
-		}
-		
-	}
-	
-	#opal .salutation {
-		font-family: Charm;
-		padding-left: 4vw;
-	}
-	
-	#cults {
-		padding-bottom: 10vw;
-	}
-	
-	#cults h3 {
-		font-family: Charm;
-	}
-	
-	#cults p:first-letter {
-		float: left;
-		font-size: 350%;
-		margin: 0.10em 0.15em 0 0;
-		font-family: Charm;
-		line-height: 1em;
-		
-		background: #000;
-		color: #fff;
-		padding: 0.1em 0.2em;
-		border: 0.09em solid #ccc;
-	}
-	
-	#cults #mareen p:first-letter {
-		
-		color: #323b56;
-		border-color: #323b56;
-		background: #d0e3e8 url('../i/events/eskhaton/mareen_back.jpg') top left no-repeat;
-		background-size: cover;
-	}
-	
-	#cults #extant p:first-letter {
-		
-		color: #eaf1e4;
-		border-color: #9fa09e;
-		background: #d0e3e8 url('../i/events/eskhaton/extant_back.jpg') top left no-repeat;
-		background-size: cover;
-	}
-	
-	#cults #seekers p:first-letter {
-		
-		color: #e0e1d4;
-		border-color: #333;
-		background: #d0e3e8 url('../i/events/eskhaton/seekers_back.jpg') top right no-repeat;
-		background-size: cover;
-	}
-	
-	#cults #expositors p:first-letter {
-		
-		color: #b2274c;
-		border-color: #c22f57;
-		background: #d0e3e8 url('../i/events/eskhaton/expositors_back.jpg') top right no-repeat;
-		background-size: cover;
-	}
-	
-	#cults #progenus p:first-letter {
-		
-		color: #81b1e4;
-		border-color: #6887a9;
-		background: #d0e3e8 url('../i/events/eskhaton/progenus_back.jpg') top right no-repeat;
-		background-size: cover;
-	}
-	
-}
-
-// :event - the hard way
-
-body#hardway {
-		
-}
-
-// :event - sanguis
-
-$sanguis-red: rgba(224, 1, 53, 1);
-body#sanguis {
-	background-image: linear-gradient(180deg, $sanguis-red 0px, $sanguis-red 300px, #000);
-	color: $color-text-main;
-	font-family: $text-main;
-	color: #fff;
-	
-	img.hero {
-		background: transparent;
-		border: none;
-		padding: 0;
-		max-height: 66vh;
-		width: auto;
-		display: block;
-		margin: 0 auto;
-	}
-	
-	h2 {
-		background: none;
-		border: none;
-		text-align: center;
-		font-variant: all-small-caps;
-		font-family: $text-main;
-		color: #fff;
-	}
-	
-	ul.about-links {
-		margin-bottom: 1em;
-		
-		li {
-			a {
-				color: $sanguis-red;
-				border: 1px solid $sanguis-red;
-				background: transparent;
-			}
-		}
-		
-		li.facebook a:before {
-			background: transparent url('../i/facebook_sanguis.png') center center no-repeat;
-			background-size: contain;
-		}
-		
-		li.discord a:before {
-			background: transparent url('../i/discord_sanguis.png') center center no-repeat;
-			background-size: contain;
-		}
-		
-		li.email a:before {
-			background: transparent url('../i/email_sanguis.png') center center no-repeat;
-			background-size: contain;
-		}
-	}
-	
-	nav > a.menu-toggle {
-		background: transparent;
-		color: #000;
-		border: 1px solid #000;
-	}
-	
-	footer {
-		background: transparent;
-		color: #fff;
-	}
-}
-
-// :event - saturnalia
-
-body#saturnalia {
-	
-	.saturnalia-grid {
-		display: grid;
-		grid-template: 
-		"hero"
-		"kickstarter"
-		"partnership"
-		"story"
-		"logistics";
-		margin: 1em 4vw 0 4vw;
-		
-		.hero {
-			grid-area: hero;
-		}
-		
-		.kickstarter {
-			grid-area: kickstarter;
-			margin-top: 1em;
-		}
-		
-		.partnership {
-			grid-area: partnership;
-		}
-		
-		.story {
-			grid-area: story;
-		}
-		
-		.logistics {
-			grid-area: logistics;
+		h2 {
+			font-size: 280%;
+			text-align: center;
+			margin-bottom: 1em;
 		}
 		
 		p {
-			box-sizing: border-box;
-			padding: 0;
+			font-size: 120%;
+			margin: 0;
 		}
 	}
-	
-	.kickstarter a {
-		
-		display: block;
-		background: #05ce78;
-		background: linear-gradient(#03ad64, #05ce78);
-		color: #000;
-		border: none;
-		font-family: $text-aux;
-		font-size: 90%;
-		font-weight: bold;
-		margin: 0 auto 1em auto;
-		padding: 1em 0;
-		text-align: center;
-		text-transform: uppercase;
-		border: 1px solid rgba(255, 255, 255, 0.5);
-		border-radius: 10em;
-		line-height: 1em;
-		
-	}
-	
 }
 
-@import 'breakpoints.scss';
-@import 'desktop.scss';
+// :nav
+@import 'nav.scss';
+
+// :size breakpoints
+@import 'breakpoints.scss'

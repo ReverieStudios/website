@@ -1,11 +1,8 @@
 ---
 title: Reverie Studios
 id: home
+layout: page
 ---
-
-{% include header.html class = 'page' %}
-{% include masthead-standard.html %}
-{% include menu.html %}
 
 {% comment %}
 <section id = "hero">
@@ -83,7 +80,7 @@ id: home
 	</div>
 	
 	<div class = "more-events">
-		<p><a href = "/events/schedule/">Full Event Schedule</a></p>
+		<p><a class = "button" href = "/events/schedule/">Full Event Schedule</a></p>
 	</div>
 	
 </section>
@@ -94,5 +91,3 @@ id: home
 	{{about | markdownify}}
 	
 </section>
-
-{% include footer.html %}
