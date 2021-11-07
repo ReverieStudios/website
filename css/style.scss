@@ -144,6 +144,27 @@ h1.hidden {
 	margin: 0
 }
 
+section#videos {
+	div.video {
+		margin-bottom: 2em;
+	}
+	
+	div.video-container {
+		position: relative;
+		height: 0px;
+		padding-bottom: 56.25%;
+		width: 100%;
+	}
+	
+	iframe.video {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+	}
+}
+
 // :header 
 
 section#masthead {
@@ -261,16 +282,30 @@ body.page {
 
 body#home {
 	
-	// layout outside of section#main defined by body.page above
+	display: grid;
+	grid-template: 
+	". nav ."
+	". masthead ."
+	"main main main"
+	"footer footer footer";
+	grid-template-columns: 1rem 1fr 1rem;
+	column-gap: 0;
+	
+	// other layout outside of section#main defined by body.page above
 	
 	section#main {
 		display: grid;
 		grid-template: 
+		"hero hero hero"
 		". intro ."
 		". events ."
 		". about .";
-		grid-template-columns: 0rem 1fr 0rem;
+		grid-template-columns: 1rem 1fr 1rem;
 		column-gap: 0rem;
+	}
+	
+	section#hero {
+		grid-area: hero;
 	}
 	
 	section#intro {
@@ -291,6 +326,18 @@ body#home {
 	
 	section#events h2 {
 		margin-top: 1em;
+	}
+	
+	section#hero {
+		
+		margin: 0 0 1em 0;
+		
+		img {
+			width: 100%;
+			height: auto;
+			padding: 1px 0;
+			border-width: 1px 0;
+		}
 	}
 	
 	div.event {
@@ -962,6 +1009,21 @@ body#daedalus {
 			margin: 0;
 		}
 	}
+}
+
+// :event - haunting
+
+body#haunting {
+		
+	section#hero {
+		
+		margin: 0 0 1em 0;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}	
 }
 
 // :nav

@@ -94,6 +94,20 @@ h1.hidden {
   overflow: hidden;
   margin: 0; }
 
+section#videos div.video {
+  margin-bottom: 2em; }
+section#videos div.video-container {
+  position: relative;
+  height: 0px;
+  padding-bottom: 56.25%;
+  width: 100%; }
+section#videos iframe.video {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%; }
+
 section#masthead a {
   display: block;
   border: none; }
@@ -159,98 +173,112 @@ body.page {
     body.page nav ul.main {
       text-align: left; }
 
-body#home section#main {
+body#home {
   display: grid;
-  grid-template: ". intro ." ". events ." ". about .";
-  grid-template-columns: 0rem 1fr 0rem;
-  column-gap: 0rem; }
-body#home section#intro {
-  grid-area: intro; }
-body#home section#events {
-  grid-area: events; }
-body#home section#about {
-  grid-area: about; }
-body#home div.event-list {
-  margin-bottom: 1em; }
-body#home section#events h2 {
-  margin-top: 1em; }
-body#home div.event {
-  border: 1px solid #b9b9c3;
-  background: #000;
-  padding: 1px;
-  margin-bottom: 1em; }
-  body#home div.event a {
-    position: relative;
-    display: block;
-    border: none; }
-    body#home div.event a:after {
+  grid-template: ". nav ." ". masthead ." "main main main" "footer footer footer";
+  grid-template-columns: 1rem 1fr 1rem;
+  column-gap: 0; }
+  body#home section#main {
+    display: grid;
+    grid-template: "hero hero hero" ". intro ." ". events ." ". about .";
+    grid-template-columns: 1rem 1fr 1rem;
+    column-gap: 0rem; }
+  body#home section#hero {
+    grid-area: hero; }
+  body#home section#intro {
+    grid-area: intro; }
+  body#home section#events {
+    grid-area: events; }
+  body#home section#about {
+    grid-area: about; }
+  body#home div.event-list {
+    margin-bottom: 1em; }
+  body#home section#events h2 {
+    margin-top: 1em; }
+  body#home section#hero {
+    margin: 0 0 1em 0; }
+    body#home section#hero img {
+      width: 100%;
+      height: auto;
+      padding: 1px 0;
+      border-width: 1px 0; }
+  body#home div.event {
+    border: 1px solid #b9b9c3;
+    background: #000;
+    padding: 1px;
+    margin-bottom: 1em; }
+    body#home div.event a {
+      position: relative;
+      display: block;
+      border: none; }
+      body#home div.event a:after {
+        position: absolute;
+        bottom: 1em;
+        right: 0.75em;
+        width: 2em;
+        height: 2em;
+        background: transparent url("/i/arrow-white-right.png") center center no-repeat;
+        background-size: contain;
+        content: " "; }
+    body#home div.event div.blurb {
       position: absolute;
-      bottom: 1em;
-      right: 0.75em;
-      width: 2em;
-      height: 2em;
-      background: transparent url("/i/arrow-white-right.png") center center no-repeat;
-      background-size: contain;
-      content: " "; }
-  body#home div.event div.blurb {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 1rem; }
-  body#home div.event div.gradient {
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
+      top: 0;
+      left: 0;
+      padding: 1rem; }
+    body#home div.event div.gradient {
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
+    body#home div.event.seance div.gradient {
+      background-image: linear-gradient(90deg, black, transparent); }
+    body#home div.event.daedalus div.gradient {
+      background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.85) 75%); }
+    body#home div.event.acog div.gradient {
+      background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.75), transparent); }
+    body#home div.event.eskhaton div.gradient {
+      background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.75), transparent); }
+    body#home div.event.hardway div.gradient {
+      background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.85), transparent); }
+    body#home div.event.sanguis div.gradient {
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), transparent); }
+    body#home div.event.ember div.gradient {
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.75), transparent); }
+    body#home div.event.saturnalia div.gradient {
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), transparent); }
+    body#home div.event h3 {
+      font-size: 2em; }
+    body#home div.event.daedalus h3, body#home div.event.daedalus p, body#home div.event.hardway h3, body#home div.event.hardway p {
+      color: #000; }
+    body#home div.event.daedalus div.blurb, body#home div.event.hardway div.blurb {
+      left: auto;
+      right: 0; }
+    body#home div.event.daedalus a:after, body#home div.event.hardway a:after {
+      background-image: url("../i/arrow-black-right.png"); }
+  body#home div.event img {
     width: 100%;
-    height: 100%; }
-  body#home div.event.seance div.gradient {
-    background-image: linear-gradient(90deg, black, transparent); }
-  body#home div.event.daedalus div.gradient {
-    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.85) 75%); }
-  body#home div.event.acog div.gradient {
-    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.75), transparent); }
-  body#home div.event.eskhaton div.gradient {
-    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.75), transparent); }
-  body#home div.event.hardway div.gradient {
-    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.85), transparent); }
-  body#home div.event.sanguis div.gradient {
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), transparent); }
-  body#home div.event.ember div.gradient {
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.75), transparent); }
-  body#home div.event.saturnalia div.gradient {
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), transparent); }
-  body#home div.event h3 {
-    font-size: 2em; }
-  body#home div.event.daedalus h3, body#home div.event.daedalus p, body#home div.event.hardway h3, body#home div.event.hardway p {
-    color: #000; }
-  body#home div.event.daedalus div.blurb, body#home div.event.hardway div.blurb {
-    left: auto;
-    right: 0; }
-  body#home div.event.daedalus a:after, body#home div.event.hardway a:after {
-    background-image: url("../i/arrow-black-right.png"); }
-body#home div.event img {
-  width: 100%;
-  height: auto;
-  border: none;
-  padding: 0;
-  position: relative; }
-body#home div.more-events {
-  text-align: center;
-  padding-bottom: 1em; }
-  body#home div.more-events a {
-    color: white;
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid white; }
-    body#home div.more-events a::after {
-      display: inline-block;
-      content: "_";
-      color: transparent;
-      height: 100%;
-      width: 1em;
-      margin-left: 0.5em;
-      background: transparent url("../i/arrow-white-right.png") center center no-repeat;
-      background-size: contain; }
+    height: auto;
+    border: none;
+    padding: 0;
+    position: relative; }
+  body#home div.more-events {
+    text-align: center;
+    padding-bottom: 1em; }
+    body#home div.more-events a {
+      color: white;
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid white; }
+      body#home div.more-events a::after {
+        display: inline-block;
+        content: "_";
+        color: transparent;
+        height: 100%;
+        width: 1em;
+        margin-left: 0.5em;
+        background: transparent url("../i/arrow-white-right.png") center center no-repeat;
+        background-size: contain; }
 
 div#lightbox {
   position: fixed;
@@ -588,6 +616,12 @@ body#daedalus section#in-game {
     font-size: 120%;
     margin: 0; }
 
+body#haunting section#hero {
+  margin: 0 0 1em 0; }
+  body#haunting section#hero img {
+    width: 100%;
+    height: auto; }
+
 /*
 
 Styles for the main nav menu. 
@@ -762,6 +796,11 @@ The one exception is {body#home section#main section#events}, which has some min
   body {
     font-size: 20px; }
 
+  section#videos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem; }
+
   section#masthead img.logo-one-line {
     display: block; }
   section#masthead img.logo-two-line {
@@ -785,7 +824,7 @@ The one exception is {body#home section#main section#events}, which has some min
 
   body#home section#main {
     display: grid;
-    grid-template: ". intro ." "events events events" ". about .";
+    grid-template: "hero hero hero" ". intro ." "events events events" ". about .";
     grid-template-columns: 2rem 1fr 2rem; }
   body#home section#events h2 {
     margin-left: 2rem; }
@@ -882,7 +921,10 @@ The one exception is {body#home section#main section#events}, which has some min
     grid-template-columns: 1fr fit-content(465px) fit-content(465px) 1fr;
     column-gap: 30px; }
     body#home section#main {
-      grid-template: "intro" "events" "about"; }
+      grid-template: "hero" "intro" "events" "about"; }
+    body#home section#hero img {
+      border-width: 1px;
+      padding: 1px; }
     body#home section#events h2 {
       margin-left: 0;
       border: none; }

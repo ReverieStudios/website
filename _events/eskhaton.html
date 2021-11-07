@@ -4,7 +4,7 @@ short-name: eskhaton
 layout: page
 thumbnail: /i/events/eskhaton/eskhaton_homepage.jpg
 blurb: "The apocalypse is coming and you're invited to make it happen. A blockbuster-scale larp about the things that go bump in the night, and what they believe in."
-order: 4
+order: 5
 runs:
  - event: eskhaton
    image: /i/events/eskhaton/eskhaton_homepage.jpg
@@ -169,11 +169,11 @@ runs:
 			
 	{% for e in page.runs %}
 					
-			{% include gallery.html e = e idx = forloop.index0 %}
+		{% include gallery.html e = e idx = forloop.index0 %}
 		
-		{% endfor %}
+	{% endfor %}
 		
-		{% include lightbox.html runs = past_events %}
+	{% include lightbox.html runs = past_events %}
 	
 	
 	<h3>Synopsis</h3>

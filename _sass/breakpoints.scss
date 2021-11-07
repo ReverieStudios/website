@@ -51,6 +51,15 @@ The one exception is {body#home section#main section#events}, which has some min
 		font-size: 20px;
 	}
 	
+	section#videos {
+		
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 1rem;
+		
+		
+	}
+	
 	section#masthead {
 		img.logo-one-line {
 			display: block;
@@ -95,12 +104,13 @@ The one exception is {body#home section#main section#events}, which has some min
 		section#main {
 			display: grid;
 			grid-template: 
+			"hero hero hero"
 			". intro ."
 			"events events events"
 			". about .";
 			grid-template-columns: 2rem 1fr 2rem;
 		}
-		
+
 		section#events h2 {
 			margin-left: 2rem;
 		}
@@ -271,9 +281,17 @@ The one exception is {body#home section#main section#events}, which has some min
 		
 		section#main {
 			grid-template:
+			"hero"
 			"intro"
 			"events"
 			"about";
+		}
+		
+		section#hero {
+			img {
+				border-width: 1px;
+				padding: 1px;
+			}
 		}
 		
 		section#events {
