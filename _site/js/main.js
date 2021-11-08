@@ -82,6 +82,7 @@ $(document).ready(function() {
 	// keyboard controls
 	window.addEventListener("keydown", function (event) {
 		
+		// if the lightbox isn't open, leave
 		if (!$('#lightbox').hasClass('active')) {
 			return
 		}
