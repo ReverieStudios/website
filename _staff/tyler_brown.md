@@ -4,7 +4,7 @@ last-name: Brown
 title: Co-Founder
 type: principal
 email: tyler@reverie.studio
-pronouns: he/him
+pronouns: they/them
 order: 3
 ---
 

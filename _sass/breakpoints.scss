@@ -186,7 +186,7 @@ The one exception is {body#home section#main section#events}, which has some min
 			display: grid;
 			grid-template: 
 			"hero partnership"
-			"kickstarter kickstarter"
+			"link link"
 			"story story"
 			"logistics logistics";
 			grid-template-columns: 1.5fr 1fr;
@@ -201,8 +201,8 @@ The one exception is {body#home section#main section#events}, which has some min
 			grid-area: partnership;
 		}
 		
-		div.kickstarter {
-			grid-area: kickstarter;
+		div.link-out {
+			grid-area: link;
 		}
 		
 		p.story {

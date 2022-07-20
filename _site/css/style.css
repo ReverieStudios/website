@@ -69,6 +69,12 @@ a.button {
   line-height: 1em;
   padding: 0.5em 0.75em; }
 
+a.plain {
+  color: transparent;
+  margin: 0;
+  padding: 0;
+  border: none; }
+
 a.skip-link::after {
   display: inline-block;
   content: "_";
@@ -408,11 +414,11 @@ body#about-larp blockquote {
 body#saturnalia img {
   width: 100%;
   height: auto; }
-body#saturnalia div.kickstarter a {
+body#saturnalia div.link-out a {
   display: block;
-  background: #05ce78;
-  background: linear-gradient(#03ad64, #05ce78);
-  color: #000;
+  background: #ec3721;
+  background: linear-gradient(#b1382a, #ec3721);
+  color: #fff;
   font-weight: bold;
   font-size: 110%;
   margin: 1em 0 1em 0;
@@ -420,6 +426,15 @@ body#saturnalia div.kickstarter a {
   text-transform: uppercase;
   border: 1px solid rgba(255, 255, 255, 0.5);
   line-height: 1em; }
+  body#saturnalia div.link-out a::after {
+    display: inline-block;
+    content: "_";
+    color: transparent;
+    height: 100%;
+    width: 1em;
+    margin-left: 0.5em;
+    background: transparent url("../i/arrow-white-right.png") center center no-repeat;
+    background-size: contain; }
 
 body#hardway div.hardway-grid img {
   width: 100%;
@@ -874,15 +889,15 @@ The one exception is {body#home section#main section#events}, which has some min
 
   body#saturnalia div.saturnalia-grid {
     display: grid;
-    grid-template: "hero partnership" "kickstarter kickstarter" "story story" "logistics logistics";
+    grid-template: "hero partnership" "link link" "story story" "logistics logistics";
     grid-template-columns: 1.5fr 1fr;
     column-gap: 1rem; }
   body#saturnalia img.hero {
     grid-area: hero; }
   body#saturnalia p.partnership {
     grid-area: partnership; }
-  body#saturnalia div.kickstarter {
-    grid-area: kickstarter; }
+  body#saturnalia div.link-out {
+    grid-area: link; }
   body#saturnalia p.story {
     grid-area: story; }
   body#saturnalia p.logistics {
