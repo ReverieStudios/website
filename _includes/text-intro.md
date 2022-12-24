@@ -3,15 +3,14 @@ The text that appears under the banner on the front page.
 Should be formatted using Markdown syntax (very easy to read).
 {% endcomment %}
 
-## Gray Manor was a blast!
+## Io Saturnalia!
 
-*[The Haunting of Gray Manor][haunting]* has come and gone, and what a weekend! Thank you to the more than 60 attendees who made this larp a fun, freaky, and thrilling night to remember.
+*[Saturnalia][saturnalia]* took the famed French Quarter by storm! This blockbuster collaboration between Reverie Studios and By Night Studios brought 200 attendees together for a night of larp mayhem in New Orleans. Thank you to everyone, attendees and staff alike, who made this a truly unforgettable experience. 
 
-Looking ahead to 2022, Reverie Studios is pleased to announce *[Saturnalia][saturnalia]*, a collaboration between Reverie and By Night Studios. This blockbuster larp will bring the World of Darkness to New Orleans as never before! Tickets available now!
+Just announced for October 20, 2023: *[The Hard Way][hardway]*, a wrestling larp. Get ready to book your tickets for the Crash Wrestling Alliance's final brawl!
 
-And keep a lookout for *[The Hard Way][hardway]*, which will be set during the final event of the fictitious Crash Wrestling Alliance, following the onstage and backstage lives of its performers and crew. 
+We're also in the early stages of planning several events into 2024 and 2025, including *Eskhaton II*, *ProGenus 1984*, *Azimuth Unknown*, *Summer Camp Massacre*, and *The Meat Market*.
 
-[haunting]: /events/haunting/
 [hardway]: /events/hardway
 [saturnalia]: /events/saturnalia
 	

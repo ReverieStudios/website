@@ -1,16 +1,16 @@
 ---
-title: Eskhaton
+title: Eskhaton II
 short-name: eskhaton
 layout: page
-thumbnail: /i/events/eskhaton/eskhaton_homepage.jpg
-blurb: "The apocalypse is coming and you're invited to make it happen. A blockbuster-scale larp about the things that go bump in the night, and what they believe in."
+thumbnail: /i/events/eskhaton/eskhaton2_homepage.jpg
+blurb: "The apocalypse is coming and you're invited to make it happen. The second run of Reverie's blockbuster larp about the lives of the things that go bump in the night."
 order: 5
 runs:
  - event: eskhaton
    image: /i/events/eskhaton/eskhaton_homepage.jpg
    date: '2019-04-06'
    display-date: 'April 4&ndash;6, 2019'
-   title: Eskhaton
+   title: Eskhaton I
    blurb: "Reverie Studios is proud to announce their brand new blockbuster larp, [Eskhaton](http://www.eskhatonlarp.com). This is a cosmic horror larp that focuses on the experiences of cultists worshipping Elder Gods that are gathering to celebrate the end of the world. Their belief will help shape which apocalypse happens, and will test the limits of the rationality and self-interest."
    gallery:
    - image: esk01
@@ -85,6 +85,12 @@ runs:
    - image: esk24
      full: /i/events/eskhaton/gallery/esk24.JPG
      thumb: /i/events/eskhaton/gallery/esk24.JPG
+ - event: eskhaton
+   image: /i/events/eskhaton/eskhaton2_homepage.jpg
+   date: '2025-03-01'
+   display-date: '2024 / 2025'
+   title: Eskhaton II
+   blurb: "A second run of the ‘cult famous’ larp that Reverie Studios ran in 2019. If you want to attend again, or you missed it the first time, this will be an opportunity to join us again in Providence, RI to experience the end of the world!"
 ---
 
 <section id = "in-game-disclaimer">
@@ -166,10 +172,18 @@ runs:
 	<div id = "out-of-game-disclaimer">
 		<p>The following is practical &ldquo;out-of-game&rdquo; information describing a typical run of <em>Eskhaton</em>. Detailed information about Eskhaton is available at its <a href ="http://www.eskhatonlarp.com">event website</a>.</p>
 	</div>
+	
+	<h3>{{page.runs[1].title}}</h3>
+	<h4>{{page.runs[1].display-date}}</h4>
+	
+	<p>{{page.runs[1].blurb}}</p>
+	
+	<h3>{{page.runs[0].title}}</h3>
+	<h4>{{page.runs[0].display-date}}</h4>
 			
 	{% for e in page.runs %}
 					
-		{% include gallery.html e = e idx = forloop.index0 %}
+		{% include gallery.html e = e idx = 0 %}
 		
 	{% endfor %}
 		
