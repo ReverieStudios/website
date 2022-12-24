@@ -9,7 +9,7 @@ pronouns: he/him
 order: 1
 ---
 
-Garett is a writer and participatory experience designer, deeply invested in the concepts of collaborative and immersive techniques. He has written a number of different kinds of games and larps, including: 'Age of Iron', an experimental fantasy production that implemented myth creation with a decentralized structure to allow participants to explore stories that were interesting to them, rather than any pre-written experience.
+Garett is a writer and participatory experience designer, deeply invested in the concepts of collaborative and immersive techniques. Garett has designed and written for all of the Reverie projects. His focus is on expanding the art form of larp in the United States and contributing to its growth.
 
 By profession, Garett is an administrative manager and has an MBA in 'Sustainable Organization and Development', with a focus on employee-ownership and fair business practice. His professional career has given him opportunities to work with health research, renewable energy, and community projects.
 
