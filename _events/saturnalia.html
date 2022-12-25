@@ -2,33 +2,91 @@
 title: "Saturnalia"
 short-name: saturnalia
 layout: page
-thumbnail: /i/events/saturnalia/thumbnail.jpg	
+thumbnail: /i/events/saturnalia/thumbnail2.jpg	
 blurb: "Unchain the God of Liberty! A World of Darkness larp by Reverie Studios and By Night Studios. November 2022."
 order: 1
 runs:
  - event: saturnalia
-   image: /i/events/saturnalia/thumbnail.jpg	
-   date: '2022-11-01'
-   display-date: 'November 2022'
+   image: /i/events/saturnalia/thumbnail2.jpg	
+   date: '2022-11-12'
+   display-date: 'November 12, 2022'
    title: "Saturnalia"
    blurb: "Unchain the God of Liberty! A World of Darkness larp by Reverie Studios and By Night Studios. November 2022."
+   gallery:
+   - image: sat01
+     full: /i/events/saturnalia/gallery/sat01.jpg
+     thumb: /i/events/saturnalia/gallery/sat01_th.jpg
+   - image: sat02
+     full: /i/events/saturnalia/gallery/sat02.jpg
+     thumb: /i/events/saturnalia/gallery/sat02_th.jpg
+   - image: sat03
+     full: /i/events/saturnalia/gallery/sat03.jpg
+     thumb: /i/events/saturnalia/gallery/sat03_th.jpg
+   - image: sat04
+     full: /i/events/saturnalia/gallery/sat04.jpg
+     thumb: /i/events/saturnalia/gallery/sat04_th.jpg
+   - image: sat05
+     full: /i/events/saturnalia/gallery/sat05.jpg
+     thumb: /i/events/saturnalia/gallery/sat05_th.jpg
+   - image: sat06
+     full: /i/events/saturnalia/gallery/sat06.jpg
+     thumb: /i/events/saturnalia/gallery/sat06_th.jpg
+   - image: sat07
+     full: /i/events/saturnalia/gallery/sat07.jpg
+     thumb: /i/events/saturnalia/gallery/sat07_th.jpg
+   - image: sat08
+     full: /i/events/saturnalia/gallery/sat08.jpg
+     thumb: /i/events/saturnalia/gallery/sat08_th.jpg
+   - image: sat09
+     full: /i/events/saturnalia/gallery/sat09.jpg
+     thumb: /i/events/saturnalia/gallery/sat09_th.jpg
+   - image: sat10
+     full: /i/events/saturnalia/gallery/sat10.jpg
+     thumb: /i/events/saturnalia/gallery/sat10_th.jpg
+   - image: sat11
+     full: /i/events/saturnalia/gallery/sat11.jpg
+     thumb: /i/events/saturnalia/gallery/sat11_th.jpg
+   - image: sat12
+     full: /i/events/saturnalia/gallery/sat12.jpg
+     thumb: /i/events/saturnalia/gallery/sat12_th.jpg
 ---
+
+{% assign now = 'now' | date: "%Y-%m-%d" %}
+{% assign future_events = page.runs | where_exp: "r", "r.date >= now" %}
+{% assign past_events = page.runs | where_exp: "r", "r.date < now" | reverse %}
+{% comment %}"{% endcomment %}
 
    <h2>Saturnalia</h2>
 
    <div class = "saturnalia-grid">
       
-      <a class = "plain" href = "https://www.vampirelarp.com"><img class = "hero" src = "/i/events/saturnalia/saturnalia_image.jpg" /></a>
+      <img class = "hero" src = "/i/events/saturnalia/saturnalia_hero.jpg" />
       
-      <div class = "link-out">
-         <a href = "https://www.vampirelarp.com" class = "button">Take Me To <em>Saturnalia</em></a>
-      </div>
+      <h3>The Masquerade Comes to the French Quarter</h3>
       
-   
-      <p class = "partnership">Want to experience the ultimate immersive blockbuster Larp event? Reverie Studios has partnered with <a href = "https://bynightstudios.com/">By Night Studios</a> to bring you a grand and magnificent Larp event intended to fully immerse you in the World of Darkness&mdash;Saturnalia, a street-level, high intensity, low mechanics Vampire: The Masquerade Larp designed to be played in the Nordic style in the V5 setting.</p>
-   
-      <p class = "story">Unchain the God of Liberty! The war between the Anarch Movement and the Camarilla has raged since the Convention of Prague. The Second Inquisition ravages the undead. The Beckoning upsets societal constants. And time-honored Kindred celebrations and festivals like Saturnalia still have their own inertia despite these crises. Kindred from across the world put aside their fear (mostly), postpone their grudges (perhaps), and gather for an unforgettable night of splendor.</p>
-   
-      <p class = "logistics">Planned for November of 2022 in New Orleans, <em>Saturnalia</em> will utilize a series of venues across a several-block radius with each venue serving a different plot element.  The drama will play out across the city! Tickets will be limited to maintain a world class experience for all participants. To reserve your ticket to this limited access event, <a href = "https://www.vampirelarp.com">visit the <em>Saturnalia</em> main site</a>.</p>
-   
+      <p>Reverie Studios and By Night Studios have combined forces to create a one of a kind experience.  This officially licensed blockbuster-scale larp, set in the world of <em>Vampire: The Masquerade</em>, brought two hundred attendees to the famed French Quarter of New Orleans for an unforgettable night of Nordic larp.</p> 
+      
+      <p>This seven-hour event made use of multiple locations across the French Quarter, with over twenty locations participating, from jazz halls to voodoo shops. As the participants lived the experience, they converged on Jackson Square for a traditional New Orleans second line parade, which led them to the historic and sprawling Beauregard Keyes House. This became the site of countless intrigues and endings, culminating in a final ritual to mark the conclusion of Saturnalia, the day of transformation.</p>
+            
+      {% if past_events.size > 0 %}
+      
+         <div class = "past-runs">
+                  
+            {% for e in past_events %}
+            
+               <h4>{{e.display-date}}</h4>
+               
+               {% include gallery.html e = e idx = forloop.index0 %}
+            
+            {% endfor %}
+            
+            {% include lightbox.html runs = past_events %}
+            
+         </div>
+         
+      {% endif %}
+      
+      <p class = "legal">
+         Portions of the materials are the copyrights and trademarks of <a href = "https://www.paradoxinteractive.com">Paradox Interactive AB</a>, and are used with permission. All rights reserved. For more information please visit <a href = "http://worldofdarkness.com">http://worldofdarkness.com</a>.
+      </p>
    </div>
