@@ -457,6 +457,22 @@ body#saturnalia div.link-out a {
 body#hardway div.hardway-grid img {
   width: 100%;
   margin-bottom: 2em; }
+body#hardway div#store {
+  text-align: center; }
+body#hardway div#store a {
+  display: inline-block;
+  margin: 0 0 2em 0;
+  font-size: 120%;
+  text-transform: uppercase; }
+  body#hardway div#store a::after {
+    display: inline-block;
+    content: "_";
+    color: transparent;
+    height: 100%;
+    width: 1em;
+    margin-left: 0.5em;
+    background: transparent url("../i/arrow-black-right.png") center center no-repeat;
+    background-size: contain; }
 
 body#eskhaton, body#acog, body#seance, body#daedalus {
   grid-template: ". nav ." ". masthead ." "main main main" "footer footer footer";
@@ -918,7 +934,7 @@ The one exception is {body#home section#main section#events}, which has some min
 
   body#hardway div.hardway-grid {
     display: grid;
-    grid-template: "img text";
+    grid-template: "store store" "img text";
     grid-template-columns: 2fr 1fr;
     column-gap: 1rem; }
   body#hardway img.hero {
@@ -927,6 +943,8 @@ The one exception is {body#home section#main section#events}, which has some min
     height: auto; }
   body#hardway div.hardway-text {
     grid-area: text; }
+  body#hardway div#store {
+    grid-area: store; }
 
   body#eskhaton section#in-game div.inner {
     display: grid;

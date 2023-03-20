@@ -747,6 +747,29 @@ body#hardway {
 		width: 100%;
 		margin-bottom: 2em;
 	}
+	
+	div#store {
+		text-align: center;
+	}
+	
+	div#store a {
+		
+		display: inline-block;
+		margin: 0 0 2em 0;
+		font-size: 120%;
+		text-transform: uppercase;
+		
+		&::after {
+			display: inline-block;
+			content: "_";
+			color: transparent;
+			height: 100%;
+			width: 1em;
+			margin-left: 0.5em;
+			background: transparent url('../i/arrow-black-right.png') center center no-repeat;
+			background-size: contain;
+		}
+	}
 }
 
 // :event in-game / out-game format

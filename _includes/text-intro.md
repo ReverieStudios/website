@@ -3,11 +3,11 @@ The text that appears under the banner on the front page.
 Should be formatted using Markdown syntax (very easy to read).
 {% endcomment %}
 
-## Io Saturnalia!
+## Spring 2023 Updates!
+
+Reverie Studios has a store, and the first item we're selling is tickets to *[The Hard Way][hardway]*, a wrestling larp set for October 20-22. Book your tickets for the Crash Wrestling Alliance's final brawl!
 
 *[Saturnalia][saturnalia]* took the famed French Quarter by storm! This blockbuster collaboration between Reverie Studios and By Night Studios brought two hundred attendees together for a night of larp mayhem in New Orleans. Thank you to everyone, attendees and staff alike, who made this a truly unforgettable experience. For more details about *Saturnalia*, check out its [event page][saturnalia].
-
-Just announced for October 20, 2023: *[The Hard Way][hardway]*, a wrestling larp. Get ready to book your tickets for the Crash Wrestling Alliance's final brawl!
 
 We're also in the early stages of planning several events into 2024 and 2025, including *[Eskhaton II][eskhaton]*, *[ProGenus 1984][progenus]*, *[Azimuth Unknown][azimuth]*, and *[Fracture][fracture]*.
 

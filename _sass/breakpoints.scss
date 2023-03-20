@@ -207,7 +207,9 @@ The one exception is {body#home section#main section#events}, which has some min
 		
 		div.hardway-grid {
 			display: grid;
-			grid-template: "img text";
+			grid-template: 
+			"store store"
+			"img text";
 			grid-template-columns: 2fr 1fr;
 			column-gap: 1rem;
 		}
@@ -220,6 +222,10 @@ The one exception is {body#home section#main section#events}, which has some min
 		
 		div.hardway-text {
 			grid-area: text;
+		}
+		
+		div#store {
+			grid-area: store;
 		}
 	}
 	
