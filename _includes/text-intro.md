@@ -9,13 +9,11 @@ Should be formatted using Markdown syntax (very easy to read).
 
 Just announced for October 20, 2023: *[The Hard Way][hardway]*, a wrestling larp. Get ready to book your tickets for the Crash Wrestling Alliance's final brawl!
 
-We're also in the early stages of planning several events into 2024 and 2025, including *[Eskhaton II][eskhaton]*, *[ProGenus 1984][progenus]*, *[Azimuth Unknown][azimuth]*, *[Summer Camp Massacre][summer]*, and *[The Meat Market][meat]*.
+We're also in the early stages of planning several events into 2024 and 2025, including *[Eskhaton II][eskhaton]*, *[ProGenus 1984][progenus]*, *[Azimuth Unknown][azimuth]*, and *[Fracture][fracture]*.
 
 [hardway]: /events/hardway
 [saturnalia]: /events/saturnalia
 [eskhaton]: /events/eskhaton
 [progenus]: /events/prog84
 [azimuth]: /events/azimuth
-[summer]: /events/summercamp
-[meat]: /events/meat
-	
+[fracture]: /events/fracture	
