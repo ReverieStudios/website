@@ -934,7 +934,7 @@ The one exception is {body#home section#main section#events}, which has some min
 
   body#hardway div.hardway-grid {
     display: grid;
-    grid-template: "store store" "img text";
+    grid-template: "store store" "img text" "details details";
     grid-template-columns: 2fr 1fr;
     column-gap: 1rem; }
   body#hardway img.hero {
@@ -945,6 +945,8 @@ The one exception is {body#home section#main section#events}, which has some min
     grid-area: text; }
   body#hardway div#store {
     grid-area: store; }
+  body#hardway div.hardway-details {
+    grid-area: details; }
 
   body#eskhaton section#in-game div.inner {
     display: grid;
