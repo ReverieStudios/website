@@ -1107,6 +1107,177 @@ body#haunting {
 	}	
 }
 
+// :event - fracture
+
+body#fracture {
+	background: #de3029;
+	color: #000;
+	grid-template-areas: 
+	". nav ."
+	". masthead ."
+	"main main main"
+	"footer footer footer";
+	
+	.h2-pad {
+		margin: 0 1.5rem;
+	}
+	
+	h2 {
+		text-align: center;
+		font-size: 10vw;
+		color: transparent;
+		background: url('/i/events/fracture/fracture-logotype.png') no-repeat;
+		background-size: contain;
+		margin: 0 auto;
+		max-width: $width-desktop-full;
+		background-position: center center;
+	}
+	
+	#main {
+		h3, h4, p, ul {
+			margin: 0 1rem 1rem 1rem;
+			color: rgb(236, 236, 236);
+		}
+		
+		.button {
+			background: #000;
+			color: #fff;
+			border-color: rgba(255, 255, 255, 0.8);
+		}
+		
+		p.subhead {
+			text-align: center;
+			margin: 1em auto;
+		}
+		
+		p.subhead a::after {
+			display: inline-block;
+			content: "_";
+			color: transparent;
+			height: 100%;
+			width: 1em;
+			margin-left: 0.5em;
+			background: transparent url('../i/arrow-white-right.png') center center no-repeat;
+			background-size: contain;
+		}
+	}
+	
+	.fracture-hero, .fracture-story, .fracture-themes, .fracture-warnings, .fracture-schedule, .fracture-event-details, .fracture-misc {
+		padding: 2rem 0 !important;
+	}
+	
+	.fracture-hero {
+		background: #de3029 url('/i/events/fracture/bg-hero.jpg') no-repeat;
+		background-size: cover;
+	}
+	
+	.fracture-story {
+		background: #20ae49 url('/i/events/fracture/bg-story.jpg') no-repeat;
+		background-size: cover;
+	}
+	
+	.fracture-themes {
+		background: #461b76 url('/i/events/fracture/bg-themes.jpg') no-repeat;
+		background-size: cover;
+	}
+	
+	#main .fracture-warnings {
+		background: #dddddd;
+		
+		h3, p {
+			color: #000;
+		}
+	}
+	
+	.fracture-event-details {
+		background: #2e81bd url('/i/events/fracture/bg-details.jpg') no-repeat;
+		background-size: cover;
+	}
+	
+	.fracture-menu {
+		ul {
+			display: flex;
+			justify-content: space-between;
+			list-style: none;
+			margin: 0;
+		}
+		
+		ul li {
+			margin: 0;
+			padding: 0;
+		}
+		@media screen and (min-width: 500px) {
+			a::after {
+				display: inline-block;
+				content: "_";
+				color: transparent;
+				height: 100%;
+				width: 1em;
+				margin-left: 0.5em;
+				background: transparent url('../i/arrow-white-right.png') center center no-repeat;
+				background-size: contain;
+			}
+		}
+	}
+	
+	div.fracture-misc .fracture-menu ul {
+		
+		li {
+			margin: 0 auto;
+			
+			a::after {
+				display: inline-block;
+				content: "_";
+				color: transparent;
+				height: 100%;
+				width: 1em;
+				margin-left: 0.5em;
+				background: transparent url('../i/arrow-white-right.png') center center no-repeat;
+				background-size: contain;
+			}
+		}
+	}
+	
+	div.fracture-misc {
+		padding-bottom: 0 !important	;
+	}
+	
+	footer {
+		background: #000;
+		color: #fff;
+		margin-top: 0;
+		
+		.button {
+			background: $color-text-main;
+			color: $color-background-footer;
+		}
+	}
+}
+
+// :video
+
+.video {
+	max-width: $width-desktop-full;
+	margin: 0 auto;
+}
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: $width-desktop-full;
+  margin: 0 auto 1rem auto;
+}
+
+.embed-container iframe, .embed-container object, .embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 // :nav
 @import 'nav.scss';
 
