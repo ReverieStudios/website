@@ -5,7 +5,7 @@ Should be formatted using Markdown syntax (very easy to read).
 
 ## Summer 2023 Updates!
 
-Reverie Studios is thrilled to announce that we are currently planning our next horror larp, *[Fracture]*, and tons of new details are available on its [event page][Fracture]. Set in the *[Eskhaton]* universe, *Fracture* will delve into a struggle between summer campers and the eerie cult in the nearby woods. Mark your calendars for August 30th, 2024!
+Reverie Studios is thrilled to announce that we are currently planning our next horror larp, *[Fracture]*, and tons of new details are available on its [event page][Fracture]. Set in the *[Eskhaton]* universe, *Fracture* will delve into a sanguineous encounter between denizens of an adult summer camp, and a primordial cult in the surrounding woods. Mark your calendars for August 30th, 2024!
 
 Unfortunately, we've had to put our wrestling larp, *The Hard Way*, on the back burner for now, but if this is a larp you'd like to play in the future, reach out and [let us know][contact]!
 
