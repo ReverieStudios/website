@@ -730,11 +730,10 @@ body#fracture {
     background-size: cover; }
   body#fracture .fracture-menu ul {
     display: flex;
-    justify-content: space-between;
-    list-style: none;
-    margin: 0; }
+    justify-content: center;
+    list-style: none; }
   body#fracture .fracture-menu ul li {
-    margin: 0;
+    margin: 0 1rem 0 0;
     padding: 0; }
   @media screen and (min-width: 500px) {
     body#fracture .fracture-menu a::after {
