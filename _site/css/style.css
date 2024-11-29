@@ -120,7 +120,8 @@ h1.hidden {
   margin: 0; }
 
 section#videos div.video {
-  margin-bottom: 2em; }
+  margin-bottom: 2em;
+  width: 100%; }
 section#videos div.video-wrapper {
   border: 1px solid #b9b9c3;
   padding: 1px; }
