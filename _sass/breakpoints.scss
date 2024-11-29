@@ -106,9 +106,16 @@ The one exception is {body#home section#main section#events}, which has some min
 			grid-template: 
 			"hero hero hero"
 			". intro ."
+			". community ."
 			"events events events"
 			". about .";
 			grid-template-columns: 2rem 1fr 2rem;
+		}
+		
+		section#community {
+			p {
+				padding: 2rem;
+			}
 		}
 
 		section#events h2 {
@@ -303,6 +310,7 @@ The one exception is {body#home section#main section#events}, which has some min
 			grid-template:
 			"hero"
 			"intro"
+			"community"
 			"events"
 			"about";
 		}
@@ -312,6 +320,10 @@ The one exception is {body#home section#main section#events}, which has some min
 				border-width: 1px;
 				padding: 1px;
 			}
+		}
+		
+		section#community {
+			
 		}
 		
 		section#events {

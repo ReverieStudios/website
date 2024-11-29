@@ -91,6 +91,20 @@ a.skip-link::after {
   background: transparent url("../i/arrow-dusk-right.png") center center no-repeat;
   background-size: contain; }
 
+.callout {
+  background: #e7e7f4;
+  color: #38383c;
+  padding: 0.5rem;
+  border-radius: 0.5rem; }
+  .callout a {
+    color: #000;
+    border-color: #000; }
+
+.callout.discord {
+  background: #e7e7f4 url("../i/discord_black_transparent.png") right center no-repeat;
+  background-size: contain;
+  background-origin: content-box; }
+
 img {
   display: block;
   background: #000;
@@ -198,13 +212,15 @@ body#home {
     margin-right: 1rem; }
   body#home section#main {
     display: grid;
-    grid-template: "hero hero hero" ". intro ." ". events ." ". about .";
+    grid-template: "hero hero hero" ". intro ." ". community ." ". events ." ". about .";
     grid-template-columns: 1rem 1fr 1rem;
     column-gap: 0rem; }
   body#home section#hero {
     grid-area: hero; }
   body#home section#intro {
     grid-area: intro; }
+  body#home section#community {
+    grid-area: community; }
   body#home section#events {
     grid-area: events; }
   body#home section#about {
@@ -1001,8 +1017,10 @@ The one exception is {body#home section#main section#events}, which has some min
 
   body#home section#main {
     display: grid;
-    grid-template: "hero hero hero" ". intro ." "events events events" ". about .";
+    grid-template: "hero hero hero" ". intro ." ". community ." "events events events" ". about .";
     grid-template-columns: 2rem 1fr 2rem; }
+  body#home section#community p {
+    padding: 2rem; }
   body#home section#events h2 {
     margin-left: 2rem; }
   body#home div.event-list {
@@ -1106,7 +1124,7 @@ The one exception is {body#home section#main section#events}, which has some min
     body#home nav {
       margin-right: 0; }
     body#home section#main {
-      grid-template: "hero" "intro" "events" "about"; }
+      grid-template: "hero" "intro" "community" "events" "about"; }
     body#home section#hero img {
       border-width: 1px;
       padding: 1px; }

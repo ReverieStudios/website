@@ -142,6 +142,24 @@ a.skip-link {
 	}
 }
 
+.callout {
+	background: $color-text-main;
+	color: $color-background-main;
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+	
+	a {
+		color: #000;
+		border-color: #000;
+	}
+}
+
+.callout.discord {
+	background: $color-text-main url('../i/discord_black_transparent.png') right center no-repeat;
+	background-size: contain;
+	background-origin: content-box;
+}
+
 img {
 	display: block;
 	background: #000;
@@ -323,6 +341,7 @@ body#home {
 		grid-template: 
 		"hero hero hero"
 		". intro ."
+		". community ."
 		". events ."
 		". about .";
 		grid-template-columns: 1rem 1fr 1rem;
@@ -335,6 +354,10 @@ body#home {
 	
 	section#intro {
 		grid-area: intro;
+	}
+	
+	section#community {
+		grid-area: community;
 	}
 	
 	section#events {
