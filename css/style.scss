@@ -35,6 +35,8 @@ $color-menu: rgba(73, 73, 81, 1);
 $width-desktop-full: 960px;
 $width-desktop-gap: 30px;
 $width-double-column: $width-desktop-full / 2 - $width-desktop-gap / 2;
+$width-major-column: 660px - $width-desktop-gap / 2;
+$width-minor-column: 300px - $width-desktop-gap / 2;
 
 // :basic styling
 
@@ -265,11 +267,10 @@ footer {
 body.page {
 	display: grid;
 	grid-template: 
-	". nav ."
-	". masthead ."
-	". main ."
-	"footer footer footer";
-	grid-template-columns: 1rem 1fr 1rem;
+	". masthead nav ."
+	". main main ."
+	"footer footer footer footer";
+	grid-template-columns: 2rem 5fr 5fr 2rem;
 	padding: 2em 0 0 0;
 	column-gap: 0;
 	
@@ -304,16 +305,18 @@ body.page {
 
 body#home {
 	
+	grid-template-columns: 0rem 5fr 5fr 0rem;
 	display: grid;
-	grid-template: 
-	". nav ."
-	". masthead ."
-	"main main main"
-	"footer footer footer";
-	grid-template-columns: 1rem 1fr 1rem;
-	column-gap: 0;
 	
 	// other layout outside of section#main defined by body.page above
+	
+	#masthead {
+		margin-left: 1rem;
+	}
+	
+	nav {
+		margin-right: 1rem;
+	}
 	
 	section#main {
 		display: grid;
@@ -775,12 +778,19 @@ body#hardway {
 // :event in-game / out-game format
 body#eskhaton, body#acog, body#seance, body#daedalus {
 	
-	grid-template:
-	". nav ."
-	". masthead ."
-	"main main main"
-	"footer footer footer";
-	grid-template-columns: 1rem 1fr 1rem;
+	grid-template: 
+	". masthead nav ."
+	". main main ."
+	"footer footer footer footer";
+	grid-template-columns: 0rem 5fr 5fr 0rem;
+	
+	#masthead {
+		margin-left: 1rem;
+	}
+	
+	nav {
+		margin-right: 1rem;
+	}
 	
 	section#main {
 		display: grid;

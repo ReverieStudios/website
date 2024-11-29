@@ -5,30 +5,21 @@
 	<ul class = "main closed">
 		<li class = "menu-toggle"><a href class = "button" = "#">close</a></li>
 		<li class = "home {% if page.id == "home" %} active{% endif %}"><a href = "/">Home</a></li>
-		<li {% if page.id == "schedule" %}class = "active"{% endif %}>
-			<a href = "/events/schedule/">Events</a>
-			
-			{% comment %}
-			Old events submenu. It has become too unwieldy.
-			<ul class = "events">
-				<li {% if page.id == "schedule" %}class = "active"{% endif %}><a href = "/events/schedule/">Schedule</a></li>
-				{% assign events = site.events | sort: 'order' %}
-				{% for e in events %}
-				<li {% if page.short-name == {{e.short-name}} || page.id == {{e.short-name}} %}class = "active"{% endif %}><a href = "/events/{{e.short-name}}">{{e.title}}</a></li>
-				{% endfor %}
+		<li class = "store"><a href = "#">Store</a>
+			<ul class = "store-sub">
+				<li class = "store-shopify"><a href = "https://reverie-studios-larp.myshopify.com/">Event Tickets</a></li>
+				<li class = "store-zazzle"><a href = "https://www.zazzle.com/store/reveriestudios/products">Merch &amp; Swag</a></li>
 			</ul>
-			{% endcomment %}
 		</li>
-		<li class = "store"><a href = "https://reverie-studios-larp.myshopify.com/">Store</a></li>
 		<li>
-		<a href = "/about/studio/">About</a>
+		<a href = "/about/larp">About</a>
 			<ul class = "about">
-				<li {% if page.id == "about-studio" %}class = "active"{% endif %}><a href = "/about/studio/">Reverie Studios</a></li>
 				<li {% if page.id == "about-larp" %}class = "active"{% endif %}><a href = "/about/larp/">Larp Gaming</a></li>
 				<li {% if page.id == "dei" %}class = "active"{% endif %}><a href = "/about/dei/">Diversity, Equity, &amp; Inclusion</a></li>
 				<li {% if page.id == "conduct" %}class = "active"{% endif %}><a href = "/about/conduct/">Code of Conduct</a></li>
 			</ul>
 		</li>
+		<li class = "character-creator"><a href = "https://creator.reverie.studio/">Character Creator</a></li>
 		<li {% if page.id == "contact" %}class = "active"{% endif %}>
 			<a href = "/contact/">Contact</a>
 			<ul class = "contact-sub">

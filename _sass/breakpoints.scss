@@ -262,12 +262,17 @@ The one exception is {body#home section#main section#events}, which has some min
 	}
 	
 	body.page {
-		grid-template-columns: 1fr fit-content($width-double-column) fit-content($width-double-column) 1fr;
+		grid-template: 
+		". masthead nav ."
+		". main main ."
+		"footer footer footer footer";
+		grid-template-columns: 1fr fit-content($width-minor-column) fit-content($width-major-column) 1fr;
 		column-gap: $width-desktop-gap;
 		padding-top: 4em;
 	}
 	
 	section#masthead {
+				
 		img.logo-two-line {
 			display: block;
 		}
@@ -283,8 +288,16 @@ The one exception is {body#home section#main section#events}, which has some min
 		". masthead nav ."
 		". main main ."
 		"footer footer footer footer";
-		grid-template-columns: 1fr fit-content($width-double-column) fit-content($width-double-column) 1fr;
+		grid-template-columns: 1fr fit-content($width-minor-column) fit-content($width-major-column) 1fr;
 		column-gap: $width-desktop-gap;
+		
+		#masthead {
+			margin-left: 0;
+		}
+		
+		nav {
+			margin-right: 0;
+		}
 		
 		section#main {
 			grid-template:
@@ -357,7 +370,7 @@ The one exception is {body#home section#main section#events}, which has some min
 		". masthead nav ."
 		"main main main main"
 		"footer footer footer footer";
-		grid-template-columns: 1fr fit-content($width-double-column) $width-double-column 1fr;
+		grid-template-columns: 1fr fit-content($width-minor-column) $width-major-column 1fr;
 		column-gap: $width-desktop-gap;
 		
 		section#main {
@@ -393,7 +406,7 @@ The one exception is {body#home section#main section#events}, which has some min
 		". masthead nav ."
 		"main main main main"
 		"footer footer footer footer";
-		grid-template-columns: 1fr fit-content($width-double-column) $width-double-column 1fr;
+		grid-template-columns: 1fr fit-content($width-major-column) $width-minor-column 1fr;
 		column-gap: $width-desktop-gap;
 		
 		.fracture-menu {

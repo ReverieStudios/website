@@ -170,8 +170,8 @@ footer {
 
 body.page {
   display: grid;
-  grid-template: ". nav ." ". masthead ." ". main ." "footer footer footer";
-  grid-template-columns: 1rem 1fr 1rem;
+  grid-template: ". masthead nav ." ". main main ." "footer footer footer footer";
+  grid-template-columns: 2rem 5fr 5fr 2rem;
   padding: 2em 0 0 0;
   column-gap: 0; }
   body.page nav {
@@ -190,10 +190,12 @@ body.page {
       text-align: left; }
 
 body#home {
-  display: grid;
-  grid-template: ". nav ." ". masthead ." "main main main" "footer footer footer";
-  grid-template-columns: 1rem 1fr 1rem;
-  column-gap: 0; }
+  grid-template-columns: 0rem 5fr 5fr 0rem;
+  display: grid; }
+  body#home #masthead {
+    margin-left: 1rem; }
+  body#home nav {
+    margin-right: 1rem; }
   body#home section#main {
     display: grid;
     grid-template: "hero hero hero" ". intro ." ". events ." ". about .";
@@ -475,8 +477,12 @@ body#hardway div#store a {
     background-size: contain; }
 
 body#eskhaton, body#acog, body#seance, body#daedalus {
-  grid-template: ". nav ." ". masthead ." "main main main" "footer footer footer";
-  grid-template-columns: 1rem 1fr 1rem; }
+  grid-template: ". masthead nav ." ". main main ." "footer footer footer footer";
+  grid-template-columns: 0rem 5fr 5fr 0rem; }
+  body#eskhaton #masthead, body#acog #masthead, body#seance #masthead, body#daedalus #masthead {
+    margin-left: 1rem; }
+  body#eskhaton nav, body#acog nav, body#seance nav, body#daedalus nav {
+    margin-right: 1rem; }
   body#eskhaton section#main, body#acog section#main, body#seance section#main, body#daedalus section#main {
     display: grid;
     grid-template: ". in-disclaim ." "in in in" ". out .";
@@ -889,7 +895,7 @@ Desktop
         border: none;
         color: #bbbbc6;
         display: block;
-        padding: 0.5em 0.75em; }
+        padding: 0.5em 0.65em; }
       nav ul.main li.active a {
         color: #fff;
         font-weight: bold; }
@@ -1081,7 +1087,8 @@ The one exception is {body#home section#main section#events}, which has some min
     font-size: 25px; }
 
   body.page {
-    grid-template-columns: 1fr fit-content(465px) fit-content(465px) 1fr;
+    grid-template: ". masthead nav ." ". main main ." "footer footer footer footer";
+    grid-template-columns: 1fr fit-content(285px) fit-content(645px) 1fr;
     column-gap: 30px;
     padding-top: 4em; }
 
@@ -1092,8 +1099,12 @@ The one exception is {body#home section#main section#events}, which has some min
 
   body#home {
     grid-template: ". masthead nav ." ". main main ." "footer footer footer footer";
-    grid-template-columns: 1fr fit-content(465px) fit-content(465px) 1fr;
+    grid-template-columns: 1fr fit-content(285px) fit-content(645px) 1fr;
     column-gap: 30px; }
+    body#home #masthead {
+      margin-left: 0; }
+    body#home nav {
+      margin-right: 0; }
     body#home section#main {
       grid-template: "hero" "intro" "events" "about"; }
     body#home section#hero img {
@@ -1129,7 +1140,7 @@ The one exception is {body#home section#main section#events}, which has some min
 
   body#eskhaton, body#acog, body#seance, body#daedalus {
     grid-template: ". masthead nav ." "main main main main" "footer footer footer footer";
-    grid-template-columns: 1fr fit-content(465px) 465px 1fr;
+    grid-template-columns: 1fr fit-content(285px) 645px 1fr;
     column-gap: 30px; }
     body#eskhaton section#main, body#acog section#main, body#seance section#main, body#daedalus section#main {
       display: grid;
@@ -1147,7 +1158,7 @@ The one exception is {body#home section#main section#events}, which has some min
 
   body#fracture {
     grid-template: ". masthead nav ." "main main main main" "footer footer footer footer";
-    grid-template-columns: 1fr fit-content(465px) 465px 1fr;
+    grid-template-columns: 1fr fit-content(645px) 285px 1fr;
     column-gap: 30px; }
     body#fracture .fracture-menu {
       width: 800px;
