@@ -406,39 +406,25 @@ body#schedule div.event {
 body#schedule h3 {
   margin-top: 0.5em; }
 
-body#about-studio div#principals, body#about-studio div#collaborators {
+body#team div.name-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5em; }
+body#team h4 {
+  font-family: "Lora", Georgia, serif;
+  font-weight: normal;
+  text-transform: none; }
+body#team p.contact {
+  font-family: Arial, Verdana, Geneva, sans-serif;
+  font-size: 80%; }
+body#team div#principals, body#team div#collaborators {
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 0em;
   column-gap: 0em; }
-  body#about-studio div#principals div.staff, body#about-studio div#collaborators div.staff {
-    margin-bottom: 1em; }
-body#about-studio div.contact {
-  margin: 1em 0;
-  font-size: 100%;
-  font-family: Arial, Verdana, Geneva, sans-serif;
-  color: #fff; }
-body#about-studio section#main a.email, body#about-studio a.twitter, body#about-studio div.pronouns {
-  display: flex;
-  border: none;
-  margin: 0 0 0.5em 0;
-  color: inherit; }
-  body#about-studio section#main a.email:before, body#about-studio a.twitter:before, body#about-studio div.pronouns:before {
-    display: flex;
-    content: "_";
-    color: transparent;
-    width: 1em;
-    height: 1em;
-    margin-right: 0.5em; }
-body#about-studio section#main a.email:before {
-  background: transparent url("/i/email-icon.png") center center no-repeat;
-  background-size: contain; }
-body#about-studio a.twitter:before {
-  background: transparent url("/i/twitter-icon.png") center center no-repeat;
-  background-size: contain; }
-body#about-studio div.pronouns:before {
-  background: transparent url("/i/person-icon.png") center center no-repeat;
-  background-size: contain; }
+  body#team div#principals div.staff, body#team div#collaborators div.staff {
+    margin-top: 1em; }
 
 body#about-larp blockquote {
   margin: 0 0 1em 0.5em;

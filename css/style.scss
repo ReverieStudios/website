@@ -660,7 +660,25 @@ body#schedule {
 
 // :about-studio page
 
-body#about-studio {
+body#team {
+	
+	div.name-title {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: 0.5em; 
+	}
+	
+	h4 {
+		font-family: $text-main;
+		font-weight: normal;
+		text-transform: none;
+	}
+	
+	p.contact {
+		font-family: $text-aux;
+		font-size: 80%;
+	}
 	
 	div#principals, div#collaborators {
 		
@@ -670,46 +688,8 @@ body#about-studio {
 		column-gap: 0em;
 		
 		div.staff {
-			margin-bottom: 1em;
+			margin-top: 1em;
 		}
-	}
-	
-	div.contact {
-		margin: 1em 0;
-		font-size: 100%;
-		font-family: $text-aux;
-		color: #fff;
-	}
-	
-	section#main a.email, a.twitter, div.pronouns {
-		display: flex;
-		border: none;
-		margin: 0 0 0.5em 0;
-		color: inherit;
-		
-		&:before {
-			display: flex;
-			content: "_";
-			color: transparent;
-			width: 1em;
-			height: 1em;
-			margin-right: 0.5em;
-		}
-	}
-	
-	section#main a.email:before {
-		background: transparent url('/i/email-icon.png') center center no-repeat;
-		background-size: contain;
-	}
-	
-	a.twitter:before {
-		background: transparent url('/i/twitter-icon.png') center center no-repeat;
-		background-size: contain;
-	}
-	
-	div.pronouns:before {
-		background: transparent url('/i/person-icon.png') center center no-repeat;
-		background-size: contain;
 	}
 }
 
