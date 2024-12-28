@@ -15,12 +15,11 @@ The designers and writers behind Reverie Studios.
 
 		<div class = "name-title">
 			<h4>{{p.first-name}} {{p.last-name}}</h4>
-			
-			<p class = "contact">
-				{{p.title}} <br />
-				({{p.pronouns}}) <br />
-				<a class = "email" href = "mailto:{{p.email}}">{{p.email}}</a>
-			</p>
+			<ul class = "staff-info">
+				<li>{{p.title}}</li>
+				<li>{{p.pronouns}}</li>
+				<li><a class = "email" href = "mailto:{{p.email}}">{{p.email}}</a></li>
+			</ul>
 		</div>
 		
 		{% if p.image %}

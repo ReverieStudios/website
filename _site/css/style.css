@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 
 Primary look and layout styles for Reverie Studios website.
@@ -94,7 +95,7 @@ a.skip-link::after {
 .callout {
   background: #e7e7f4;
   color: #38383c;
-  padding: 1rem 1.5rem;
+  padding: 1rem;
   border-radius: 0.5rem; }
   .callout a {
     color: #000;
@@ -257,8 +258,8 @@ body#home {
         position: absolute;
         bottom: 1em;
         right: 0.75em;
-        width: 2em;
-        height: 2em;
+        width: 1.5em;
+        height: 1.5em;
         background: transparent url("/i/arrow-white-right.png") center center no-repeat;
         background-size: contain;
         content: " "; }
@@ -305,7 +306,7 @@ body#home {
     body#home div.event.azimuth div.gradient {
       background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), transparent); }
     body#home div.event.fracture div.gradient {
-      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.75), transparent); }
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.25), transparent); }
     body#home div.event.meat div.gradient {
       background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), transparent); }
     body#home div.event h3 {
@@ -419,18 +420,23 @@ body#schedule div.event {
 body#schedule h3 {
   margin-top: 0.5em; }
 
-body#team div.name-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 0.5em; }
 body#team h4 {
   font-family: "Lora", Georgia, serif;
   font-weight: normal;
-  text-transform: none; }
-body#team p.contact {
+  text-transform: none;
+  margin-bottom: 0.25em; }
+body#team ul.staff-info {
   font-family: Arial, Verdana, Geneva, sans-serif;
-  font-size: 80%; }
+  font-size: 80%;
+  display: flex;
+  list-style: none; }
+  body#team ul.staff-info li {
+    margin: 0 0.5em 1em 0; }
+  body#team ul.staff-info li:after {
+    content: '•';
+    margin-left: 0.5em; }
+  body#team ul.staff-info li:last-child:after {
+    content: none; }
 body#team div#principals, body#team div#collaborators {
   display: grid;
   grid-template-columns: 1fr;
@@ -698,95 +704,8 @@ body#haunting section#hero {
     width: 100%;
     height: auto; }
 
-body#fracture {
-  background: #de3029;
-  color: #000;
-  grid-template-areas: ". nav ." ". masthead ." "main main main" "footer footer footer"; }
-  body#fracture .h2-pad {
-    margin: 0 1.5rem; }
-  body#fracture h2 {
-    text-align: center;
-    font-size: 10vw;
-    color: transparent;
-    background: url("/i/events/fracture/fracture-logotype.png") no-repeat;
-    background-size: contain;
-    margin: 0 auto;
-    max-width: 960px;
-    background-position: center center; }
-  body#fracture #main h3, body#fracture #main h4, body#fracture #main p, body#fracture #main ul {
-    margin: 0 1rem 1rem 1rem;
-    color: #ececec; }
-  body#fracture #main .button {
-    background: #000;
-    color: #fff;
-    border-color: rgba(255, 255, 255, 0.8); }
-  body#fracture #main p.subhead {
-    text-align: center;
-    margin: 1em auto; }
-  body#fracture #main p.subhead a::after {
-    display: inline-block;
-    content: "_";
-    color: transparent;
-    height: 100%;
-    width: 1em;
-    margin-left: 0.5em;
-    background: transparent url("../i/arrow-white-right.png") center center no-repeat;
-    background-size: contain; }
-  body#fracture .fracture-hero, body#fracture .fracture-story, body#fracture .fracture-themes, body#fracture .fracture-warnings, body#fracture .fracture-schedule, body#fracture .fracture-event-details, body#fracture .fracture-misc {
-    padding: 2rem 0 !important; }
-  body#fracture .fracture-hero {
-    background: #de3029 url("/i/events/fracture/bg-hero.jpg") no-repeat;
-    background-size: cover; }
-  body#fracture .fracture-story {
-    background: #20ae49 url("/i/events/fracture/bg-story.jpg") no-repeat;
-    background-size: cover; }
-  body#fracture .fracture-themes {
-    background: #461b76 url("/i/events/fracture/bg-themes.jpg") no-repeat;
-    background-size: cover; }
-  body#fracture #main .fracture-warnings {
-    background: #dddddd; }
-    body#fracture #main .fracture-warnings h3, body#fracture #main .fracture-warnings p {
-      color: #000; }
-  body#fracture .fracture-event-details {
-    background: #2e81bd url("/i/events/fracture/bg-details.jpg") no-repeat;
-    background-size: cover; }
-  body#fracture .fracture-menu ul {
-    display: flex;
-    justify-content: center;
-    list-style: none; }
-  body#fracture .fracture-menu ul li {
-    margin: 0 1rem 0 0;
-    padding: 0; }
-  @media screen and (min-width: 500px) {
-    body#fracture .fracture-menu a::after {
-      display: inline-block;
-      content: "_";
-      color: transparent;
-      height: 100%;
-      width: 1em;
-      margin-left: 0.5em;
-      background: transparent url("../i/arrow-white-right.png") center center no-repeat;
-      background-size: contain; } }
-  body#fracture div.fracture-misc .fracture-menu ul li {
-    margin: 0 auto; }
-    body#fracture div.fracture-misc .fracture-menu ul li a::after {
-      display: inline-block;
-      content: "_";
-      color: transparent;
-      height: 100%;
-      width: 1em;
-      margin-left: 0.5em;
-      background: transparent url("../i/arrow-white-right.png") center center no-repeat;
-      background-size: contain; }
-  body#fracture div.fracture-misc {
-    padding-bottom: 0 !important; }
-  body#fracture footer {
-    background: #000;
-    color: #fff;
-    margin-top: 0; }
-    body#fracture footer .button {
-      background: #e7e7f4;
-      color: #191919; }
+body#fracture img {
+  margin-bottom: 1em; }
 
 body#miskatonic section#hero {
   margin: 0 0 1em 0; }
@@ -891,12 +810,7 @@ Desktop
         width: 1em;
         height: 1.3em;
         margin-right: 0.5em;
-        background-size: contain; }
-
-  body#fracture .button {
-    background: #000;
-    color: #fff;
-    border-color: rgba(255, 255, 255, 0.8); } }
+        background-size: contain; } }
 @media screen and (min-width: 1025px) {
   nav {
     font-family: Arial, Verdana, Geneva, sans-serif;
@@ -962,10 +876,7 @@ Desktop
       font-size: 80%;
       white-space: nowrap; }
       nav ul.main li:hover > ul:hover {
-        display: block; }
-
-  body#fracture nav ul.main a {
-    color: #fff; } }
+        display: block; } }
 /*
 
 Styles that define how the site design changes as the device window size increases.
@@ -998,6 +909,9 @@ The one exception is {body#home section#main section#events}, which has some min
   body {
     font-size: 20px; }
 
+  .callout {
+    padding: 2rem; }
+
   section#videos {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1016,20 +930,18 @@ The one exception is {body#home section#main section#events}, which has some min
     grid-template: ". masthead nav ." ". main main ." "footer footer footer footer";
     grid-template-columns: 2rem 5fr 1fr 2rem; }
 
-  body#home, body#seance, body#eskhaton, body#acog, body#daedalus, body#fracture {
+  body#home, body#seance, body#eskhaton, body#acog, body#daedalus {
     grid-template: ". masthead nav ." "main main main main" "footer footer footer footer";
     grid-template-columns: 2rem 5fr 1fr 2rem; }
-    body#home section#main, body#seance section#main, body#eskhaton section#main, body#acog section#main, body#daedalus section#main, body#fracture section#main {
+    body#home section#main, body#seance section#main, body#eskhaton section#main, body#acog section#main, body#daedalus section#main {
       grid-template-columns: 2rem 1fr 2rem; }
-      body#home section#main section#in-game, body#seance section#main section#in-game, body#eskhaton section#main section#in-game, body#acog section#main section#in-game, body#daedalus section#main section#in-game, body#fracture section#main section#in-game {
+      body#home section#main section#in-game, body#seance section#main section#in-game, body#eskhaton section#main section#in-game, body#acog section#main section#in-game, body#daedalus section#main section#in-game {
         grid-template-columns: 2rem 1fr 2rem; }
 
   body#home section#main {
     display: grid;
     grid-template: "hero hero hero" ". intro ." ". community ." "events events events" ". about .";
     grid-template-columns: 2rem 1fr 2rem; }
-  body#home section#community p {
-    padding: 2rem; }
   body#home section#events h2 {
     margin-left: 2rem; }
   body#home div.event-list {
@@ -1059,11 +971,7 @@ The one exception is {body#home section#main section#events}, which has some min
     body#acog section#main section#in-game div.inner img.badge {
       width: 30%;
       height: 55%;
-      margin: 0; }
-
-  body#fracture .fracture-menu {
-    width: 750px;
-    margin: 0 auto; } }
+      margin: 0; } }
 @media screen and (min-width: 900px) {
   body {
     font-size: 23px; }
@@ -1181,16 +1089,4 @@ The one exception is {body#home section#main section#events}, which has some min
     font-size: 80%; }
 
   body#daedalus section#main section#in-game {
-    padding-bottom: 4em; }
-
-  body#fracture {
-    grid-template: ". masthead nav ." "main main main main" "footer footer footer footer";
-    grid-template-columns: 1fr fit-content(645px) 285px 1fr;
-    column-gap: 30px; }
-    body#fracture .fracture-menu {
-      width: 800px;
-      margin: 0 auto; }
-    body#fracture #main h3, body#fracture #main h4, body#fracture #main p, body#fracture #main ul {
-      max-width: 960px;
-      margin-left: auto;
-      margin-right: auto; } }
+    padding-bottom: 4em; } }

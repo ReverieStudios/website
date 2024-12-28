@@ -51,6 +51,10 @@ The one exception is {body#home section#main section#events}, which has some min
 		font-size: 20px;
 	}
 	
+	.callout {
+		padding: 2rem;
+	}
+	
 	section#videos {
 		
 		display: grid;
@@ -81,7 +85,7 @@ The one exception is {body#home section#main section#events}, which has some min
 		grid-template-columns: 2rem 5fr 1fr 2rem;
 	}
 	
-	body#home, body#seance, body#eskhaton, body#acog, body#daedalus, body#fracture {
+	body#home, body#seance, body#eskhaton, body#acog, body#daedalus {
 		grid-template:
 		". masthead nav ."
 		"main main main main"
@@ -108,12 +112,6 @@ The one exception is {body#home section#main section#events}, which has some min
 			"events events events"
 			". about .";
 			grid-template-columns: 2rem 1fr 2rem;
-		}
-		
-		section#community {
-			p {
-				padding: 2rem;
-			}
 		}
 
 		section#events h2 {
@@ -166,13 +164,7 @@ The one exception is {body#home section#main section#events}, which has some min
 			}
 		}
 	}
-	
-	body#fracture {
-		.fracture-menu {
-			width: 750px;
-			margin: 0 auto;
-		}
-	}
+
 }
 
 @media screen and (min-width: 900px) {
@@ -407,29 +399,6 @@ The one exception is {body#home section#main section#events}, which has some min
 	body#daedalus {
 		section#main section#in-game {
 			padding-bottom: 4em;
-		}
-	}
-	
-	body#fracture {
-		
-		grid-template: 
-		". masthead nav ."
-		"main main main main"
-		"footer footer footer footer";
-		grid-template-columns: 1fr fit-content($width-major-column) $width-minor-column 1fr;
-		column-gap: $width-desktop-gap;
-		
-		.fracture-menu {
-			width: 800px;
-			margin: 0 auto;
-		}
-		
-		#main {
-			h3, h4, p, ul {
-				max-width: $width-double-column * 2 + 30;
-				margin-left: auto;
-				margin-right: auto;
-			}
 		}
 	}
 }

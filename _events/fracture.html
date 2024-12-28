@@ -12,45 +12,67 @@ runs:
    display-date: 'August 30th - September 1st 2024'
    title: "Fracture"
    blurb: "A summer camp becomes a crucible for death and rebirth at the hands of mysterious cultists."
+   gallery:
+   - image: name
+     thumb: /i/events/fracture/gallery/Fracture_LARP_4496_th.jpeg
+     full: /i/events/fracture/gallery/Fracture_LARP_4496.jpeg
+   - image: name
+     thumb: /i/events/fracture/gallery/Fracture_LARP_3510_th.jpeg
+     full: /i/events/fracture/gallery/Fracture_LARP_3510.jpeg
+   - image: name
+     thumb: /i/events/fracture/gallery/FRACTURE-714_th.jpeg
+     full: /i/events/fracture/gallery/FRACTURE-714.jpeg
+   - image: name
+     thumb: /i/events/fracture/gallery/Fracture_LARP_0797-Enhanced-NR_th.jpeg
+     full: /i/events/fracture/gallery/Fracture_LARP_0797-Enhanced-NR.jpeg
+   - image: name
+     thumb: /i/events/fracture/gallery/Fracture_LARP_0889-Enhanced-NR_th.jpeg
+     full: /i/events/fracture/gallery/Fracture_LARP_0889-Enhanced-NR.jpeg
+   - image: name
+     thumb: /i/events/fracture/gallery/Fracture_LARP_0916-Enhanced-NR_th.jpeg
+     full: /i/events/fracture/gallery/Fracture_LARP_0916-Enhanced-NR.jpeg
+   - image: name
+     thumb: /i/events/fracture/gallery/Fracture_LARP_1424_th.jpeg
+     full: /i/events/fracture/gallery/Fracture_LARP_1424.jpeg
+   - image: name
+     thumb: /i/events/fracture/gallery/Fracture_LARP_2394_th.jpeg
+     full: /i/events/fracture/gallery/Fracture_LARP_2394.jpeg
+   - image: name
+     thumb: /i/events/fracture/gallery/Fracture_LARP_2202_th.jpeg
+     full: /i/events/fracture/gallery/Fracture_LARP_2202.jpeg
+   - image: name
+     thumb: /i/events/fracture/gallery/Fracture_LARP_2543_th.jpeg
+     full: /i/events/fracture/gallery/Fracture_LARP_2543.jpeg
+   - image: name
+     thumb: /i/events/fracture/gallery/Fracture_LARP_2551-Enhanced-NR_th.jpeg
+     full: /i/events/fracture/gallery/Fracture_LARP_2551-Enhanced-NR.jpeg
+   - image: name
+     thumb: /i/events/fracture/gallery/Fracture_LARP_2633_th.jpeg
+     full: /i/events/fracture/gallery/Fracture_LARP_2633.jpeg
+   - image: name
+     thumb: /i/events/fracture/gallery/Fracture_LARP_4198_th.jpeg
+     full: /i/events/fracture/gallery/Fracture_LARP_4198.jpeg
+   - image: name
+     thumb: /i/events/fracture/gallery/Fracture_LARP_4417-Enhanced-NR_th.jpeg
+     full: /i/events/fracture/gallery/Fracture_LARP_4417-Enhanced-NR.jpeg
+   - image: name
+     thumb: /i/events/fracture/gallery/Fracture_LARP_4426_th.jpeg
+     full: /i/events/fracture/gallery/Fracture_LARP_4426.jpeg
 ---
+
+{% assign now = 'now' | date: "%Y-%m-%d" %}
+{% assign future_events = page.runs | where_exp: "r", "r.date >= now" %}
+{% assign past_events = page.runs | where_exp: "r", "r.date < now" | reverse %}
+{% comment %}"{% endcomment %}
 
 <div class = "fracture-grid">
    
    <div class = "fracture-hero">
-      
-      <div class = "h2-pad"><h2>Fracture</h2></div>
-      <p class = "subhead"><a href = "https://reverie-studios-larp.myshopify.com/" class = "button">Get your tickets now!</a></p>
-      
-      <div class = "video">
-         <div class = "embed-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/598Xbekksfo?si=yDPv4DZOc5i3UN_S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-         </div>
-      </div>
-      
-      <p class = "tagline">
-         Embrace a harrowing journey within Fracture&mdash;a Nordic larp where a trip to summer camp becomes a crucible for death and rebirth at the hands of mysterious cultists: how long until you break?
-      </p>
-      
-      <p class = "abstract">
-         In Fracture, you'll experience a weekend-long Nordic larp experience that merges splatterpunk and psychological horror, to be run at Ye Olde Commons, in Charlton, Massachusetts, Labor Day Weekend, August 30<sup>th</sup>&ndash;September 1<sup>st</sup> 2024. It is set in the extended universe of Reverie Studio's premier blockbuster event <em><a href = "/events/eskhaton/">Eskhaton</a></em> and features cultists lurking in the foreboding woods waiting to convert unsuspecting campers, in a cosmic horror setting. Participants will be campers and cultists, with campers dying and becoming cultists.
-      </p>
-      
-      <div class = "fracture-menu">
-         
-         <ul>
-            <li><a href = "https://reverie-studios-larp.myshopify.com/" class = "button">Get Tickets</a></li>
-            <li><a href = "https://tinyurl.com/fractureguide" class = "button">Participant Guide</a></li>
-            {% comment %}<li><a href = "https://docs.google.com/document/d/18anew7aQLDoTKRdOaKaG5ZH4ncldzz6Fy5zUN1lbrGc/edit#heading=h.1j1s6lsguhx6" class = "button">Design Document</a></li>{% endcomment %}
-            {% comment %}<li><a href = "https://docs.google.com/document/d/1okmLCO-Mgx6grSOZpWcvrWh8YXAOLVAxlQmS8mzLW50/edit#heading=h.3g39hakqxuyj" class = "button">Ingredients List</a></li>{% endcomment %}
-         </ul>
-         
-      </div>
-      
+      <img src = "/i/events/fracture/homepage.jpg" />
    </div>
    
-   <div class = "fracture-story">
-      
-      <h3>The Story</h3>
+   <div class = "fracture-body">
+      <h3>Fracture</h3>
       
       <p>Camp Whispering Pines, a remote summer camp nestled deep in the woods, is known for its idyllic setting, and fun-filled activities. As the summer begins, campers, staff, and local residents eagerly gather for another summer brimming with relaxation, friendship, and memories.</p>
       
@@ -63,103 +85,22 @@ runs:
       <p>Fracture is a harrowing tale of occultism, dread, and breaking points; blending the unnerving suspense of cosmic horror with the excitement and camaraderie of summer camp massacre cinema. It explores the depths of the human psyche when faced with unimaginable trauma, serving as a cautionary reminder that even in the brightest of summers, darkness can loom in the shadows, ready to engulf and challenge our resilience.</p>
    </div>
    
-   <div class = "fracture-themes">
-      
-      <h3>Themes</h3>
-      
-      <p><strong>On Its Face:</strong> Fracture is a nod to many things: campy slasher movies, pastiche of growing up in the 80’s and 90’s, and overcoming mounting adversity in an evolving, ever-changing, modern world. Surface themes include, but are not limited to: fear of the unknown, isolation and fear of being lost, psychological horror, interpersonal conflict, and sacrifice.</p>
-      
-      <p><strong>At Its Heart:</strong>Fracture is about reaching and identifying one’s breaking point - the juncture when you simply cannot endure any further. From a meta perspective, there are diegetic allegories of identity politics, political schisms, and socio-economic divides. Fracture is a story about picking yourself&mdash;and others&mdash;up after traumatic events, and making a conscious decision in not letting them define you, in an effort to break those cycles of behavior.</p>
-
-      <h3>Characters</h3>
-      
-      <p>Characters will consist of camp counselors and staff, local townies, various flavors of campers with diverse backgrounds, and of course, clandestine cultists of the Extant&mdash;a mysterious order dwelling in the darkness of the woods. Over the course of the weekend, all will endure harrowing encounters from the cultists. Most will meet their gruesome fate, and enact the same bitter end on others. Though, for the Extant, death is never the end: when a character 'dies' they will be reborn as a cultist and continue the experience. Very few will survive, but all will be changed, and absorbed into the eternal cosmic cycle of Birth, Death, and Rebirth.</p>
-      
-      <h3>Experience</h3>
-      
-      <p>Participants will have a plethora of experiences to enjoy. Counselors and staff will conduct their work around the camp, leading the campers in typical summer activities, while navigating their own landscape of plots and problems behind closed doors. Campers will break off in ‘Camper Groups’ and experience the typical offerings of a summer camp, navigate a tense interpersonal landscape, and become converted/convert others to the cult of the Extant.</p>
-         
-      <p>Cultists will be operating under the guise of campers, counselors, or local residents, but will primarily be working to ‘convert’ their victims, while upkeeping the ruse of their personas. The primary goals of the event are to uncover the mysteries of Camp Whispering Pines, be pushed and push others to their breaking points, die, and ultimately, be reborn.</p>
-      
-      <h3>Death &amp; Rebirth</h3>
-      
-      <p><em>Death and Rebirth</em> is the featured theme of this larp, so for most non-cultist characters death is not optional. But participants will ultimately decide how and when their character dies and then play out their rebirth among the cultists.</p>
-      
-      <p>Participants will have negotiated methods and techniques to navigate in-character conflict and consent based play. Conflict is between characters, not participants, and conflicts include consent. Participants will receive workshop training on how to conduct this safely and cooperatively, lifting for good roleplay and experience while respecting others autonomy and desire for a scene to proceed in a collaborative manner.</p>
-   </div>
+   {% if past_events.size > 0 %}
    
-   <div class = "fracture-warnings">
-      
-      <h3>Content Warnings &amp; Accessibility</h3>
-      
-      <p>This larp will contain elements of simulated violence, prejudice against class, extradimensional horror, ritual or occult themes, blood, bodily fluids, bright or flashing lights, loud sounds, and simulated sex or nudity. The event may also necessitate walking moderate distances over uneven terrain, variably lit environments with roots, rocks, and uneven areas, temperature variations that might be uncomfortable, lack of sleep, natural wildlife (insects, wild animals), etc.</p>
-      
-      <p>While this is not a highly physically demanding larp, persons with significant mobility or accessibility needs may find aspects of the event difficult. Please take this into consideration before committing to a ticket. Due to the nature of the campsite, there may be moderate travel over uneven terrain. A majority of the larp’s activities and experiences cannot be designed for accessibility. </p>      
-   </div>
-   
-   <div class = "fracture-event-details">
-      
-      <h3>Schedule</h3>
-      
-      <p>The schedule below is a loose idea of the general activities of the larp. The full schedule of the larp is <a href ="https://docs.google.com/document/d/1Zlxi7JjjQ1O4lp81dju1Jp5d5QgB0-0l308i5-3b5k8/edit?usp=sharing">here</a>. There will be quiet times and a stretch of time for participants to sleep.</p>
-      
-      <ul>
+      <div class = "past-runs">
+               
+         {% for e in past_events %}
          
-         <li><strong>Friday (August 30):</strong> Arrival, workshops, orientation, soft roleplay and feeling the character.</li>
-         <li><strong>Saturday (August 31):</strong> Experience kicks off with summer camp activities and cultists ramping up intensity.</li>
-         <li><strong>Sunday (September 1):</strong> The camp turns into anarchy and horror! Campers are turned into cultists, and the larp reaches its climax.</li>
-         <li><strong>Monday (September 2):</strong> Shipping back to Boston!</li>
-      </ul>
-      
-      <h3>Event Details</h3>
-      
-      <h4>Pricing</h4>
-      
-      <ul>
-         <li><strong>Standard Ticket:</strong> $550</li>
-         <li><strong>Large Group Ticket (6 people + private cabin):</strong> $2,850</li>
-         <li><strong>Small Group Ticket (3 people + shared cabin):</strong> $1,750</li>
-         <li><strong>Installment Ticket:</strong> $200 for first payment, $175 for second payment period, and $175 for third.</li>
-         <li><strong>Scholarship Tickets:</strong> After the initial ticket sales, we will provide info on how to sign up and apply for scholarships we make available. The studio is funding a finite amount of scholarships, but can fund more if people donate.</li>
-      </ul>
-      
-      <h4>Lodging &amp; Food</h4>
-      
-      <p>The experience will include a 'summer camp' experience on site. There are bunk beds in a main lodge area, and tents with cots available. Cabins with beds are also available as an add-on during ticket purchase with a group ticket. Should you want you can bring your own tent, or take advantage of ample nearby hotels if you want or need. Though it is highly encouraged to sleep on site, as many of the core elements will be introduced at night.</p>
-      
-      <p>There will be on site food provided by a chef for breakfasts, lunches, and dinners. Dietary needs will be collected beforehand and accommodated reasonably. Alcohol will not be provided, but is permitted, as this event is 21+.</p>
-
-      <h4>Characters</h4>
-      
-      <p>You will be able to make unique, bespoke characters in the Reverie Character Creator system. This will allow you a high degree of customization, while also providing handholds into the experience to easily connect with others and form fertile ground to roleplay.</p>
-      
-      <h4>The Bus</h4>
-      
-      <p>There will be a nominal bus upcharge for those that want to get a ride to the event site with other participants, which will depart from a centralized location.</p>
-      
-   </div>
-   
-   <div class = "fracture-misc">
-      
-      <h3>Other Details</h3>
-      
-      <p>There is a participant vetting list for safety. Please email <a href = "mailto:garett@reverie.studio">garett@reverie.studio</a> or <a href = "mailto:ken@reverie.studio">ken@reverie.studio</a> or contact us on Discord if you have any concerns about anyone attending.</p>
-      
-      <p>We have hired a paid consultant for diversity and inclusivity, have a professional theater worker with a side consulting business for theatrical safety on staff, and will have a professional care nurse staffing our care room.</p>
-      
-      <p>Reverie Studios has a <a href = "/about/conduct/">Code of Conduct</a> which it adheres to and participants are required to as well.</p>
-      
-      <div class = "fracture-menu">
+            <h4>{{e.display-date}}</h4>
+            
+            {% include gallery.html e = e idx = forloop.index0 %}
          
-         <ul>
-            <li><a href = "https://reverie-studios-larp.myshopify.com/" class = "button">Get Tickets</a></li>
-         </ul>
+         {% endfor %}
+         
+         {% include lightbox.html runs = past_events %}
          
       </div>
       
-   </div>
-   
-   
-      
+   {% endif %}
 
 </div>

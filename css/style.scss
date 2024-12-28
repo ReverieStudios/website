@@ -145,7 +145,7 @@ a.skip-link {
 .callout {
 	background: $color-text-main;
 	color: $color-background-main;
-	padding: 1rem 1.5rem;
+	padding: 1rem;
 	border-radius: 0.5rem;
 	
 	a {
@@ -413,8 +413,8 @@ body#home {
 				position: absolute;
 				bottom: 1em;
 				right: 0.75em;
-				width: 2em;
-				height: 2em;
+				width: 1.5em;
+				height: 1.5em;
 				background: transparent url('/i/arrow-white-right.png') center center no-repeat;
 				background-size: contain;
 				content: " ";
@@ -498,7 +498,7 @@ body#home {
 		}
 		
 		&.fracture div.gradient {
-			background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.75), transparent);
+			background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.25), transparent);
 		}
 		
 		&.meat div.gradient {
@@ -682,22 +682,31 @@ body#schedule {
 
 body#team {
 	
-	div.name-title {
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-start;
-		gap: 0.5em; 
-	}
-	
 	h4 {
 		font-family: $text-main;
 		font-weight: normal;
 		text-transform: none;
+		margin-bottom: 0.25em;
 	}
 	
-	p.contact {
+	ul.staff-info {
 		font-family: $text-aux;
 		font-size: 80%;
+		display: flex;
+		list-style: none;
+		
+		li {
+			margin: 0 0.5em 1em 0;
+		}
+		
+		li:after {
+			content: '•';
+			margin-left: 0.5em;
+		}
+		
+		li:last-child:after {
+			content: none;
+		}
 	}
 	
 	div#principals, div#collaborators {
@@ -1144,147 +1153,11 @@ body#haunting {
 // :event - fracture
 
 body#fracture {
-	background: #de3029;
-	color: #000;
-	grid-template-areas: 
-	". nav ."
-	". masthead ."
-	"main main main"
-	"footer footer footer";
 	
-	.h2-pad {
-		margin: 0 1.5rem;
+	img {
+		margin-bottom: 1em;
 	}
 	
-	h2 {
-		text-align: center;
-		font-size: 10vw;
-		color: transparent;
-		background: url('/i/events/fracture/fracture-logotype.png') no-repeat;
-		background-size: contain;
-		margin: 0 auto;
-		max-width: $width-desktop-full;
-		background-position: center center;
-	}
-	
-	#main {
-		h3, h4, p, ul {
-			margin: 0 1rem 1rem 1rem;
-			color: rgb(236, 236, 236);
-		}
-		
-		.button {
-			background: #000;
-			color: #fff;
-			border-color: rgba(255, 255, 255, 0.8);
-		}
-		
-		p.subhead {
-			text-align: center;
-			margin: 1em auto;
-		}
-		
-		p.subhead a::after {
-			display: inline-block;
-			content: "_";
-			color: transparent;
-			height: 100%;
-			width: 1em;
-			margin-left: 0.5em;
-			background: transparent url('../i/arrow-white-right.png') center center no-repeat;
-			background-size: contain;
-		}
-	}
-	
-	.fracture-hero, .fracture-story, .fracture-themes, .fracture-warnings, .fracture-schedule, .fracture-event-details, .fracture-misc {
-		padding: 2rem 0 !important;
-	}
-	
-	.fracture-hero {
-		background: #de3029 url('/i/events/fracture/bg-hero.jpg') no-repeat;
-		background-size: cover;
-	}
-	
-	.fracture-story {
-		background: #20ae49 url('/i/events/fracture/bg-story.jpg') no-repeat;
-		background-size: cover;
-	}
-	
-	.fracture-themes {
-		background: #461b76 url('/i/events/fracture/bg-themes.jpg') no-repeat;
-		background-size: cover;
-	}
-	
-	#main .fracture-warnings {
-		background: #dddddd;
-		
-		h3, p {
-			color: #000;
-		}
-	}
-	
-	.fracture-event-details {
-		background: #2e81bd url('/i/events/fracture/bg-details.jpg') no-repeat;
-		background-size: cover;
-	}
-	
-	.fracture-menu {
-		ul {
-			display: flex;
-			justify-content: center;
-			list-style: none;
-		}
-		
-		ul li {
-			margin: 0 1rem 0 0;
-			padding: 0;
-		}
-		@media screen and (min-width: 500px) {
-			a::after {
-				display: inline-block;
-				content: "_";
-				color: transparent;
-				height: 100%;
-				width: 1em;
-				margin-left: 0.5em;
-				background: transparent url('../i/arrow-white-right.png') center center no-repeat;
-				background-size: contain;
-			}
-		}
-	}
-	
-	div.fracture-misc .fracture-menu ul {
-		
-		li {
-			margin: 0 auto;
-			
-			a::after {
-				display: inline-block;
-				content: "_";
-				color: transparent;
-				height: 100%;
-				width: 1em;
-				margin-left: 0.5em;
-				background: transparent url('../i/arrow-white-right.png') center center no-repeat;
-				background-size: contain;
-			}
-		}
-	}
-	
-	div.fracture-misc {
-		padding-bottom: 0 !important	;
-	}
-	
-	footer {
-		background: #000;
-		color: #fff;
-		margin-top: 0;
-		
-		.button {
-			background: $color-text-main;
-			color: $color-background-footer;
-		}
-	}
 }
 
 // :event - miskatonic 

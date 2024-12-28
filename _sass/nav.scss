@@ -112,14 +112,6 @@ Desktop
 		}
 	}
 	
-	body#fracture {
-		.button {
-			background: #000;
-			color: #fff;
-			border-color: rgba(255, 255, 255, 0.8);
-		}
-	}
-	
 }
 
 // ::desktop styles
@@ -225,12 +217,6 @@ Desktop
 			&:hover {
 				display: block;
 			}
-		}
-	}
-	
-	body#fracture {
-		nav ul.main a {
-			color: #fff;
 		}
 	}
 }
