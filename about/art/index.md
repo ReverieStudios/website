@@ -4,13 +4,18 @@ id: about-larp
 layout: page
 ---
 
+
 ## Our Art
+
+<img src = "/i/staff/bts3.jpeg" class = "sub-image" />
 
 Since 2016, Reverie Studios has created high-quality, immersive live-action roleplaying (larp) events where participants actively engage in storytelling by embodying unique personas. Prioritizing participant-driven narratives, Reverie collaborates with attendees to develop characters and scenes, providing tools and support to ensure meaningful and impactful experiences.
 
 Reverie Studios specializes in Nordic-style larps, emphasizing immersive, collaborative, and artistic storytelling. Based in Greater Boston, the studio has hosted events worldwide, tailoring venues and narratives for maximum immersion. Reverie focuses on participant-driven experiences that explore themes like grief, authority, and existential questions.
 
 ### Q&A
+
+<img src = "/i/staff/bts1.jpeg" class = "sub-image" />
 
 **What is larp?** A mix of live-action roleplay and immersive theater, where participants shape the story. Reverie prioritizes narrative control over game mechanics to foster emotional and thematic depth.
 
@@ -21,6 +26,8 @@ Reverie Studios specializes in Nordic-style larps, emphasizing immersive, collab
 **Why larp?** Reverie aims to elevate larp in the U.S. and collaborate internationally to create meaningful, high-quality events. The studio has contributed to notable projects like End of the Line in Berlin, Saturnalia in New Orleans, and actively partners with global creators such as Chaos League for international runs of larps.
 
 ### Ethics
+
+<img src = "/i/staff/bts2.jpeg" class = "sub-image" />
 
 Reverie Studios values diversity, safety, and shared storytelling, fostering compassion and inclusion in all its activities.
 
