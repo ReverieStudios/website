@@ -8,7 +8,7 @@ layout: page
 
 We'd love to hear from you! General inquiries should be sent to [{{site.email}}][1]. You can also find us on [Facebook][2] and [Discord][discord]. 
 
-To stay up to date on the latest Reverie Studios news, <a href = "mailto:contact@reverie.studio?subject=Mailing%20List%20Inquiry&body=Please%20add%20me%20to%20the%20Reverie%20Studios%20mailing%20list!">sign up for our mailing list</a>. Your contact information will be kept private and will never be given to third-parties. 
+To stay up to date on the latest Reverie Studios news, <a href = "https://stats.sender.net/forms/bmZOrr/view">sign up for our mailing list</a>. Your contact information will be kept private and will never be given to third-parties. 
 
 For information on how to reach out to us individually, please see our [staff page][3].
 
