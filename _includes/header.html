@@ -11,6 +11,21 @@
 	
 	<script src = "/js/jquery-3.3.1.slim.min.js"></script>
 	<script src = "/js/main.js"></script>
+	<script>
+	  (function (s, e, n, d, er) {
+		s['Sender'] = er;
+		s[er] = s[er] || function () {
+		  (s[er].q = s[er].q || []).push(arguments)
+		}, s[er].l = 1 * new Date();
+		var a = e.createElement(n),
+			m = e.getElementsByTagName(n)[0];
+		a.async = 1;
+		a.src = d;
+		m.parentNode.insertBefore(a, m)
+	  })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+	  sender('036b0296600011')
+	</script>
+
 </head>
 
 <body {% if page.short-name %}id="{{page.short-name}}"{% else if page.id %}id = {{page.id}}{% endif %} class = "{{include.class}}"> {% comment %} closed in footer.html {% endcomment %}

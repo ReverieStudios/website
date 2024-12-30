@@ -163,18 +163,6 @@ Desktop
 				color: $color-text-menu;
 			}
 			
-			a.facebook:before {
-				background: transparent url('../i/facebook_negative.png') center center no-repeat;
-			}
-			
-			a.discord:before {
-				background: transparent url('../i/discord_negative.png') center center no-repeat;
-			}
-			
-			a.email:before {
-				background: transparent url('../i/email_negative.png') center center no-repeat;
-			}
-			
 			a.facebook, a.discord, a.email {
 				
 				display: flex;
@@ -223,7 +211,7 @@ Desktop
 				background: $color-link-main;
 				
 				a {
-					color: #000;
+					color: rgba(0, 0, 0, 0.7);
 				}
 			}
 			
@@ -239,6 +227,30 @@ Desktop
 			&:hover {
 				display: block;
 			}
+		}
+		
+		a.facebook:before {
+			background: transparent url('../i/facebook_negative.png') center center no-repeat;
+		}
+		
+		a.discord:before {
+			background: transparent url('../i/discord_negative.png') center center no-repeat;
+		}
+		
+		a.email:before {
+			background: transparent url('../i/email_negative.png') center center no-repeat;
+		}
+		
+		a:hover.facebook:before {
+			background: transparent url('../i/facebook_positive.png') center center no-repeat;
+		}
+		
+		a:hover.discord:before {
+			background: transparent url('../i/discord_positive.png') center center no-repeat;
+		}
+		
+		a:hover.email:before {
+			background: transparent url('../i/email_positive.png') center center no-repeat;
 		}
 	}
 }

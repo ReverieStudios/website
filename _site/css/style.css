@@ -848,12 +848,6 @@ Desktop
       nav ul.main li.active ul a {
         font-weight: normal;
         color: #bbbbc6; }
-      nav ul.main a.facebook:before {
-        background: transparent url("../i/facebook_negative.png") center center no-repeat; }
-      nav ul.main a.discord:before {
-        background: transparent url("../i/discord_negative.png") center center no-repeat; }
-      nav ul.main a.email:before {
-        background: transparent url("../i/email_negative.png") center center no-repeat; }
       nav ul.main a.facebook, nav ul.main a.discord, nav ul.main a.email {
         display: flex; }
         nav ul.main a.facebook:before, nav ul.main a.discord:before, nav ul.main a.email:before {
@@ -886,14 +880,26 @@ Desktop
       nav ul.main li:hover > ul li:hover {
         background: #fbce6b; }
         nav ul.main li:hover > ul li:hover a {
-          color: #000; }
+          color: rgba(0, 0, 0, 0.7); }
       nav ul.main li:hover > ul li:first-child {
         margin-top: 0.5em;
         border-radius: 0.5em 0.5em 0 0; }
       nav ul.main li:hover > ul li:last-child {
         border-radius: 0 0 0.5em 0.5em; }
       nav ul.main li:hover > ul:hover {
-        display: block; } }
+        display: block; }
+    nav a.facebook:before {
+      background: transparent url("../i/facebook_negative.png") center center no-repeat; }
+    nav a.discord:before {
+      background: transparent url("../i/discord_negative.png") center center no-repeat; }
+    nav a.email:before {
+      background: transparent url("../i/email_negative.png") center center no-repeat; }
+    nav a:hover.facebook:before {
+      background: transparent url("../i/facebook_positive.png") center center no-repeat; }
+    nav a:hover.discord:before {
+      background: transparent url("../i/discord_positive.png") center center no-repeat; }
+    nav a:hover.email:before {
+      background: transparent url("../i/email_positive.png") center center no-repeat; } }
 /*
 
 Styles that define how the site design changes as the device window size increases.

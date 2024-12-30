@@ -32,10 +32,6 @@ Incidents that violate this Code of Conduct should be reported to RS management 
 
 RS may modify this Code of Conduct from time to time. We will notify you of changes by posting changes here, or by other appropriate means. Any changes to the Code of Conduct will become effective when the updated policy is made publicly available or announced. Your use of our services or attendance at any of our events indicates your acceptance of this Code of Conduct.
 
-### Updates:
-
-Due to the ongoing COVID-19 health emergency, Reverie will be instituting and revisiting policies to protect the health and wellbeing of all participants, staff and visitors. All attendees will be expected to follow these procedures as part of their participation.
-
 ## Anti-Harassment Policy
 
 ### The Quick Version
