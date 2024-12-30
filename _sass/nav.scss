@@ -141,7 +141,9 @@ Desktop
 			li {
 				flex: 0 1 auto;
 				position: relative;
-				margin: 0;		
+				margin: 0;	
+				background: rgba(0, 0, 0, 0.3);
+				border-radius: 0.5em;
 			}
 			
 			a {
@@ -210,9 +212,29 @@ Desktop
 			left: 0;
 			margin: 0;
 			padding: 0;
-			background: $color-menu;
-			font-size: 80%;
 			white-space: nowrap;
+			
+			li {
+				background: $color-menu;
+				border-radius: 0;
+			}
+			
+			li:hover {
+				background: $color-link-main;
+				
+				a {
+					color: #000;
+				}
+			}
+			
+			li:first-child {
+				margin-top: 0.5em;
+				border-radius: 0.5em 0.5em 0 0;
+			}
+			
+			li:last-child {
+				border-radius: 0 0 0.5em 0.5em;
+			}
 			
 			&:hover {
 				display: block;
