@@ -1188,6 +1188,23 @@ body#neonvoid84 {
 	img {
 		margin-bottom: 1em;
 	}
+	
+	.detail-grid {
+		display: grid;
+		grid-template-columns: fit-content(20ch) 1fr;
+		border-top: 1px solid color-mix(in hsl, $color-text-main, transparent 75%);
+		padding-top: 0.5rem;
+		
+		p {
+			border-bottom: 1px solid color-mix(in hsl, $color-text-main, transparent 75%);
+			margin-bottom: 0.5rem;
+			padding-bottom: 0.5rem;
+		}
+		
+		p.title {
+			padding-right: 1rem;
+		}
+	}
 }
 
 // :video

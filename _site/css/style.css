@@ -720,6 +720,17 @@ body#convolution img {
 
 body#neonvoid84 img {
   margin-bottom: 1em; }
+body#neonvoid84 .detail-grid {
+  display: grid;
+  grid-template-columns: fit-content(20ch) 1fr;
+  border-top: 1px solid color-mix(in hsl, #e7e7f4, transparent 75%);
+  padding-top: 0.5rem; }
+  body#neonvoid84 .detail-grid p {
+    border-bottom: 1px solid color-mix(in hsl, #e7e7f4, transparent 75%);
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem; }
+  body#neonvoid84 .detail-grid p.title {
+    padding-right: 1rem; }
 
 .video {
   max-width: 960px;
