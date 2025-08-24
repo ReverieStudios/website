@@ -10,6 +10,7 @@ This design makes extensive use of grid layout rules, with some flexbox.
 
 */
 @import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700|Oswald:500|Charm");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -718,19 +719,85 @@ body#miskatonic section#hero {
 body#convolution img {
   margin-bottom: 1em; }
 
-body#neonvoid84 img {
-  margin-bottom: 1em; }
-body#neonvoid84 .detail-grid {
-  display: grid;
-  grid-template-columns: fit-content(20ch) 1fr;
-  border-top: 1px solid color-mix(in hsl, #e7e7f4, transparent 75%);
-  padding-top: 0.5rem; }
-  body#neonvoid84 .detail-grid p {
-    border-bottom: 1px solid color-mix(in hsl, #e7e7f4, transparent 75%);
-    margin-bottom: 0.5rem;
-    padding-bottom: 0.5rem; }
-  body#neonvoid84 .detail-grid p.title {
-    padding-right: 1rem; }
+body#neonvoid84 {
+  background: #070C23 url("../i/events/neonvoid84/neon_bg.jpg") center top;
+  background-size: contain; }
+  body#neonvoid84 .neonvoid84-logo img {
+    border: none;
+    background: transparent;
+    background: radial-gradient(ellipse 60% 40% at center, #D825D1aa 10%, transparent 80%);
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto; }
+  body#neonvoid84 img {
+    margin-bottom: 1em; }
+  body#neonvoid84 .neonvoid84-text {
+    margin-top: 2rem; }
+    body#neonvoid84 .neonvoid84-text h3, body#neonvoid84 .neonvoid84-text h4 {
+      font-family: "DM Sans";
+      font-weight: 900;
+      font-size: 250%; }
+    body#neonvoid84 .neonvoid84-text h3 {
+      margin: 1rem 0;
+      text-align: center;
+      color: #D825D1;
+      background: radial-gradient(ellipse at center, #9b25d866 0%, transparent 50%);
+      text-shadow: 0px 4px 20px #9f1d9a; }
+    body#neonvoid84 .neonvoid84-text h3.warning {
+      color: #d83425;
+      background: radial-gradient(ellipse at center, #d8542566 0%, transparent 50%);
+      text-shadow: 0px 4px 20px #9f1d1d; }
+    body#neonvoid84 .neonvoid84-text h4 {
+      text-align: center;
+      font-size: 200%;
+      color: #A8F9DE;
+      text-shadow: 0px 1px 10px #A8F9DE; }
+    body#neonvoid84 .neonvoid84-text p.tagline {
+      font-family: "DM Sans";
+      font-weight: 100;
+      font-size: 200%;
+      color: #A8F9DE;
+      text-shadow: 0px 1px 10px #A8F9DE; }
+      body#neonvoid84 .neonvoid84-text p.tagline strong {
+        font-weight: 900; }
+  body#neonvoid84 .neonvoid84-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem; }
+    body#neonvoid84 .neonvoid84-buttons .button {
+      text-transform: uppercase;
+      font-family: "DM Sans";
+      font-weight: 700;
+      font-size: 125%;
+      color: #fffa;
+      text-shadow: 0px 0px 8px #fff;
+      position: relative;
+      border: 1px solid #fff8;
+      border-width: 1px 0 1px 0;
+      border-bottom-color: #000;
+      background: linear-gradient(#27A2D1 20%, #46f0d1);
+      box-shadow: 0 0 15px #D825D1, 0 0 50px #25D1D8; }
+    body#neonvoid84 .neonvoid84-buttons .button:hover {
+      color: #fff; }
+    body#neonvoid84 .neonvoid84-buttons .button:after {
+      content: "→"; }
+  body#neonvoid84 .detail-grid {
+    display: grid;
+    grid-template-columns: fit-content(20ch) 1fr;
+    border-top: 1px solid #D825D1aa;
+    padding-top: 0.5rem; }
+    body#neonvoid84 .detail-grid p {
+      border-bottom: 1px solid #D825D1aa;
+      margin-bottom: 0.5rem;
+      padding-bottom: 0.5rem; }
+    body#neonvoid84 .detail-grid p.title {
+      padding-right: 1rem; }
+    body#neonvoid84 .detail-grid p strong {
+      text-shadow: 0px 1px 10px #A8F9DE; }
+  body#neonvoid84 footer {
+    background: transparent; }
 
 .video {
   max-width: 960px;
@@ -750,6 +817,18 @@ body#neonvoid84 .detail-grid {
   left: 0;
   width: 100%;
   height: 100%; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  /* prevent line breaks */
+  border: 0; }
 
 /*
 
@@ -920,7 +999,10 @@ The one exception is {body#home section#main section#events}, which has some min
 */
 @media screen and (min-width: 320px) {
   body {
-    font-size: 12px; } }
+    font-size: 12px; }
+
+  body#neonvoid84 .button {
+    font-size: 110% !important; } }
 @media screen and (min-width: 375px) {
   body#home div.event-list p {
     font-size: 120%; }

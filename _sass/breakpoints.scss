@@ -11,6 +11,12 @@ The one exception is {body#home section#main section#events}, which has some min
 	body {
 		font-size: 12px;
 	}
+	
+	body#neonvoid84 {
+		.button {
+			font-size: 110% !important;
+		}
+	}
 }
 
 @media screen and (min-width: 375px) {
