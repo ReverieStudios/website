@@ -3,16 +3,20 @@ The text that appears under the banner on the front page.
 Should be formatted using Markdown syntax (very easy to read).
 {% endcomment %}
 
-## A Year in Reflection, and Looking Ahead
-2024 was a busy year for Reverie Studios! *[Fracture]*, set in the *[Eskhaton]* universe, was a huge success. Future Reverie larps will elaborate and expand on the *Eskhaton* setting. 
+## The Pause Before the Neon Storm
 
-### Upcoming Events
+In 2026, Reverie Studios will return to form running a large-scale blockbuster event of its own yet again! August 7th-9th, 2026 will herald the dawning of a new horror: [NEON VOID 1984][neon], a larp about the birth of a cosmic horror science cult in the shadow of the Cold War set against the backdrop of the neon &rsquo;80s. [Tickets] go on sale in early September, 2025 so join us for an unforgettable experience!
 
-In 2025 Reverie Studios is partnering with [Chaos League] to bring the North American run of the critically acclaimed *[Miskatonic University]* to Bryn Mawr in Philadelphia, PA. We are also working on a number of other projects, including a limited small-form larp: *[Convolution]*, an *Eskhaton*-set, mind-warping encounter in the drug-addled &rsquo;70s.
+The studio is also working on a number of side projects including:
 
-In 2026 Reverie will run a large-scale blockbuster event yet again! This project will either be a new run of *Eskhaton*, rebooted with new material, or a completely new project: [*Neon Void ‘84*][neon], about the birth of a science cult in the shadow of the Cold War.
+* [Convolution][Convolution]: a limited small-form larp about a mind-warping encounter in the drug-addled 70’s, set in the [Eskhaton] universe.
+* Expanding quality of life features and enhancements for our character creation system.
+* A tabletop adaptation of our [Eskhaton] setting, where players take on the roles of cultists in the final days before the arrival of the apocalypse. Intended for light-weight, quick pick-up-and-play with narrative depth, the Eskhaton TTRPG is an exciting new foray for Reverie as a design studio.
 
-Reverie Studios is also in final playtesting and review of a tabletop roleplaying game based on *[Eskhaton]*, where players take on the roles of cultists in the final days before the arrival of the apocalypse. Intended for lightweight, quick pick-up-and-play with narrative depth, the *Eskhaton* TTRPG is an exciting expansion of Reverie as a design studio.
+### 2025
+
+In 2025, Reverie Studios partnered with [Chaos League] to bring two sold-out runs in North American of the critically acclaimed [Miskatonic University] at Bryn Mawr in Philadelphia, PA. This was Reverie Studios second collaboration after running the large scale vampire larp [Saturnalia] with By Night Studios in New Orleans's famed French Quarter.
+
 
 
 [Fracture]: /events/fracture	
@@ -23,3 +27,4 @@ Reverie Studios is also in final playtesting and review of a tabletop roleplayin
 [Convolution]: /events/convolution/
 [neon]: /events/neonvoid84/
 [contact]: /contact
+[Tickets]: https://reverie-studios-larp.myshopify.com/
